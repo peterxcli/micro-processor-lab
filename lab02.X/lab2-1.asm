@@ -4,7 +4,7 @@ List p=18f4520
     CONFIG WDT = OFF
     org 0x00 
 
-setup1
+setup1:
     ; Store 0x00 in [0x100]
     MOVLW 0x00
     MOVWF 0x100
@@ -13,21 +13,32 @@ setup1
     MOVLW 0x01
     MOVWF 0x116
 
-    LFSR 0, 0x101 ; FSR0 point to 0x10
-    LFSR 1, 0x115
-
-start:
-    ; Use at least one type of indirect addressing
+    LFSR 0, 0x100 ; FSR0 points to 0x100
+    LFSR 1, 0x116 ; FSR1 points to 0x116
 
 loop1:
-    ; until INDF0 equal to 0x106, GOTO loop1_end
+    ; Check if INDF0 equals 0x106
+    MOVLW 0x106
+    CPFSEQ INDF0
+    GOTO continue_loop
+    GOTO loop1_end
 
-    ; In each loop:
-    ; set [INDF0] = [INDF0-1] + [INDF1+1], 100, 116
-    ; set [INDF1] = [INDF0] + [INDF1+1], 101, 116
-    ; then INDF0++
-    ; then INDF1--
+continue_loop:
+    ; Set [INDF0 + 1] = [INDF0] + [INDF1]
+    MOVF POSTINC0, W ; Load [INDF0] into W and increment FSR0
+    ADDWF INDF1, W ; Add [INDF1] to W
+    MOVWF POSTINC0 ; Store result in [INDF0] and increment FSR0
+
+    ; INDF0++ (already done by POSTINC0 above)
+
+    ; Set [INDF1] = [INDF0] + [INDF1]
+    MOVF INDF0, W ; Load [INDF0] into W
+    ADDWF POSTDEC1, W ; Add [INDF1] to W
+    MOVWF INDF1 ; Store result in [INDF1]
     
+    ; INDF1-- (already done by POSTDEC1 above)
+
+    GOTO loop1
 
 loop1_end:
 
