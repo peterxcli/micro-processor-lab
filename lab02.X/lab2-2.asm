@@ -4,6 +4,9 @@ List p=18f4520
     CONFIG WDT = OFF
     org 0x00 
 
+    outer_count equ 0x300
+    inner_count equ 0x301
+
 init:
     LFSR 0, 0x100
     
@@ -22,26 +25,27 @@ init:
     MOVLW 0x0D
     MOVWF POSTINC0 
 
-    ; Begin the sorting process
     MOVLW 0x07       ; Load the number of elements - 1 (for bubble sort)
-    MOVWF 0x300      ; Store in COUNT (number of passes)
+    MOVWF outer_count      ; Store in COUNT (number of passes)
 
 main:
     LFSR 0, 0x100; j
     LFSR 1, 0x101; j + 1
-    MOVLW 0x300
-    MOVWF 0x301
-    DECFSZ 0x300
+    MOVLW 0x00
+    ADDWF outer_count,w
+    MOVWF inner_count
+    DECFSZ outer_count
     GOTO outer_loop
     GOTO end_sort
 
 outer_loop:
-    DECFSZ 0x301
+    DECFSZ inner_count
     GOTO inner_loop
     GOTO main
 
 inner_loop:
-    MOVF INDF0, W
+    MOVLW 0x00
+    ADDWF INDF0,w
     CPFSGT INDF1
     GOTO swap_elements
     GOTO end_inner_loop
