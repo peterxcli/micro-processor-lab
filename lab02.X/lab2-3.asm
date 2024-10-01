@@ -10,22 +10,22 @@ List p=18f4520
 setup:
     LFSR 0, 0x000
 
-    MOVLW 0x28
+    MOVLW 0x00
     MOVWF POSTINC0
-    MOVLW 0x34
+    MOVLW 0x11
     MOVWF POSTINC0
-    MOVLW 0x7A
+    MOVLW 0x22
     MOVWF POSTINC0
-    MOVLW 0x80
+    MOVLW 0x33
     MOVWF POSTINC0
-    MOVLW 0xA7
+    MOVLW 0x44
     MOVWF POSTINC0
-    MOVLW 0xD1
+    MOVLW 0x55
     MOVWF POSTINC0
-    MOVLW 0xFE
+    MOVLW 0x66
     MOVWF POSTINC0
     
-    MOVLW 0x28
+    MOVLW 0x33
     MOVWF target
     
     LFSR 0, 0x000 // left = 0
@@ -52,7 +52,8 @@ while_loop:
 	
 right_half: 
 	MOVF FSR2, W
-    INCF INDF0 // l = mid + 1;
+	ADDLW 0x01
+	MOVWF FSR0 // l = mid + 1;
 	GOTO while_loop
 	
 left_half:

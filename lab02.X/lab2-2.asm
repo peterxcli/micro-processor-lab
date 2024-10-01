@@ -10,19 +10,19 @@ List p=18f4520
 init:
     LFSR 0, 0x100
     
-    MOVLW 0x08
-    MOVWF POSTINC0 
-    MOVLW 0x7C
-    MOVWF POSTINC0 
-    MOVLW 0x78 
+    MOVLW 0xFF
     MOVWF POSTINC0 
     MOVLW 0xFE
     MOVWF POSTINC0 
-    MOVLW 0x34 
+    MOVLW 0xFD
     MOVWF POSTINC0 
-    MOVLW 0x7A 
+    MOVLW 0xFC
     MOVWF POSTINC0 
-    MOVLW 0x0D
+    MOVLW 0xFB 
+    MOVWF POSTINC0 
+    MOVLW 0xFA 
+    MOVWF POSTINC0 
+    MOVLW 0xF9
     MOVWF POSTINC0 
 
     MOVLW 0x07       ; Load the number of elements - 1 (for bubble sort)
