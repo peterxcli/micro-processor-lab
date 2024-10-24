@@ -17,11 +17,19 @@ sqrt_loop:
     MULWF   0x021              ; Square the value (WREG * WREG)
     MOVFF   PRODH, 0x022       ; Get the higher byte of the result into 0x022
     MOVFF   PRODL, WREG        ; Get the lower byte of the result into WREG
-    SUBWF   0x020, W        ; Subtract input value from the square
 
-    BNC     sqrt_done          ; If the square is greater than input, stop
+    ; check if overflow
+    __check_overflow:
+        TSTFSZ 0x022
+        GOTO sqrt_done
+        GOTO __subtract_input
 
-    BRA     sqrt_loop          ; Otherwise, continue incrementing sqrt candidate
+    __subtract_input:
+        SUBWF   0x020, W        ; Subtract input value from the square
+
+        BNC     sqrt_done          ; If the square is greater than input, stop
+
+        BRA     sqrt_loop          ; Otherwise, continue incrementing sqrt candidate
 
 sqrt_done:
     DECF    0x021, F           ; Decrement by 1

@@ -1,15 +1,6 @@
-#include "xc.inc"
+#include"xc.inc"
 GLOBAL _mygcd
-PSECT mytest,local,class=CODE,reloc=2
-
-_swap macro aa_l, aa_h, bb_l, bb_h
-    MOVFF aa_l, WREG
-    MOVFF bb_l, aa_l
-    MOVFF WREG, bb_l
-    MOVFF aa_h, WREG
-    MOVFF bb_h, aa_h
-    MOVFF WREG, bb_h
-    ENDM 
+PSECT mytext,local,class=CODE,reloc=2
 
 #define al 0x020
 #define ah 0x021
@@ -17,75 +8,77 @@ _swap macro aa_l, aa_h, bb_l, bb_h
 #define bh 0x023
 
 _mygcd:
-    movff 0x01, al
-    movff 0x02, ah
-    movff 0x03, bl
-    movff 0x04, bh
+    movff 0x001, al
+    movff 0x002, ah
+    movff 0x003, bl
+    movff 0x004, bh
 
 gcd_loop:
-    MOVF bl, W
-    IORWF bh, W
-    BZ end_gcd
+    MOVF bl,W
+    iorwf bh,W
+    bz end_gcd
     
-    MOVF bh, W
-    SUBWF ah, W
-    BC a_b_greater
-    BRA swap_a_b
+    movf bh,W
+    subwf ah,W
+    bc a_b_greater
+    bra swap_a_b
 
 a_b_greater:
     btfsc STATUS,2
-    GOTO compare_low ; if ah == bh, compare low
-    GOTO proceed_division
+    goto compare_low
+    goto proceed_division
 
 compare_low:
-    MOVF bl,W
-    SUBWF al, W
-    BC proceed_division
-    BRA swap_a_b
+    movf bl,W
+    subwf al,W
+    bc proceed_division
+    bra swap_a_b
 
 proceed_division:
-    MOVFF al, 0x024
-    MOVFF ah, 0x025
+    movff al,0x024
+    movff ah,0x025
 
 subtract_b:
-    MOVF bl, W
-    SUBWF 0x024, F
-    MOVF bh, W
-    SUBWFB 0x025, F
-    ;check if temp>=b
-    MOVF bh, W
-    SUBWF 0x025, W
-    BC continue_subtract
-    BRA division_done
+    movf bl, W
+    subwf 0x024, F
+    movf bh, W
+    subwfb 0x025, F
+    //check if temp>=b
+    movf bh, W
+    subwf 0x025, W
+    bc continue_subtract
+    bra division_done
 
 continue_subtract:
-    BTFSC STATUS, 2
-    GOTO check_temp_low
-    BRA subtract_b
+    btfsc STATUS, 2
+    goto check_temp_low
+    bra subtract_b
 
 check_temp_low:
-    MOVF bl, W
-    SUBWF 0x024, W
-    BC subtract_b
-    BRA division_done
+    movf    bl, W
+    subwf   0x024, W
+    bc     subtract_b
+    bra     division_done
 
 division_done:
     ; Now, a = b, b = temp
-    MOVFF bl, al
-    MOVFF bh, ah
-    MOVFF 0x024, bl  ; b = temp
-    MOVFF 0x025, bh
-    BRA gcd_loop
+    movff   bl, al    ; a = b
+    movff   bh, ah
+    movff   0x024, bl  ; b = temp
+    movff   0x025, bh
+    bra     gcd_loop
 
 swap_a_b:
     ; Swap a and b
-    MOVFF al, 0x024
-    MOVFF ah, 0x025
-    MOVFF bl, al
-    MOVFF bh, ah
-    BRA gcd_loop
+    movff   al, 0x024
+    movff   ah, 0x025
+    movff   bl, al
+    movff   bh, ah
+    movff   0x024, bl
+    movff   0x025, bh
+    bra     gcd_loop
 
 end_gcd:
-	MOVFF al, 0x001
-	MOVFF ah, 0x002
+	movff al, 0x001
+	movff ah,0x002
 	RETURN

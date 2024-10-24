@@ -45,15 +45,25 @@ _multi_signed:
         GOTO __mark_result_negative ; if a is zero, mark result as negative
 
     __mark_result_positive:
-        GOTO __multiply
+        GOTO __check_zero
 
     __mark_result_negative:
         INCF 0x10 ; result is negative
+        GOTO __check_zero
+
+    __check_zero:
+        CLRF in_a
+        CLRF in_b
+        CLRF 0x02
+
+        TSTFSZ in_b
         GOTO __multiply
+        GOTO __finish
 
     __multiply: ; do "add a" b times
         MOVFF in_b, n ; temp n 
         MOVFF in_a, 0x21 ; copy of 0x01
+
         DECF n ; temp n --
 
     __multiply_loop:
