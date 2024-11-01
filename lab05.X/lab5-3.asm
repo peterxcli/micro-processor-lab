@@ -13,7 +13,16 @@ _multi_signed:
 
     CLRF 0x05 ; a sign; 0 = positive, 1 = negative
     CLRF 0x10 ; result sign, 0 = positive, 1 = negative
+
+    ; check if b is 0
+    TSTFSZ in_b
+    GOTO __input
+    GOTO __b_zero_finish
     
+    __b_zero_finish:
+	CLRF in_a
+	RETURN
+
     __input:
         MOVFF in_a, in_b
         MOVFF WREG, in_a
@@ -45,25 +54,15 @@ _multi_signed:
         GOTO __mark_result_negative ; if a is zero, mark result as negative
 
     __mark_result_positive:
-        GOTO __check_zero
+        GOTO __multiply
 
     __mark_result_negative:
         INCF 0x10 ; result is negative
-        GOTO __check_zero
-
-    __check_zero:
-        CLRF in_a
-        CLRF in_b
-        CLRF 0x02
-
-        TSTFSZ in_b
         GOTO __multiply
-        GOTO __finish
 
     __multiply: ; do "add a" b times
         MOVFF in_b, n ; temp n 
         MOVFF in_a, 0x21 ; copy of 0x01
-
         DECF n ; temp n --
 
     __multiply_loop:
