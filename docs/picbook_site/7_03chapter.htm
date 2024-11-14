@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_03chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#000080" face="Verdana" size="4"><b>7.3 
+      </b></font><b><font color="#000080" face="Verdana" size="4">Push 
+      buttons</font></b></p>
+<p><font face="Verdana" size="2">Buttons are mechanical devices used to 
+      execute a break or make connection between two points. They come in 
+      different sizes and with different purposes. Buttons that are used here 
+      are also called "dip-buttons". They are soldered directly onto a printed 
+      board and are common in electronics. They have four pins (two for each 
+      contact) which give them mechanical stability.</font></p>
+<p align="center"><img border="0" height="269" src="7_03chapter_files/09.gif" width="407"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Example of connecting buttons 
+      to microcontroller pins</b></font></p>
+<p><font face="Verdana" size="2">Button function is simple. When we push a 
+      button, two contacts are joined together and connection is made. Still, it 
+      isn't all that simple. The problem lies in the nature of voltage as an 
+      electrical dimension, and in the imperfection of mechanical contacts. That 
+      is to say, before contact is made or cut off, there is a short time period 
+      when vibration (oscillation) can occur as a result of unevenness of 
+      mechanical contacts, or as a result of the different speed in pushing a 
+      button (this depends on person who pushes the button). The term given to 
+      this phenomena is called SWITCH (CONTACT) DEBOUNCE. If this is overlooked 
+      when program is written, an error can occur, or the program can produce 
+      more than one output pulse for a single button push. In order to avoid 
+      this, we can introduce a small delay when we detect the closing of a 
+      contact. This will ensure that the push of a button is interpreted as a 
+      single pulse. The debounce delay is produced in software and the length of 
+      the delay depends on the button, and the purpose of the button. The 
+      problem can be partially solved by adding a capacitor across the button, 
+      but a well-designed program is a much-better answer. The program can be 
+      adjusted until false detection is completely eliminated. Image below shows 
+      what actually happens when button is pushed.</font></p>
+<p align="center"><img border="0" height="358" src="7_03chapter_files/deboncing.gif" width="500"/></p>
+<p><font face="Verdana" size="2">As buttons are very common element in 
+      electronics, it would be smart to have a macro for detecting the button is 
+      pushed. Macro will be called <i>button</i>. <i>Button</i> has several 
+      parameters that deserve additional explanation.</font></p>
+<p><font face="Verdana" size="2">button <b>macro </b> port, pin, hilo, 
+      label <br/><br/><b>Port</b> is a microcontroller's port to which a 
+      button is connected. In case of a PIC16F84 microcontroller, it can be 
+      PORTA or PORTB.<br/><b>Pin</b> is port's pin to which the button is 
+      connected.<br/><b>HiLo</b> can be '0' or '1' which represents the state 
+      when the button is pushed.<br/><b>Label</b> is a destination address for 
+      jump to a service subprogram which will handle the event (button 
+      pushed).</font></p>
+<p align="center"><img border="0" height="428" src="7_03chapter_files/button_inc.gif" width="573"/></p>
+<p align="left"><b><font face="Verdana" size="2">Example 1:</font></b></p>
+<p align="left"><font face="Verdana" size="2">button PORTA, 3, 1, 
+      Button1</font></p>
+<p align="left"><font face="Verdana" size="2">Button T1 is connected to pin RA3 
+      and to the mass across a pull-down resistor, so it generates logical one 
+      upon push. When the button is released, program jumps to the label 
+      Button1.</font></p>
+<p align="left"><b><font face="Verdana" size="2">Example 2:</font></b></p>
+<p align="left"><font face="Verdana" size="2">button PORTA, 2, 0, 
+      Button2</font></p>
+<p><font face="Verdana" size="2">Button T1 is connected to pin RA1 and to the 
+      mass across a pull-up resistor, so it generates logical zero upon push. 
+      When the button is released, program jumps to the label 
+Button2.</font></p>
+<p><font face="Verdana" size="2">The following example illustrates use of 
+      macro <i>button</i> in a program. Buttons are connected to the supply 
+      across pull-up resistors and connect to the mass when pushed. Variable 
+      <i>cnt</i> is displayed on port B LEDs;<i> cnt </i>is incremented by 
+      pushing the button RA0, and is decremented by pushing the button 
+      RA1.</font></p>
+<p align="center"><img border="0" height="762" src="7_03chapter_files/button_asm.gif" width="574"/></p>
+<p><font face="Verdana" size="2">It is important to note that this kind of 
+      debouncing has certain drawbacks, mainly concerning the idle periods of 
+      microcontroller. Namely, microcontroller is in the state of waiting from 
+      the moment the button is pushed until it is released, which can be a very 
+      long time period in certain applications. if you want the program to be 
+      attending to a number of things at the same time, different approach 
+      should be used from the start. Solution is to use the interrupt routine 
+      for each push of a button, which will occur periodically with pause 
+      adequate to compensate for repeated pushes of button.</font></p>
+<p><font face="Verdana" size="2">The idea is simple. Every 10ms, button state 
+      will be checked upon and compared to the previous input state. This 
+      comparison can detect rising or falling edge of the signal. In case that 
+      states are same, there were apparently no changes. In case of change from 
+      0 to a 1, rising edge occurred. If succeeding 3 or 4 checks yield the same 
+      result (logical one), we can be positive that the button is 
+      pushed.</font></p>
+<p align="center"><img border="0" height="151" src="7_03chapter_files/deboncing2.gif" width="500"/></p>
+<p align="center"> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_03chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_02chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_03chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_03chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_04chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_03chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

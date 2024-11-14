@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_04chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">7.4 
+      Optocouplers</font></b><font face="Verdana" size="2"><br/> </font></p>
+<p><font face="Verdana" size="2">Optocouplers were discovered right after 
+      photo-transistors (like any other transistor, except it is stimulated by 
+      light), by combining a LED and photo-transistor in the same case. The 
+      purpose of an optocoupler is to separate two parts of a 
+circuit.</font></p>
+<p><font face="Verdana" size="2">This is done for a number of 
+      reasons:</font></p>
+<ul>
+<li><font face="Verdana" size="2">Interference<b>.</b> Typical examples are 
+        industrial units with lots of interferences which affect signals in the 
+        wires. If these interferences affected the function of control section, 
+        errors would occur and the unit would stop working.</font>
+<li><font face="Verdana" size="2">Simultaneous separation and 
+        intensification of a signal<b>.</b> Typical examples are relays which 
+        require higher current than microcontroller pin can provide. Usually, 
+        optocoupler is used for separating microcontroller supply and relay 
+        supply.</font>
+<li><font face="Verdana" size="2">In case of a breakdown, optocoupled part 
+        of device stays safe in its casing, reducing the repair costs.</font>
+</li></li></li></ul>
+<p><font face="Verdana" size="2">Optocouplers can be used as either input or 
+      output devices. They can have additional functions such as intensification 
+      of a signal or Schmitt triggering (the output of a Schmitt trigger is 
+      either 0 or 1 - it changes slow rising and falling waveforms into definite 
+      low or high values). Optocouplers come as a single unit or in groups of 
+      two or more in one casing.<br/><br/>Each optocoupler needs two supplies in 
+      order to function. They can be used with one supply, but the voltage 
+      isolation feature, which is their primary purpose, is lost.</font></p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><b><a name="7.4.1 Optocoupler on an input line">7.4.1 Optocoupler on an input line</a></b></font></b></p>
+<p><font face="Verdana" size="2">The way it works is simple: when a signal 
+      arrives, the LED within the optocoupler is turned on, and it illuminates 
+      the base of a photo-transistor within the same case. When the transistor 
+      is activated, the voltage between collector and emitter falls to 0.7V or 
+      less and the microcontroller sees this as a logic zero on its RA4 pin. 
+      </font></p>
+<p><font face="Verdana" size="2">The example below is a simplified model of a 
+      counter, element commonly utilized in industry (it is used for counting 
+      products on a production line, determining motor speed, counting the 
+      number of revolutions of an axis, etc). We will have sensor set off the 
+      LED every time axis makes a full revolution. LED in turn will 'send' a 
+      signal by means of photo-transistor to a microcontroller input RA4 
+      (TOCKI). As prescaler is set to 1:2 in this example, every second signal 
+      will increment TMR0. Current status of the counter is displayed on PORTB 
+      LEDs.</font></p>
+<p align="center"><img border="0" height="257" src="7_04chapter_files/12.gif" width="544"/></p>
+<p align="center"><b><font face="Verdana" size="2">Example of optocoupler on an 
+      input line</font></b></p>
+<p align="center"><img border="0" height="552" src="7_04chapter_files/optoin_asm.gif" width="562"/></p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><b><a name="7.4.2 Optocoupler on an output line">7.4.2 Optocoupler on an output line</a></b></font></b></p>
+<p align="left"><font face="Verdana" size="2">An Optocoupler can be also used to 
+      separate the output signals. If optocoupler LED is connected to 
+      microcontroller pin, logical zero on pin will activate optocoupler LED, 
+      thus activating the transistor. This will consequently switch on LED in 
+      the part of device working on 12V. Layout of this connection is shown 
+      below.</font></p>
+<p align="center"><img border="0" height="234" src="7_04chapter_files/14.gif" width="485"/></p>
+<p align="center"><b><font face="Verdana" size="2">Ex</font></b><font face="Verdana" size="2"><b>ample of optocoupler on output line</b></font></p>
+<p align="left"><font face="Verdana" size="2">The program for this example is 
+      simple. By delivering a logical one to the third pin of port A, the 
+      transistor will be activated in the optocoupler, switching on the LED in 
+      the part of device working on 12V.</font></p>
+<p align="center"> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber44" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_04chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_03chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_04chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_04chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_05chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_04chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 6 - Examples for subsystems within microcontroller</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="6_chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#ff0000" face="Arial Black" size="6"><b>CHAPTER 
+      6</b></font></p>
+<p align="center"><font color="#000000" face="Verdana" size="5"><b>Examples for 
+      subsystems within microcontroller</b></font></p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><a href="6_chapter.htm#Introduction">Introduction</a></font></p>
+<p><font face="Verdana" size="2"><a href="6_chapter.htm#6.1 Writing to and reading from EEPROM">6.1 
+      Writing to and reading from EEPROM</a><br/><a href="6_chapter.htm#6.2 Processing interrupt caused by changes on pins RB4-RB7">6.2 
+      Processing interrupt caused by changes on pins RB4-RB7</a><br/><a href="6_chapter.htm#6.3 Processing interrupt caused by change on pin RB0">6.3 
+      Processing interrupt caused by change on pin RB0</a><br/><a href="6_chapter.htm#6.4 Processing interrupt caused by overflow on timer TMR0">6.4 
+      Processing interrupt caused by overflow on timer TMR0</a><br/><a href="6_chapter.htm#6.5 Processing interrupt caused by overflow on TMR0 connected to external input (TOCKI)">6.5 
+      Processing interrupt caused by overflow on TMR0 connected to external 
+      input (TOCKI)</a></font></p>
+<p> </p>
+<p align="left"><b><font color="#000080" face="Verdana" size="4"><a name="Introduction">Introduction</a></font></b></p>
+<p align="left"><font face="Verdana" size="2">Every microcontroller comprises a 
+      number of subsystems allowing for flexibility and wide range of 
+      applications. These include internal EEPROM memory, AD converters, serial 
+      or other form of communication, timers, interrupts, etc. Two most commonly 
+      utilized elements are interrupts and timers. One of these or several in 
+      combination can create a basis for useful and practical 
+      programs.</font></p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="6.1 Writing to and reading from EEPROM">6.1 Writing to and reading 
+      from EEPROM</a></font></b></p>
+<p align="left"><font face="Verdana" size="2">Program "eeprom.asm" uses EEPROM 
+      memory for storing certain microcontroller parameters. Transfer of data 
+      between RAM and EEPROM has two steps - calling macros <i>eewrite</i> and 
+      <i>eeread</i>. Macro <i>eewrite</i> writes certain variable to a given 
+      address, while <i>eeread</i> reads the given address of EEPROM and stores 
+      the value to a variable.</font></p>
+<p align="left"><font face="Verdana" size="2">Macro <i>eewrite</i> writes the 
+      address to EEADR register and the variable to EEDATA register. It then 
+      calls the subprogram which executes the standard procedure for 
+      initialization of writing data (setting WREN bit in EECON1 register and 
+      writing control bytes 0x55 and 0xAA to EECON2).</font></p>
+<p align="center"><img border="0" height="514" src="6_chapter_files/eeprom_inc.gif" width="572"/></p>
+<p align="left"><font face="Verdana" size="2">For data to be actually stored in 
+      EEPROM, 10ms delay is necessary. This is achieved by using macro 
+      <i>pausems</i>. In case that this pause is unacceptable for any reason, 
+      problem can be solved by using an interrupt for signaling that data is 
+      written to EEPROM.</font></p>
+<p align="left"> </p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber40" style="BORDER-COLLAPSE: collapse" width="566">
+<tbody>
+<tr>
+<td width="85"><font face="Verdana" size="2">eewrite</font></td>
+<td width="477"><font face="Verdana" size="2"><b>macro</b> addr, 
+          var</font></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2"> </font></td>
+<td width="477"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="85"><b><font face="Verdana" size="2">addr</font></b></td>
+<td width="477"><font face="Verdana" size="2">Destination address. With 
+            PIC16F84, there are 68 bytes </font></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2"> </font></td>
+<td width="477"><font face="Verdana" size="2">of EEPROM for a total 
+            address range of 0x00 - 0x44.</font></td></tr>
+<tr>
+<td width="85"><b><font face="Verdana" size="2">var</font></b></td>
+<td width="477"><font face="Verdana" size="2">Name of the variable to be 
+            stored to EPROM</font></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2"> </font></td>
+<td width="477"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">eeread</font></td>
+<td width="477"><font face="Verdana" size="2"><b>macro</b> addr, 
+          var</font></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2"> </font></td>
+<td width="477"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="85"><b><font face="Verdana" size="2">addr</font></b></td>
+<td width="477"><font face="Verdana" size="2">Destination address. With 
+            PIC16F84, there are 68 bytes</font></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2"> </font></td>
+<td width="477"><font face="Verdana" size="2">of EEPROM for a total 
+            address range of 0x00 - 0x44.</font></td></tr>
+<tr>
+<td width="85"><b><font face="Verdana" size="2">var</font></b></td>
+<td width="477"><font face="Verdana" size="2">Name of the variable into 
+            which data read from EPROM will be 
+      stored.</font></td></tr></tbody></table></center></div>
+<p align="left"> </p>
+<p align="left"><font face="Verdana" size="2">Example: Variable <i>volume</i>, 
+      which is set via buttons RA0 and RA1, will be stored to the address 0 of 
+      EEPROM. After reboot, when the program is started, it first loads the last 
+      known value of variable <i>volume</i> from EEPROM.</font></p>
+<p align="center"><img border="0" height="948" src="6_chapter_files/eeprom_asm.gif" width="574"/></p>
+<p align="left"> </p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="6.2 Processing interrupt caused by changes on pins RB4-RB7">6.2 
+      Processing interrupt caused by changes on pins RB4-RB7</a></font></b></p>
+<p align="left"><font face="Verdana" size="2">Program "intportb.asm" illustrates 
+      how interrupt can be employed for indicating changes on pins RB4-RB7. Upon 
+      pushing any of the buttons, program enters the interrupt routine and 
+      determines which pin caused an interrupt. This program could be utilized 
+      in systems with battery power supply, where power consumption plays an 
+      important role. It is useful to set microcontroller to low consumption 
+      mode with a <i>sleep</i> instruction. Microcontroller is practically on 
+      stand-by, saving energy until the occurrence of interrupt.</font></p>
+<p align="center"><img border="0" height="408" src="6_chapter_files/int_62.gif" width="544"/></p>
+<p align="center"><b><font face="Verdana" size="2">Example of processing 
+      interrupt caused by changes on pins RB4-RB7</font></b></p>
+<p align="center"><img border="0" height="904" src="6_chapter_files/intportb_asm.gif" width="564"/></p>
+<p align="center"> </p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="6.3 Processing interrupt caused by change on pin RB0">6.3 Processing 
+      interrupt caused by change on pin RB0</a></font></b></p>
+<p align="left"><font face="Verdana" size="2">Example "intrb0.asm" demonstrates 
+      use of interrupt RB0/INT. Upon falling edge of the impulse coming to 
+      RB0/INT pin, program jumps to subprogram for processing interrupt. This 
+      routine then performs a certain operation, in our case it blinks the LED 
+      diode on PORTB, 7.</font></p>
+<p align="center"><img border="0" height="233" src="6_chapter_files/int_63.gif" width="416"/></p>
+<p align="center"><b><font face="Verdana" size="2">Example of processing 
+      interrupt caused by changes on pin RB0</font></b></p>
+<p align="center"><img border="0" height="703" src="6_chapter_files/intrb0_asm.gif" width="563"/></p>
+<p align="left"> </p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="6.4 Processing interrupt caused by overflow on timer TMR0">6.4 
+      Processing interrupt caused by overflow on timer TMR0</a></font></b></p>
+<p align="left"><font face="Verdana" size="2">Program "inttmr0.asm" illustrates 
+      how interrupt TMR0 can be employed for generating specific periods of 
+      time. Diodes on port B are switched on and off alternately every second. 
+      Interrupt is generated every 5.088ms; in interrupt routine variable 
+      <i>cnt</i> is incremented to the cap of 196, thus generating approx. 1 
+      second pause (5.088ms*196 is actually 0.99248s). Pay attention to 
+      initialization of  OPTION register which enables this mode of work 
+      for timer TMR0.</font></p>
+<p align="center"><img border="0" height="352" src="6_chapter_files/int_64.gif" width="346"/></p>
+<p align="center"><b><font face="Verdana" size="2">Example of processing 
+      interrupt caused by overflow on timer TMR0</font></b></p>
+<p align="center"><img border="0" height="933" src="6_chapter_files/inttmr0_asm.gif" width="575"/></p>
+<p align="center"><img border="0" height="370" src="6_chapter_files/inttmr0_graph.gif" width="461"/></p>
+<p align="center"> </p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="6.5 Processing interrupt caused by overflow on TMR0 connected to external input (TOCKI)">6.5 
+      Processing interrupt caused by overflow on TMR0 connected to external 
+      input (TOCKI)</a></font></b></p>
+<p align="left"><font face="Verdana" size="2">Counter TMR0 increments upon 
+      signal change on pin RA4/TOCKI. Prescaler is set to 4, meaning that TMR0 
+      will be incremented on every fourth impulse. Pay attention to 
+      initialization of  OPTION register which enables this mode of work 
+      for timer TMR0 (this mode is common for devices such as 
+      counters).</font></p>
+<p align="center"><img border="0" height="359" src="6_chapter_files/int_65.gif" width="349"/></p>
+<p align="center"><b><font face="Verdana" size="2">Example of processing 
+      interrupt caused by overflow on timer TMR0 connected to 
+      TOCKI</font></b></p>
+<p align="center"><img border="0" height="977" src="6_chapter_files/inttmr0_a_asm.gif" width="575"/></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="6_chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="5_chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="6_chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="6_chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_01chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="6_chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

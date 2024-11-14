@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_07chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">7.7 Shift 
+      registers</font></b></p>
+<p align="left"><font face="Verdana" size="2">There are two types of shift 
+      registers: <b>input and output</b>. <b>Input shift registers</b> receive 
+      data in parallel, through 8 lines and then send it serially through two 
+      lines to a microcontroller. <b>Output shift registers</b> work in the 
+      opposite direction; they receive serial data and on a "latch" line signal, 
+      they turn it into parallel data. Shift registers are generally used to 
+      expand the number of input-output lines of a microcontroller. They are not 
+      so much in use any more though, because most modern microcontrollers have 
+      a large number of pins. However, their use with microcontrollers such as 
+      PIC16F84 is very important.</font></p>
+<p align="center"><b><font color="#000080" face="Verdana">7.7.1 Input shift 
+      register 74HC597</font></b></p>
+<p align="left"><font face="Verdana" size="2">Input shift registers transform 
+      parallel data into serial data and transfers it to a microcontroller. 
+      Their working is quite simple. There are four lines for the transfer of 
+      data: <b>Clock, Latch, Load and Data</b>. Data is first read from the 
+      input pins by an internal register through a 'latch' signal. Then, with a 
+      'load' signal, data is transferred from the input latch register to the 
+      shift register, and from there it is serially transferred to a 
+      microcontroller via 'data' and 'clock' lines.</font></p>
+<p align="center"><img border="0" height="261" src="7_07chapter_files/21.gif" width="328"/></p>
+<p align="left"><font face="Verdana" size="2">An outline of the connection of 
+      the shift register 74HC597 to a micro, is shown below.</font></p>
+<p align="center"><img border="0" height="384" src="7_07chapter_files/22.gif" width="561"/></p>
+<p align="left"><font face="Verdana" size="2">In order to simplify the main 
+      program, a macro can be used for the input shift register. Macro HC597 has 
+      two parameters:<br/><br/>HC597 macro Var, Var1<br/><br/><b>Var</b> variable 
+      where data from shift register input pins is transferred<br/><b>Var1</b> 
+      loop counter<br/><br/><b>Example:</b> HC597 data, counter<br/><br/>Data from 
+      the input pins of the shift register is stored in data 
+      variable. Timer/counter variable is used as a loop 
+      counter. <br/><br/>Macro listing:</font> </p>
+<p align="center"><img border="0" height="499" src="7_07chapter_files/hc597_inc.gif" width="560"/></p>
+<p align="left"><font face="Verdana" size="2">Example of how to use the HC597 
+      macro is given in the following program. Program receives data from a 
+      parallel input of the shift register and moves it serially into the RX 
+      variable of the microcontroller. LEDs connected to port B will indicate 
+      the result of the data input.</font></p>
+<p align="center"><img border="0" height="751" src="7_07chapter_files/hc597_asm.gif" width="561"/></p>
+<p align="left"> </p>
+<p align="center"><b><font color="#000080" face="Verdana">7.7.2 Output shift 
+      register</font></b></p>
+<p align="left"><font face="Verdana" size="2">Output shift registers transform 
+      serial data into parallel data. On every rising edge of the clock, the 
+      shift register reads the value from data line, stores it in temporary 
+      register, and then repeats this cycle 8 times. On a signal from 'latch' 
+      line, data is copied from the shift register to input register, thus data 
+      is transformed from serial into parallel data.</font></p>
+<p align="center"><img border="0" height="224" src="7_07chapter_files/25.gif" width="360"/></p>
+<p align="left"><font face="Verdana" size="2">An outline of the 74HC595 shift 
+      register connections is shown on the diagram below:</font></p>
+<p align="center"><img border="0" height="265" src="7_07chapter_files/26.gif" width="579"/></p>
+<p align="left"><font face="Verdana" size="2">Macro used in this example can be 
+      found in hc595.inc file, and is called HC595.<br/><br/>Macro HC595 has two 
+      parameters:<br/><br/>HC595 macro Var, Var1<br/><br/><b>Var</b> variable whose 
+      contents is transferred to outputs of shift register.<br/><b>Var1</b> loop 
+      counter<br/><br/><b>Example:</b> HC595 Data, counter<br/><br/>The data we want 
+      to transfer is stored in data variable, and counter variable is used as a 
+      loop counter.</font></p>
+<p align="center"><img border="0" height="411" src="7_07chapter_files/hc595_inc.gif" width="559"/></p>
+<p align="left"><font face="Verdana" size="2">An example of how to use the HC595 
+      macro is given in the following program. Data from variable TX is serially 
+      transferred to shift register. LEDs connected to the parallel output of 
+      the shift register will indicate the state of the lines. In this example 
+      value 0xCB (1100 1011) is sent so that the seventh, sixth, third, first, 
+      and zero LEDs are illuminated.</font></p>
+<p align="center"><img border="0" height="687" src="7_07chapter_files/hc595_asm.gif" width="561"/></p>
+<p align="left"> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber59" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_07chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_06chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_07chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_07chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_08chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_07chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

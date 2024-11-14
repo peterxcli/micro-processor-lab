@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 3 - Assembly Language Programming</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="3_chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#ff0000" face="Arial Black" size="6"><b>CHAPTER 
+      </b></font><b><font color="#ff0000" face="Arial Black" size="6">3</font></b></p>
+<p align="center"><b><font color="#000000" face="Verdana" size="5">Assembly 
+      Language Programming</font></b> </p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><a href="3_chapter.htm#Introduction">Introduction</a></font></p>
+<p><font face="Verdana" size="2"><a href="3_chapter.htm#3.1 Representing numbers in assembler">3.1 
+      Representing numbers in assembler</a><br/><a href="3_chapter.htm#3.2 Assembly language elements">3.2 
+      Assembly language elements</a><br/><a href="3_chapter.htm#3.3 Writing a sample program">3.3 
+      Writing a sample program</a><br/><a href="3_chapter.htm#3.4 Control directives">3.4 
+      Control directives</a></font></p>
+<ul>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.1 #DEFINE Exchanging text for another one">define</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.2 INCLUDE Include an additional file into a program">include</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.3 CONSTANT Gives a constant numeric value to the textual designation">constant</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.4 VARIABLE Gives a variable numeric value to textual designation">variable</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.5 SET Defining assembler variable">set</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.6 EQU Defining assembler constant">equ</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.7 ORG Defines an address from which the program is stored in microcontroller memory">org</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.8 END End of program">end</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.9 IF Conditional program branching">if</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.10 ELSE 'IF' alternative to program block with conditional terms">else</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.11 ENDIF End of conditional program section">endif</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.12 WHILE Execution of program section as long as condition is met">while</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.13 ENDW End of conditional part of the program">endw</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.14 IFDEF Execution of a part of the program if symbol is defined">ifdef</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.15 IFNDEF Execution of a part of the program if symbol is defined">ifndef</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.16 CBLOCK Defining a block for the named constants">cblock</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.17 ENDC End of constant block definition">endc</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.18 DB Defining one byte data">db</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.19 DE Defining the EEPROM memory byte">de</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.20 DT Defining the data table">dt</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.21_ CONFIG Setting the configurational bits">CONFIG</a></font>
+<li><font face="Verdana" size="2"><a href="3_chapter.htm#3.22 PROCESSOR Defining microcontroller model">Processor</a></font>
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>
+<p><font face="Verdana" size="2"><a href="3_chapter.htm#3.5 Files created as a result of program translation">3.5 
+      Files created as a result of program translation</a><br/> </font></p>
+<p align="left"><font face="Verdana" size="2"><br/></font><font color="#000080" face="Verdana" size="4"><b><a name="Introduction">Introduction</a></b></font>
+</p>
+<p><font face="Verdana" size="2">The ability to communicate is of great 
+      importance in any field. However, it is only possible if both 
+      communication partners know the same language, i.e follow the same rules 
+      during communication. Using these principles as a starting point, we can 
+      also define communication that occurs between microcontrollers and man . 
+      Language that microcontroller and man use to communicate is called 
+      "assembly language". The title itself has no deeper meaning, and is 
+      analogue to names of other languages , ex. English or French. More 
+      precisely, "assembly language" is just a passing solution. Programs 
+      written in assembly language must be translated into a "language of zeros 
+      and ones" in order for a microcontroller to understand it. "Assembly 
+      language" and "assembler" are two different notions. The first represents 
+      a set of rules used in writing a program for a microcontroller, and the 
+      other is a program on the personal computer which translates assembly 
+      language into a language of zeros and ones. A program that is translated 
+      into  "zeros" and "ones" is also called "machine language".</font>
+</p>
+<p align="center"><img border="0" height="217" src="3_chapter_files/01.gif" width="432"/> </p>
+<p align="center"><font face="Verdana" size="2"><b>The process of communication 
+      between a man and a microcontroller</b></font> </p>
+<p><font face="Verdana" size="2">Physically, "<b>Program</b>" represents a 
+      file on the computer disc (or in the memory if it is read in a 
+      microcontroller), and is written according to the rules of assembler or 
+      some other language for microcontroller programming. Man can understand 
+      assembler language as it consists of alphabet signs and words. When 
+      writing a program, certain rules must be followed in order to reach a 
+      desired effect. A <b>Translator</b> interprets each instruction written in 
+      assembly language as a series of zeros and ones which have a meaning for 
+      the internal logic of the microcontroller.<br/>Lets take for instance the 
+      instruction "RETURN" that a microcontroller uses to return from a 
+      sub-program.<br/>When the assembler translates it, we get a 14-bit series 
+      of zeros and ones which the microcontroller knows how to 
+      interpret. <br/><br/><b>Example:</b> RETURN 00 0000 0000 
+      1000<br/><br/>Similar to the above instance, each assembler instruction is 
+      interpreted as corresponding to a series of zeros and ones. <br/>The 
+      place where this translation of assembly language is found, is called an 
+      "execution" file. We will often meet the name "HEX" file. This name comes 
+      from a hexadecimal representation of that file, as well as from the suffix 
+      "hex" in the title, ex. "test.hex". Once it is generated, the execution 
+      file is read in a microcontroller through a programmer. <br/><br/>An 
+      <b>Assembly Language</b> program is written in a program for text 
+      processing (editor) and is capable of producing an ASCII file on the 
+      computer disc or in specialized surroundings such as MPLAB,which will be 
+      explained in the next chapter.</font></p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="3.1 Representing numbers in assembler">3.1 Representing numbers in 
+      assembler</a></font></b></p>
+<p><font face="Verdana" size="2">In assembly language MPLAB, numbers can be 
+      represented in decimal, hexadecimal or binary form. We will illustrate 
+      this with a number 240:</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber40" style="BORDER-COLLAPSE: collapse" width="250">
+<tbody>
+<tr>
+<td width="50%"><font face="Verdana" size="2">.240</font></td>
+<td width="50%"><font face="Verdana" size="2">decimal</font></td></tr>
+<tr>
+<td width="50%"><font face="Verdana" size="2">0xF0</font></td>
+<td width="50%"><font face="Verdana" size="2">hexadecimal</font></td></tr>
+<tr>
+<td width="50%"><font face="Verdana" size="2">b'11110000'</font></td>
+<td width="50%"><font face="Verdana" size="2">binary</font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">Decimal numbers start with a dot, hexadecimal 
+      with 0x, and binary start with b with the number itself under quotes 
+      '.<br/></font></p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="3.2 Assembly language elements">3.2 Assembly language 
+      elements</a></font></b><font face="Verdana" size="2"><br/> </font></p>
+<p><font face="Verdana" size="2">Basic elements of assembly language 
+      are:</font></p>
+<ul>
+<li><font face="Verdana" size="2">Labels</font>
+<li><font face="Verdana" size="2">Instructions</font>
+<li><font face="Verdana" size="2">Operands</font>
+<li><font face="Verdana" size="2">Directives</font>
+<li><font face="Verdana" size="2">Comments</font> </li></li></li></li></li></ul>
+<p><font face="Verdana" size="4">Labels</font><font face="Verdana" size="2"><br/><br/>A <b>Label</b> is a textual designation (generally an 
+      easy-to-read word) for a line in a program, or section of a program where 
+      the micro can jump to - or even the beginning of set of lines of a 
+      program. It can also be used to execute program branching (such as Goto 
+      .......) and the program can even have a condition that must be met for 
+      the Goto instruction to be executed. It is important for a label to start 
+      with a letter of the alphabet or with an underline "_". The length of the 
+      label can be up to 32 characters. It is also important that a label starts 
+      in the first clumn.</font></p>
+<p align="center"><img border="0" height="217" src="3_chapter_files/02.gif" width="484"/> </p>
+<p><font face="Verdana" size="4">Instructions</font><font face="Verdana" size="2"><br/><br/>Instructions are already defined by the use of a specific 
+      microcontroller, so it only remains for us to follow the instructions for 
+      their use in assembly language. The way we write an instruction is also 
+      called instruction "syntax". In the following example, we can recognize a 
+      mistake in writing because instructions movlp and gotto do not exist for 
+      the PIC16F84 microcontroller.</font> </p>
+<p align="center"><img border="0" height="140" src="3_chapter_files/03.gif" width="215"/> </p>
+<p><font face="Verdana" size="4">Operands</font><font face="Verdana" size="2"><br/><br/>Operands are the instruction elements for the instruction 
+      is being executed. They are usually <b>registers</b> or <b>variables</b> 
+      or <b>constants</b>. </font> </p>
+<p align="center"><img border="0" height="226" src="3_chapter_files/3_4c.gif" width="415"/></p>
+<p><font face="Verdana" size="4">Comments</font><font face="Verdana" size="2"><br/><br/><b>Comment</b> is a series of words that a programmer 
+      writes to make the program more clear and legible. It is placed after an 
+      instruction, and must start with a semicolon ";".<br/><br/></font><font face="Verdana" size="4">Directives</font><font face="Verdana" size="2"> <br/><br/>A <b>directive</b> is similar to an instruction, but 
+      unlike an instruction it is independent on the microcontroller model, and 
+      represents a characteristic of the assembly language itself. Directives 
+      are usually given purposeful meanings via variables or registers. For 
+      example, LEVEL can be a designation for a variable in RAM memory at 
+      address 0Dh. In this way, the variable at that address can be accessed via 
+      LEVEL designation. This is far easier for a programmer to understand than 
+      for him to try to remember address 0Dh contains information about 
+      LEVEL.</font> </p>
+<p align="center"><img border="0" height="108" src="3_chapter_files/05.gif" width="468"/> </p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="3.3 Writing a sample program">3.3 W</a></font></b><font color="#000080" face="Verdana" size="4"><b><a name="3.3 Writing a sample program">riting a 
+      sample program</a></b></font> </p>
+<p><font face="Verdana" size="2">The following example illustrates a simple 
+      program written in assembly language respecting the basic 
+      rules. <br/><br/>When writing a program, beside mandatory rules, there 
+      are also some rules that are not written down but need to be followed. One 
+      of them is to write the name of the program at the beginning, what the 
+      program does, its version, date when it was written, type of 
+      microcontroller it was written for, and the programmer's name.</font> </p>
+<p><img border="0" height="476" src="3_chapter_files/06.gif" width="595"/> </p>
+<p><font face="Verdana" size="2">Since this data isn't important for the 
+      assembly translator, it is written as <b>comments</b>. It should be noted 
+      that a comment always begins with a semicolon and it can be placed in a 
+      new row or it can follow an instruction. <br/>After the opening 
+      comment has been written, the <b>directive </b>must be included. This is 
+      shown in the example above.<br/><br/>In order to function properly, we must 
+      define several microcontroller parameters such as:  - type of 
+      oscillator,<br/>- whether watchdog timer is turned on, and<br/>- whether 
+      internal reset circuit is enabled.<br/>All this is defined by the following 
+      directive:<br/><br/><font face="Courier New" size="2">_CONFIG 
+      _CP_OFF&amp;_WDT_OFF&amp;PWRTE_ON&amp;XT_OSC</font><br/><br/>When all the 
+      needed elements have been defined, we can start writing a 
+      program.<br/>First, it is necessary to determine an address from which the 
+      microcontroller starts, following a power supply start-up. This is (org 
+      0x00).<br/>The address from which the program starts if an interrupt occurs 
+      is (org 0x04).<br/>Since this is a simple program, it will be enough to 
+      direct the microcontroller to the beginning of a program with a "<b>goto 
+      Main</b>" instruction. <br/><br/>The instructions found in the 
+      <b>Main </b> select memory bank1 (BANK1) in order to access TRISB 
+      register, so that port B can be declared as an output (movlw 0x00, movwf 
+      TRISB). <br/><br/>The next step is to select memory bank 0 and place 
+      status of logic one on port B (movlw 0xFF, movwf PORTB), and thus the main 
+      program is finished.<br/>We need to make another loop where the micro will 
+      be held so it doesn't "wander" if an error occurs. For that purpose, one 
+      infinite loop is made where the micro is retained while power is 
+      connected. The necessary "end" at the end of each program informs the 
+      assembly translator that no more instructions are in the program.</font>
+</p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="3.4 Control directives">3.4 Control directives</a></b></font> </p>
+<p><font face="Verdana" size="4"><a name="3.1 #DEFINE Exchanging text for another one">3.1 
+      #DEFINE         Exchanges one part 
+      of text for another</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>#define&lt;text&gt; [&lt;another 
+      text&gt;]<br/><br/><b>Description:</b><br/>Each time &lt;text&gt; appears in 
+      the program , it will be exchanged for &lt;another text 
+      &gt;.<br/><br/><b>Example:</b><br/><br/><font face="Courier New" size="2">#define turned</font></font><font face="Courier New" size="2">_<font face="Verdana" size="2">on 1<br/>#define turned</font>_</font><font face="Verdana" size="2"><font face="Courier New" size="2">off 
+      0</font><br/><br/><b>Similar directives:</b> #UNDEFINE, 
+      IFDEF,IFNDEF<br/><br/><br/></font><font face="Verdana" size="4"><a name="3.2 INCLUDE Include an additional file into a program">3.2 
+      INCLUDE         Include an 
+      additional file in a program</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>#include &lt;file_name&gt; <br/>#include 
+      "file_name" <br/><br/><b>Description:</b><br/>An application of this 
+      directive has the effect as though the entire file was copied to a place 
+      where the "include" directive was found. If the file name is in the square 
+      brackets, we are dealing with a system file, and if it is inside quotation 
+      marks, we are dealing with a user file. The directive "include" 
+      contributes to a better layout of the main 
+      program.<br/><br/><b>Example:</b><br/><font face="Courier New" size="2">#include &lt;regs.h&gt;<br/>#include 
+      "subprog.asm"</font><br/><br/><br/></font><font face="Verdana" size="4"><a name="3.3 CONSTANT Gives a constant numeric value to the textual designation">3.3 
+      CONSTANT      Gives a constant numeric value to 
+      the textual designation</a></font><font face="Verdana" size="2"><br/><br/><b>Syntax:</b><br/>Constant 
+      &lt;name&gt;=&lt;value&gt;<br/><br/><b>Description:</b><br/>Each time that 
+      &lt;name&gt; appears in program, it will be replaced with 
+      &lt;value&gt;.<br/><br/><b>Example:</b><br/><font face="Courier New" size="2">Constant MAXIMUM=100<br/>Constant Length=30<br/></font><br/><b>Similar 
+      directives:</b> SET, VARIABLE<br/><br/></font><font face="Verdana" size="4"><a name="3.4 VARIABLE Gives a variable numeric value to textual designation">3.4 
+      VARIABLE        Gives a variable 
+      numeric value to textual designation</a></font><font face="Verdana" size="2"><br/><br/><b>Syntax:</b><br/>Variable&lt;name&gt;=&lt;value&gt;<br/><br/><b>Description:</b><br/>By 
+      using this directive, textual designation changes with particular 
+      value.<br/>It differs from CONSTANT directive in that after applying the 
+      directive, the value of textual designation can be 
+      changed. <br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">variable level=20<br/>variable time=13 </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> SET, 
+      CONSTANT<br/><br/><br/></font><font face="Verdana" size="4"><a name="3.5 SET Defining assembler variable">3.5 
+      SET        Defining assembler 
+      variable</a></font><font face="Verdana" size="2"><br/><br/><b>Syntax:</b><br/>&lt;name_variable&gt;set&lt;value&gt;<br/><br/><b>Description:</b><br/>To 
+      the variable &lt;name_variable&gt; is added expression &lt;value&gt;. SET 
+      directive is similar to EQU, but with SET directive name of the variable 
+      can be redefined following a 
+      definition.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">level set 0<br/>length set 12<br/>level set 45 </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> EQU, 
+      VARIABLE<br/><br/></font><font face="Verdana" size="4"><a name="3.6 EQU Defining assembler constant">3.6 
+      EQU       Defining assembler 
+      constant</a></font><font face="Verdana" size="2"><br/><br/><b>Syntax:</b><br/>&lt;name_constant&gt; equ 
+      &lt;value&gt;<br/><br/><b>Description:</b><br/>To the name of a constant 
+      &lt;name_constant&gt; is added value 
+      &lt;value&gt;<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">five equ 5<br/>six equ 6<br/>seven equ 7 </font><font face="Verdana" size="2"><br/><br/><b>Similar instructions:</b> SET<br/><br/></font><font face="Verdana" size="4"><a name="3.7 ORG Defines an address from which the program is stored in microcontroller memory">3.7 
+      ORG      Defines an address from which the 
+      program is stored in microcontroller memory</a></font><font face="Verdana" size="2"><br/><br/><b>Syntax:</b><br/>&lt;label&gt;org&lt;value&gt;<br/><br/><b>Description:</b><br/>This 
+      is the most frequently used directive. With the help of this directive we 
+      define where some part of a program will be start in the program 
+      memory. <br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">Start org   0×00 
+      <br/>        movlw 0xFF 
+      <br/>        movwf PORTB </font><font face="Verdana" size="2"><br/><br/>The first two instructions following the first 
+      'org' directive are stored from address 00, and the other two from address 
+      10. <br/><br/></font><font face="Verdana" size="4"><a name="3.8 END End of program">3.8 END      End of 
+      program</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>end<br/><br/><b>Description:</b><br/>At the end of 
+      each program it is necessary to place 'end' directive so that assembly 
+      translator would know that there are no more instructions in the 
+      program. <br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">.<br/>.<br/>movlw 0xFF<br/>movwf PORTB<br/>end </font></p>
+<p> </p>
+<p><font face="Verdana" size="4"><a name="3.9 IF Conditional program branching">3.9 
+      IF        Conditional program 
+      branching</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>if&lt;conditional_term&gt;<br/><br/><b>Description:</b><br/>If 
+      condition in &lt;conditional_term&gt; was met, part of the program which 
+      follows IF directive would be executed. And if it wasn't, then the part 
+      following ELSE or ENDIF directive would be 
+      executed. <br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">if level=100<br/>goto FILL<br/>else<br/>goto DISCHARGE<br/>endif 
+      </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> #ELSE, 
+      ENDIF<br/><br/></font><font face="Verdana" size="4"><a name="3.10 ELSE 'IF' alternative to program block with conditional terms">3.10 
+      ELSE          The alternative 
+      to 'IF' program block with conditional terms</a></font><font face="Verdana" size="2"> <br/><br/><b>Syntax:</b><br/>Else<br/><br/><b>Description:</b><br/>Used 
+      with IF directive as an alternative if conditional term is 
+      incorrect.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">If time&lt; 50<br/>goto SPEED UP<br/>else goto SLOW DOWN<br/>endif 
+      </font><font face="Verdana" size="2"><br/><br/><b>Similar instructions:</b> 
+      ENDIF, IF<br/><br/><br/></font><font face="Verdana" size="4"><a name="3.11 ENDIF End of conditional program section">3.11 
+      ENDIF        End of conditional program 
+      section</a></font><font face="Verdana" size="2">
+<br/><br/><br/><b>Syntax:</b><br/>endif<br/><br/><b>Description:</b><br/>Directive 
+      is written at the end of a conditional block to inform the assembly 
+      translator  that it is the end of the conditional 
+      block<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">If 
+      level=100<br/>goto LOADS<br/>else<br/>goto UNLOADS<br/>endif </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> ELSE, 
+      IF<br/><br/></font><font face="Verdana" size="4"><a name="3.12 WHILE Execution of program section as long as condition is met">3.12 
+      WHILE        Execution of program 
+      section as long as condition is met</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>while&lt;condition&gt;<br/>. 
+      <br/>endw<br/><br/><b>Description:</b><br/>Program lines between WHILE and 
+      ENDW would be executed as long as condition was met. If a condition 
+      stopped being valid, program would continue executing instructions 
+      following ENDW line. Number of instructions between WHILE and ENDW can be 
+      100 at the most, and number of executions 
+      256.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">While i&lt;10<br/>i=i+1<br/>endw </font><font face="Verdana" size="2"><br/><br/></font><font face="Verdana" size="4"><a name="3.13 ENDW End of conditional part of the program">3.13 
+      ENDW         End of conditional 
+      part of the program</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>endw<br/><br/><b>Description:</b><br/>Instruction 
+      is written at the end of the conditional WHILE block, so that assembly 
+      translator would know that it is the end of the conditional 
+      block<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">while i&lt;10<br/>i=i+1<br/><br/>endw<br/></font><font face="Verdana" size="2"><br/><b>Similar directives:</b> WHILE<br/><br/></font><font face="Verdana" size="4"><a name="3.14 IFDEF Execution of a part of the program if symbol is defined">3.14 
+      IFDEF         Execution of a part 
+      of the program if symbol was defined</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>ifdef&lt;designation&gt;<br/><br/><b>Description:</b><br/>If 
+      designation &lt;designation&gt; was previously defined (most commonly by 
+      #DEFINE instruction), instructions which follow would be executed until 
+      ELSE or ENDIF directives are not would be 
+      reached.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">#define test<br/>.<br/>ifdef test ;how the test was 
+      defined<br/>......; instructions from these lines would execute<br/>endif 
+      </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> 
+      #DEFINE, ELSE, ENDIF, IFNDEF, #UNDEFINE<br/><br/></font><font face="Verdana" size="4"><a name="3.15 IFNDEF Execution of a part of the program if symbol is defined">3.15 
+      IFNDEF       Execution of a part of the 
+      program if symbol was defined</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>ifndef&lt;designation&gt;<br/><br/><b>Description:</b><br/>If 
+      designation &lt;designation&gt; was not previously defined, or if its 
+      definition was erased with directive #UNDEFINE, instructions which follow 
+      would be executed until ELSE or ENDIF directives would be  
+      reached.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">#define test<br/>..........<br/>#undefine 
+      test<br/>..........<br/>ifndef test ;how the test was undefined<br/>..... .; 
+      instructions from these lines would execute<br/>endif </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> #DEFINE, ELSE, 
+      ENDIF, IFDEF, #UNDEFINE </font></p>
+<p><font face="Verdana" size="4"><a name="3.16 CBLOCK Defining a block for the named constants">3.16 
+      CBLOCK         Defining a block 
+      for the named constants</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>Cblock 
+      [&lt;term&gt;]<br/>          
+      &lt;label&gt;[:&lt;increment&gt;], 
+      &lt;label&gt;[:&lt;increment&gt;]......<br/>endc<br/><br/><b>Description:</b><br/>Directive 
+      is used to give values to named constants. Each following term receives a 
+      value greater by one than its precursor. If &lt;increment&gt; parameter is 
+      also given, then value given in &lt;increment&gt; parameter is added to 
+      the following constant.<br/>Value of &lt;term&gt; parameter is the starting 
+      value. If it is not given, it is considered to be 
+      zero. <br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">Cblock 0x02<br/>First, second, third  ;first=0x02, second=0x03, 
+      third=0x04<br/>endc<br/><br/>cblock 0x02<br/>first : 4, second : 2, 
+      third  ;first=0x06, second=0x08, third=0x09<br/>endc </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> 
+      ENDC<br/><br/><br/></font><font face="Verdana" size="4"><a name="3.17 ENDC End of constant block definition">3.17 
+      ENDC         End of constant block 
+      definition</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>endc<br/><br/><b>Description:</b><br/>Directive was 
+      used at the end of a definition of a block of constants so assembly 
+      translator could know that there are no more 
+      constants.<br/><br/><br/><b>Similar directives:</b> 
+      CBLOCK<br/><br/></font><font face="Verdana" size="4"><a name="3.18 DB Defining one byte data">3.18 
+      DB            
+      Defining one byte data</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>[&lt;label&gt;]db &lt;term&gt; [, 
+      &lt;term&gt;,.....,&lt;term&gt;]<br/><br/><b>Description:</b><br/>Directive 
+      reserves a byte in program memory. When there are more terms which need to 
+      be assigned a byte each, they will be assigned one after 
+      another.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">db 't', 0×0f, 'e', 's', 0×12 </font><font face="Verdana" size="2"><br/><br/><b>Similar instructions:</b> DE, DT<br/><br/></font><font face="Verdana" size="4"><a name="3.19 DE Defining the EEPROM memory byte">3.19 
+      DE            
+      Defining the EEPROM memory byte</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>[&lt;term&gt;] de &lt;term&gt; [, 
+      &lt;term&gt;,....., &lt;term&gt;]<br/><br/><b>Description:</b><br/>Directive 
+      is used for defining EEPROM memory byte. Even though it was first intended 
+      only for EEPROM memory, it could be used for any other location in any 
+      memory. <br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">org H'2100'<br/>de "Version 1.0" , 0 </font><font face="Verdana" size="2"><br/><br/><b>Similar instructions:</b> DB, DT<br/><br/></font><font face="Verdana" size="4"><a name="3.20 DT Defining the data table">3.20 
+      DT           Defining 
+      the data table</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>[&lt;label&gt;] dt &lt;term&gt; [, 
+      &lt;term&gt;,........., 
+      &lt;term&gt;]<br/><br/><b>Description:</b><br/>Directive generates RETLW 
+      series of instructions, one instruction per each 
+      term.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">dt 
+      "Message", 0<br/>dt first, second, third </font><font face="Verdana" size="2"><br/><br/><b>Similar directives:</b> DB, DE </font></p>
+<p><font face="Verdana" size="4"><a name="3.21_ CONFIG Setting the configurational bits">3.21 
+      _CONFIG         Setting the 
+      configurational bits</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>_ _config&lt;term&gt; or_ 
+      _config&lt;address&gt;,&lt;term&gt; <br/><br/><b>Description:</b><br/>Oscillator, 
+      watchdog timer application and internal reset circuit are defined. Before 
+      using this directive, the processor must be defined using PROCESSOR 
+      directive. <br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">_CONFIG 
+      _CP_OFF&amp;_WDT_OFF&amp;_PWRTE_ON&amp;_XT_OSC<br/></font><font face="Verdana" size="2"><br/><b>Similar directives:</b> _IDLOCS, 
+      PROCESSOR<br/><br/></font><font face="Verdana" size="4"><a name="3.22 PROCESSOR Defining microcontroller model">3.22 
+      PROCESSOR          Defining 
+      microcontroller model</a></font><font face="Verdana" size="2">
+<br/><br/><b>Syntax:</b><br/>Processor 
+      &lt;microcontroller_type&gt;<br/><br/><b>Description:</b><br/>Instruction 
+      sets the type of microcontroller where programming is 
+      done.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">processor 16F84 </font></p>
+<p align="center"> </p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="3.5 Files created as a result of program translation">3.5 Files 
+      created as a result of program translation</a></b></font> </p>
+<p><font face="Verdana" size="2">As a result of the process of translating a 
+      program written in assembler language we get files like: </font></p>
+<ul>
+<li><font face="Verdana" size="2">Executing file (Program_Name.HEX) </font>
+<li><font face="Verdana" size="2">Program errors file (Program_Name.ERR) 
+        </font>
+<li><font face="Verdana" size="2">List file (Program_Name.LST) 
+      </font></li></li></li></ul>
+<p><font face="Verdana" size="2">The first file contains translated program 
+      which was read in microcontroller by programming. Its contents can not 
+      give any information to programmer, so it will not be considered any 
+      further. <br/>The second file contains possible errors that were made 
+      in the process of writing, and which were noticed by assembly translator 
+      during translation process. Errors can be discovered in a "list" file as 
+      well. This file is more suitable though when program is big and viewing 
+      the 'list' file takes longer. <br/>The third file is the most useful 
+      to programmer. Much information is contained in it, like information about 
+      positioning instructions and variables in memory, or error 
+      signalization.<br/><br/>Example of 'list' file for the program in this 
+      chapter follows. At the top of each page is stated information about the 
+      file name, date when it was translated, and page number. First column 
+      contains an address in program memory where a instruction from that row is 
+      placed. Second column contains a value of any variable defined by one of 
+      the directives : SET, EQU, VARIABLE, CONSTANT or CBLOCK. Third column is 
+      reserved for the form of a translated instruction which PIC is executing. 
+      The fourth column contains assembler instructions and programmer's 
+      comments. Possible errors will appear between rows following a line in 
+      which the error occurred. </font></p>
+<p align="center"><img border="0" height="1106" src="3_chapter_files/08.gif" width="584"/><font face="Verdana" size="2"> <br/> </font></p>
+<p align="left"><font face="Verdana" size="2">At the end of the "list" file 
+      there is a table of symbols used in a program. Useful element of 'list' 
+      file is a graph of memory utilization. At the very end, there is an error 
+      statistic as well as the amount of remaining program memory. 
+      <br/></font></p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="3_chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_09chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="3_chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="3_chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="4_01chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" id="AutoNumber13" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%"> </td>
+</tr>
+</tbody></table>
+</center></div>
+<script src="3_chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

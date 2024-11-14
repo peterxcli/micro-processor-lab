@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_02chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#000080" face="Verdana" size="4"><b>7.2 LED 
+      diodes</b></font></p>
+<p><font face="Verdana" size="2">LEDs are surely one of the most commonly used 
+      elements in electronics. LED is an abbreviation for 'Light Emitting 
+      Diode'. When choosing a LED, several parameters should be looked at: 
+      diameter, which is usually 3 or 5 mm (millimeters), working current which 
+      is usually about 10mA (It can be as low as 2mA for LEDs with high 
+      efficiency - high light output), and color of course, which can be red or 
+      green though there are also orange, blue, yellow....<br/>LEDs must be 
+      connected around the correct way, in order to emit light and the 
+      current-limiting resistor must be the correct value so that the LED is not 
+      damaged or  burn out (overheated). The positive of the supply is 
+      taken to the anode, and the cathode goes to the negative or ground of the 
+      project (circuit). In order to identify each lead, the cathode is the 
+      shorter lead and the LED "bulb" usually has a cut or "flat" on the cathode 
+      side. Diodes will emit light only if current is flowing from anode to 
+      cathode. Otherwise, its PN junction is reverse biased and current won't 
+      flow. In order to connect a LED correctly, a resistor must be added in 
+      series that to limit the amount of current through the diode, so that it 
+      does not burn out. The value of the resistor is determined by the amount 
+      of current you want to flow through the LED. Maximum current flow trough 
+      LED was defined by manufacturer.</font></p>
+<div align="left">
+<table border="0" bordercolor="#ffffff" cellpadding="3" cellspacing="3" id="AutoNumber40" style="BORDER-COLLAPSE: collapse" width="600">
+<tbody>
+<tr>
+<td valign="top" width="362"><font face="Verdana" size="2">To determine the 
+            value of the dropper-resistor, we need to know the value of the 
+            supply voltage. From this we subtract the characteristic voltage 
+            drop of a LED. This value will range from 1.2v to 1.6v depending on 
+            the color of the LED. The answer is the value of <b>Ur.</b> Using 
+            this value and the current we want to flow through the LED (0.002A 
+            to 0.01A) we can work out the value of the resistor from the formula 
+            <b>R=Ur/I</b>. </font> </td>
+<td valign="top" width="238"><img border="0" height="157" src="7_02chapter_files/06.gif" width="206"/></td></tr></tbody></table></div>
+<p><font face="Verdana" size="2">LEDs are connected to a microcontroller in 
+      two ways. One is to switch them on with logic zero, and other to switch 
+      them on with logic one. The first is called NEGATIVE logic and the other 
+      is called POSITIVE logic. The next diagram shows how to connect POSITIVE 
+      logic. Since POSITIVE logic provides a voltage of +5V to the diode and 
+      dropper resistor, it will emit light each time a pin of port B is provided 
+      with a logic 1. The other way is to connect all anodes to +5V and to 
+      deliver logical zero to cathodes.</font></p>
+<p align="center"><img border="0" height="364" src="7_02chapter_files/07.gif" width="349"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Connecting LED diodes to 
+      PORTB microcontroller</b></font> </p>
+<p><font face="Verdana" size="2">The following example initializes port B as 
+      output and alternately switches on and off LED diodes every 0.5sec. For 
+      pause we used macro <i>pausems</i>, which is defined in the file 
+      pic84.inc.</font></p>
+<p align="center"><img border="0" height="746" src="7_02chapter_files/led_asm.gif" width="513"/></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_02chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_01chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_02chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_02chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_03chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_02chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

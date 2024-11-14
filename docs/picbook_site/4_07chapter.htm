@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 4 - MPLAB</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="4_07chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#000080" face="Verdana" size="4"><b>4.7 MPSIM 
+      Simulator</b></font></p>
+<p><font face="Verdana" size="2">Simulator is part of the MPLAB environment 
+      which provides a better insight into the workings of a microcontroller. 
+      Through a simulator, we can monitor current variable values, register 
+      values and status of port pins. Truthfully, simulator does not have the 
+      same value in all programs. If a program is simple (like the one given 
+      here as an example), simulation is not of great importance because setting 
+      port B pins to logic one is not a difficult task. However, simulator can 
+      be of great help with more complicated programs which include timers, 
+      different conditions where something happens and other similar 
+      requirements (especially with mathematical operations). Simulation, as the 
+      name indicates "simulates the work of a microcontroller". As 
+      microcontroller executes instructions one by one, simulator is conceived - 
+      programmer moves through a program step-by-step (line-by-line) and follows 
+      what goes on with data within the microcontroller. When writing is 
+      completed, it is a good trait for a programmer to first test his program 
+      in a simulator, and then run it in a real situation. Unfortunately, as 
+      with many other good habits, man tends to avoid this one too, more or 
+      less. Reasons for this are partly personality, and partly a lack of good 
+      simulators. </font></p>
+<p align="center"><img border="0" height="128" src="4_07chapter_files/sim_00.gif" width="228"/></p>
+<p align="center"><b><font face="Verdana" size="2">Starting the program 
+      simulation</font></b></p>
+<p align="left"><font face="Verdana" size="2">Simulator is activated by clicking 
+      on DEBUGGER &gt; SELECT TOOL &gt; MPLAB SIM, as shown in the image above. 
+      Four new icons appear to the right. They are related to simulator only, 
+      and have the following meaning:</font></p>
+<div align="center">
+<center>
+<table border="1" bordercolor="#111111" bordercolordark="#c0c0c0" bordercolorlight="#c0c0c0" cellpadding="5" cellspacing="0" id="AutoNumber40" style="BORDER-COLLAPSE: collapse" width="700">
+<tbody>
+<tr>
+<td align="middle" width="48"><font face="Verdana"><img border="0" height="24" src="4_07chapter_files/sim_01.gif" width="25"/></font></td>
+<td width="644"><font face="Verdana" style="FONT-SIZE: 9pt">Start the 
+            program execution at full speed. When started, simulator executes 
+            the program until "paused" by the icon below (just as with cassette 
+            or CD player).</font></td></tr>
+<tr>
+<td align="middle" width="48"><font face="Verdana"><img border="0" height="24" src="4_07chapter_files/sim_02.gif" width="25"/></font></td>
+<td width="644"><font face="Verdana" style="FONT-SIZE: 9pt">Stops 
+            full-speed program execution. After this icon has been clicked, 
+            program execution may be continued step-by-step or at 
+            full-speed.</font></td></tr>
+<tr>
+<td align="middle" width="48"><font face="Verdana"><img border="0" height="24" src="4_07chapter_files/sim_03.gif" width="25"/></font></td>
+<td width="644"><font face="Verdana" style="FONT-SIZE: 9pt">Step Into 
+            icon. Step-by-step program execution. Clicking on this icon executes 
+            the succeeding program line. It enters the macros and 
+            subroutines.</font></td></tr>
+<tr>
+<td align="middle" width="48"><font face="Verdana"><img border="0" height="24" src="4_07chapter_files/sim_04.gif" width="25"/></font></td>
+<td width="644"><font face="Verdana" style="FONT-SIZE: 9pt">Same as the 
+            previous icon, except it does not enter the macros and 
+            subroutines.</font></td></tr>
+<tr>
+<td align="middle" width="48"><font face="Verdana"><img border="0" height="24" src="4_07chapter_files/sim_05.gif" width="25"/></font></td>
+<td width="644"><font face="Verdana" style="FONT-SIZE: 9pt">Resets the 
+            microcontroller. Clicking on this icon positions the program counter 
+            to the beginning of program and simulation may 
+        begin.</font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2"><br/>First thing we need to do, as  in a 
+      real situation, is to reset a microcontroller with DEBUGGER &gt; RESET 
+      command or by clicking on the reset icon. This command results in green 
+      marker line positioned at the beginning of the program, and program 
+      counter PCL is positioned at zero which can also be seen in <i>Special 
+      Functions Registers</i> window.</font></p>
+<p align="center"><img border="0" height="231" src="4_07chapter_files/sim_06.gif" width="170"/> </p>
+<p><font face="Verdana" size="2">One of the main simulator features is the 
+      ability to view register status within a microcontroller. These registers 
+      are also called special function registers, or SFR registers. We can 
+      get a window with SFR registers by clicking on VIEW &gt; SPECIAL FUNCTION 
+      REGISTERS.<br/><br/>Beside SFR registers, it is useful to have an insight 
+      into file registers. Window with file registers can be opened by clicking 
+      on VIEW &gt; FILE REGISTERS.</font></p>
+<p><font face="Verdana" size="2">If there are variables in the program, it is 
+      good to monitor them, too. Each variable is assigned one window (<i>Watch 
+      Windows</i>) by clicking on VIEW &gt; WATCH.</font></p>
+<p align="center"><img border="0" height="507" src="4_07chapter_files/sim_07.gif" width="700"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Simulator with open <i>SFR 
+      registers</i> and <i>File registers</i> windows</b></font></p>
+<p><font face="Verdana" size="2">When all the variables and registers of 
+      interest are placed on the simulator working area, simulation may begin. 
+      Next command can be either <i>Step Into</i> or <i>Step Over</i>, as we may 
+      want to go into subroutines or not. Same commands can be issued via 
+      keyboard, by clicking F7 or F8.</font></p>
+<p><font face="Verdana" size="2">In the SFR registers window, we can observe 
+      how register W receives value 0xFF and delivers it to port B.</font></p>
+<p><font face="Verdana" size="2">By clicking on F7 key again, we don't achieve 
+      anything because program has arrived to an "infinite loop". Infinite loop 
+      is a term we will meet often. It represents a loop from which a 
+      microcontroller cannot get out until interrupt takes place (if it is used 
+      in a program), or until a microcontroller is reset.</font> </p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="4_07chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="4_06chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="4_07chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="4_07chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="5_chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="4_07chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

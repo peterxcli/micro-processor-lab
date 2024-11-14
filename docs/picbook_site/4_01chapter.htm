@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 4 - MPLAB</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="4_01chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#ff0000" face="Arial Black" size="6"><b>CHAPTER 
+      </b></font><b><font color="#ff0000" face="Arial Black" size="6">4</font></b></p>
+<p align="center"><font color="#000000" face="Verdana" size="5"><b>MPLAB</b></font></p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><a href="4_01chapter.htm#Introduction">Introduction</a><br/><br/><a href="4_01chapter.htm#4.1 Installing the program -MPLAB">4.1 
+      Installing the MPLAB program package</a><br/><a href="4_02chapter.htm">4.2 Welcome 
+      to MPLAB</a><br/><a href="4_03chapter.htm">4.3 
+      Designing a project</a><br/><a href="4_04chapter.htm">4.4 
+      Designing new Assembler file</a><br/><a href="4_05chapter.htm">4.5 Writing 
+      a program</a><br/><a href="4_06chapter.htm">4.6 Toolbar 
+      icons</a><br/><a href="4_07chapter.htm">4.7 MPSIM 
+      simulator</a><br/></font></p>
+<p align="left"><font face="Verdana" size="2"><br/></font><font color="#000080" face="Verdana" size="4"><b><a name="Introduction">Introduction</a></b></font></p>
+<p><font face="Verdana" size="2">MPLAB is a Windows program package that makes 
+      writing and developing a program easier. It could best be described as 
+      developing environment for a standard program language that is intended 
+      for programming a PC. Some operations which were done from the instruction 
+      line with a large number of parameters until the discovery of IDE 
+      "Integrated Development Environment" are now made easier by using the 
+      MPLAB. Still, our tastes differ, so even today some programmers prefer the 
+      standard editors and compilers from instruction line. In any case, the 
+      written program is legible, and a well documented help is also 
+      available.</font></p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="4.1 Installing the program -MPLAB">4.1 Installing the program 
+      -MPLAB</a></b></font> </p>
+<p align="center"><img border="0" height="250" src="4_01chapter_files/install_00.jpg" width="250"/> </p>
+<p><font face="Verdana" size="2">MPLAB consists of several parts:<br/><br/>- 
+      Grouping the projects files into one project (Project Manager)<br/>- 
+      Generating and processing a program (Text Editor)<br/>- Simulator of the 
+      written program used for simulating program function on the 
+      microcontroller.<br/><br/>Besides these, there are support systems for 
+      Microchip products such as PICStart Plus and ICD (In Circuit Debugger). As 
+      this book does not cover them , they will be mentioned as options 
+      only. <br/><br/>Minimal hardware requirements for starting the MPLAB 
+      are:<br/><br/>· PC compatible computer 486 or higher<br/>· Microsoft Windows 
+      3.1x or Windows 95 and new versions of the Windows operating system<br/>· 
+      VGA graphic card<br/>· 8MB memory (32MB recommended)<br/>· 20MBs of free 
+      space on hard disk<br/>· Mouse<br/><br/>In order to start the MPLAB we need 
+      to install it first. Installing is a process of copying MPLAB files from 
+      the CD onto a hard disc of your computer. There is an option on each new 
+      window which helps you return to a previous one, so errors should not 
+      present a problem or become a stressful experience. Installation itself 
+      works much the same as installation of most Windows programs. First you 
+      get the Welcome screen, then you can choose the options followed by 
+      installation itself, and, at the end, you get the message which says your 
+      installed program is ready to start.<br/><br/>Steps for installing 
+      MPLAB:<br/><br/>1. Start-up the Microsoft Windows<br/>2. Place the Microchip 
+      CD into CD ROM drive<br/>3. Click on START in the bottom left corner of the 
+      screen and choose the RUN option <br/>4. Click on BROWSE and select CD 
+      ROM drive of your computer.<br/>5. Find directory called MPLAB on your CD 
+      ROM<br/>6. Click on MPLAB v6.31.EXE and then on OK .<br/>7. Click again on 
+      OK in your RUN window<br/><br/><br/>Installing begins after these seven 
+      steps. The following images explain specific installation stages. At the 
+      very beginning, small blue window will appear to notify you that the 
+      installation has begun.</font></p>
+<p align="center"><img border="0" height="110" src="4_01chapter_files/install_01.gif" width="300"/></p>
+<p align="center"><b><font face="Verdana" size="2">Initializing Wise 
+      Installation Wizard</font></b></p>
+<p><font face="Verdana" size="2">The following window will warn you to close 
+      all the running applications, or preferably run this installation program 
+      from a re-boot.</font></p>
+<p align="center">  <img border="0" height="364" src="4_01chapter_files/install_02.gif" width="467"/></p>
+<p align="center"><b><font face="Verdana" size="2">Welcome screen and an advice 
+      to re-boot prior to installation</font></b></p>
+<p><font face="Verdana" size="2">Next is Software License Agreement window. In 
+      order to proceed with the installation, read the conditions, select the 
+      option "I Agree" and click on NEXT.</font></p>
+<p align="center"> <img border="0" height="357" src="4_01chapter_files/install_03.gif" width="467"/></p>
+<p align="center"><b><font face="Verdana" size="2">Software License Agreement 
+      window</font></b></p>
+<p><font face="Verdana" size="2">The following window concerns the 
+      installation folder. Unless there is a specific reason for changing the 
+      default destination, you should leave it be.</font></p>
+<p align="center"><img border="0" height="357" src="4_01chapter_files/install_04.gif" width="467"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Determining the destination 
+      directory for MPLAB</b></font></p>
+<p><font face="Verdana" size="2">Next option is meant for users who owned 
+      previous version(s) of MPLAB. Purpose of the option is to backup all files 
+      that will replaced during the installation of the latest version. Assuming 
+      that this is our first installation of MPLAB, you should leave NO selected 
+      and click on NEXT.</font></p>
+<p align="center"><img border="0" height="357" src="4_01chapter_files/install_04.gif" width="467"/> </p>
+<p align="center"><font face="Verdana" size="2"><b>Option to backup old files 
+      from the previous version</b> </font></p>
+<p><font face="Verdana" size="2">Installation Wizard will ask you if you want 
+      to create shortcuts to access MPLAB from the start menu. Click on NEXT to 
+      proceed with installation.</font></p>
+<p align="center"><img border="0" height="357" src="4_01chapter_files/install_06.gif" width="467"/></p>
+<p align="center"><b><font face="Verdana" size="2">Adding MPLAB to the Start 
+      Menu</font></b><font face="Verdana" size="2"> </font></p>
+<p><font face="Verdana" size="2">It is certainly useful to have MPLAB icon on 
+      desktop if you will be using the program frequently. We suggest clicking 
+      on Yes. Then, click on NEXT to proceed with installation.</font></p>
+<p align="center"><img border="0" height="357" src="4_01chapter_files/install_07.gif" width="467"/> </p>
+<p align="center"><b><font face="Verdana" size="2">Adding MPLAB to the Start 
+      Menu</font></b></p>
+<p><font face="Verdana" size="2">Ready to install! Click on NEXT to start 
+      copying the necessary files to your PC.</font></p>
+<p align="center"><img border="0" height="357" src="4_01chapter_files/install_08.gif" width="467"/> </p>
+<p align="center"><font face="Verdana" size="2"><b>Screen prior to 
+      installation</b></font></p>
+<p><font face="Verdana" size="2">Installation does not take long, and the 
+      installation flow can be monitored on a small window in the right corner 
+      of the screen. </font></p>
+<p align="center"><img border="0" height="137" src="4_01chapter_files/install_09.gif" width="304"/>  </p>
+<p align="center"><font face="Verdana" size="2"><b>Installation flow</b>
+</font></p>
+<p><font face="Verdana" size="2">After installation have been completed, there 
+      are two dialog screens, one for the last minute information regarding 
+      program versions and corrections, and the other is the welcome screen. If 
+      text files (Readme.txt) have opened, they would need to be closed. 
+      </font></p>
+<p align="center"><b><font color="#ff0000" face="Verdana" size="2"><img border="0" height="357" src="4_01chapter_files/install_10.gif" width="467"/></font></b></p>
+<p align="center"><b><font face="Verdana" size="2">View README 
+      files?</font></b><font face="Verdana" size="2"> </font></p>
+<p><font face="Verdana" size="2">In order to install the USB device driver for 
+      MPLAB ICD2 you need to follow the instructions that will be displayed by 
+      executing Ddicd2XP.htm in the explorer window that has been opened during 
+      this installation. The installation is automatic when the MPLAB ICD2 is 
+      connected to the USB port. The instructions are for reference.</font></p>
+<p><font face="Verdana" size="2">By clicking on Finish, installation of MPLAB 
+      is finished.</font></p>
+<p align="center"><img border="0" height="357" src="4_01chapter_files/install_11.gif" width="467"/></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="4_01chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="3_chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="4_01chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="4_01chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="4_02chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="4_01chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

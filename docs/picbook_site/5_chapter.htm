@@ -1,0 +1,801 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 5 - Macros and Subprograms</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="5_chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#ff0000" face="Arial Black" size="6"><b>CHAPTER 
+      5</b></font></p>
+<p align="center"><b><font color="#000000" face="Verdana" size="5">Macros and 
+      subprograms</font></b> </p>
+<p align="center"><font face="Verdana" size="2">  </font></p>
+<p align="left"><font face="Verdana" size="2"><a href="5_chapter.htm#Introduction">Introduction</a></font></p>
+<p align="left"><font face="Verdana" size="2"><a href="5_chapter.htm#Macros">5.1 
+      Macros</a><br/><a href="5_chapter.htm#Subprograms">5.2 
+      Subprograms</a><br/><a href="5_chapter.htm#Macros used in examples">5.3 
+      Macros used in the examples</a></font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><b><a name="Introduction">Introduction</a></b></font></p>
+<p align="left"><font face="Verdana" size="2">Same or similar sequence of 
+      instructions is frequently used during programming. Assembly language is 
+      very demanding. Programmer is required to take care of every single detail 
+      when writing a program, because just one incorrect instruction or label 
+      can bring about wrong results or make the program doesn't work at all. 
+      Solution to this problem is to use already tested program parts 
+      repeatedly. For this kind of programming logic, macros and subprograms are 
+      used.</font></p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="Macros">5.1 Macros</a></b></font></p>
+<p align="left"><font face="Verdana" size="2">Macro is defined with directive 
+      <b>macro </b>containing the name of macro and parameters if needed. In 
+      program, definition of macro has to be placed before the instruction line 
+      where macro is called upon. When during program execution macro is 
+      encountered, it is replaced with an appropriate set of instructions stated 
+      in the macro's definition.</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber40" style="BORDER-COLLAPSE: collapse" width="300">
+<tbody>
+<tr>
+<td width="50%">
+<p align="center"><font face="Verdana" size="2">macro_name</font></p></td>
+<td width="50%"><font face="Verdana"><b><font size="2">macro</font></b><font size="2"> par1, 
+        par2,..</font></font></td></tr>
+<tr>
+<td width="50%"><font face="Verdana" size="2"> </font></td>
+<td width="50%"><font face="Verdana" size="2">set of 
+          instructions</font></td></tr>
+<tr>
+<td width="50%"><font face="Verdana" size="2"> </font></td>
+<td width="50%"><font face="Verdana" size="2">set of 
+          instructions</font></td></tr>
+<tr>
+<td width="50%"><font face="Verdana" size="2"> </font></td>
+<td width="50%"><b><font face="Verdana" size="2">endm</font></b></td></tr></tbody></table></center></div>
+<p align="left"><font face="Verdana" size="2">The simplest use of macro could be 
+      naming a set of repetitive instructions to avoid errors during retyping. 
+      As an example, we could use a macro for selecting a bank of SFR registers 
+      or for a global permission of interrupts. It is much easier to have a 
+      macro BANK1 in a program than having to memorize which status bit defines 
+      the mentioned bank. This is illustrated below: banks 0 and 1 are selected 
+      by setting or clearing bit 5 (RP0<span lang="hr">) of status register, while 
+      interrupts are enabled b</span>y<span lang="hr"> bit 7 of INTCON 
+      register.</span> First two macros are used for selecting a bank, while 
+      other two enable and disable interrupts.</font></p>
+<p align="left"> </p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber41" style="BORDER-COLLAPSE: collapse" width="500">
+<tbody>
+<tr>
+<td width="75"><font face="Verdana" size="2">bank0</font></td>
+<td width="130"><b><font face="Verdana" size="2">macro</font></b></td>
+<td width="295"><font face="Verdana" size="2">; Macro bank0</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><font face="Verdana" size="2">bcf STATUS, RP0</font></td>
+<td width="295"><font face="Verdana" size="2">; Reset RP0 bit = 
+            Bank0</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="295"><font face="Verdana" size="2">; End of macro</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><font face="Verdana" size="2"> </font></td>
+<td width="295"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2">bank1</font></td>
+<td width="130"><b><font face="Verdana" size="2">macro</font></b></td>
+<td width="295"><font face="Verdana" size="2">; Macro bank1</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><font face="Verdana" size="2">bsf STATUS, RP0</font></td>
+<td width="295"><font face="Verdana" size="2">; Set RP0 bit = 
+          Bank1</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="295"><font face="Verdana" size="2">; End of macro</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><font face="Verdana" size="2"> </font></td>
+<td width="295"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2">enableint</font></td>
+<td width="130"><b><font face="Verdana" size="2">macro</font></b></td>
+<td width="295"><font face="Verdana" size="2">; Interrupts are globally 
+            enabled</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><font face="Verdana" size="2">bsf INTCON, 7</font></td>
+<td width="295"><font face="Verdana" size="2">; Set the bit</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="295"><font face="Verdana" size="2">; End of macro</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><font face="Verdana" size="2"> </font></td>
+<td width="295"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2">disableint</font></td>
+<td width="130"><b><font face="Verdana" size="2">macro</font></b></td>
+<td width="295"><font face="Verdana" size="2">; Interrupts are globally 
+            disabled</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><font face="Verdana" size="2">bcf INTCON, 7</font></td>
+<td width="295"><font face="Verdana" size="2">; Reset the bit</font></td></tr>
+<tr>
+<td width="75"><font face="Verdana" size="2"> </font></td>
+<td width="130"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="295"><font face="Verdana" size="2">; End of 
+        macro</font></td></tr></tbody></table></center></div>
+<p align="left"> </p>
+<p align="left"><font face="Verdana" size="2">These macros are to be saved in a 
+      special file with extension INC (abbrev. for INCLUDE file). The following 
+      image shows the file bank.inc which contains two macros, bank0 and 
+      bank1.</font></p>
+<table border="0" bordercolor="#ffffff" cellspacing="1" id="AutoNumber42" style="BORDER-COLLAPSE: collapse" width="613">
+<tbody>
+<tr>
+<td width="76">
+<p align="center"><font face="Verdana" size="2"><img border="0" height="64" src="5_chapter_files/Ideja.gif" width="21"/></font></p></td>
+<td width="530"><i><font face="Verdana" size="2">Macros Bank0 and Bank1 
+            are given for illustrational purposes more than practical, since 
+            directive <b>BANKSEL NameSFR</b> does the same job. Just write 
+            BANKSEL TRISB and the bank containing the TRISB register will be 
+            selected.</font></i></td></tr></tbody></table>
+<p align="center"><img border="0" height="333" src="5_chapter_files/bank_inc.gif" width="447"/></p>
+<p align="left"><font face="Verdana" size="2">As can be seen above, first four 
+      macros do not have parameters. However, parameters can be used if needed. 
+      This will be illustrated with the following macros, used for changing 
+      direction of pins on ports. Pin is designated as input if the appropriate 
+      bit is set (with the position matching the appropriate pin of TRISB 
+      register, bank1) , otherwise it's output.</font></p>
+<p align="left"> </p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber43" style="BORDER-COLLAPSE: collapse" width="482">
+<tbody>
+<tr>
+<td width="54"><font face="Verdana" size="2">input</font></td>
+<td width="155"><font face="Verdana"><b><font size="2">macro</font></b><font size="2"> par1, par2</font></font></td>
+<td width="319"><font face="Verdana" size="2">; Macro input</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><font face="Verdana" size="2">bank1</font></td>
+<td width="319"><font face="Verdana" size="2">; In order to access TRIS 
+            registers</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><font face="Verdana" size="2">bsf par1, par2</font></td>
+<td width="319"><font face="Verdana" size="2">; Set the given bit - 1 = 
+            input</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><font face="Verdana" size="2">bank0</font></td>
+<td width="319"><font face="Verdana" size="2">; Macro for selecting 
+            bank0</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="319"><font face="Verdana" size="2">; End of macro</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><font face="Verdana" size="2"> </font></td>
+<td width="319"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2">output</font></td>
+<td width="155"><font face="Verdana"><b><font size="2">macro</font></b><font size="2"> par1, par2</font></font></td>
+<td width="319"><font face="Verdana" size="2">; Macro output</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><font face="Verdana" size="2">bank1</font></td>
+<td width="319"><font face="Verdana" size="2">; In order to access TRIS 
+            registers</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><font face="Verdana" size="2">bcf par1, par2</font></td>
+<td width="319"><font face="Verdana" size="2">; Reset the given bit - 0 = 
+            output</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><font face="Verdana" size="2">bank0</font></td>
+<td width="319"><font face="Verdana" size="2">; Macro for selecting 
+            bank0</font></td></tr>
+<tr>
+<td width="54"><font face="Verdana" size="2"> </font></td>
+<td width="155"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="319"><font face="Verdana" size="2">; End of 
+        macro</font></td></tr></tbody></table></center></div>
+<p align="left"> </p>
+<p align="left"><font face="Verdana" size="2">Macro with parameters can be 
+      called upon in following way:</font></p>
+<p align="left"><font face="Verdana" size="2"><b>output TRISB, 
+      7</b>      ; pin RB7 is output</font></p>
+<p align="left"><font face="Verdana" size="2">When calling macro first parameter 
+      TRISB takes place of the first parameter, <i>par1</i>, in macro's 
+      definition. Parameter 7 takes place of parameter par2, thus generating the 
+      following code:</font></p>
+<p align="left"> </p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber44" style="BORDER-COLLAPSE: collapse" width="500">
+<tbody>
+<tr>
+<td width="53"><font face="Verdana" size="2">output</font></td>
+<td width="149"><font face="Verdana" size="2">TRISB, 7</font></td>
+<td width="294"><font face="Verdana" size="2">; Macro output</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="149"><font face="Verdana"><b><font size="2">bsf</font></b><font size="2"> STATUS, RP0</font></font></td>
+<td width="294"><font face="Verdana" size="2">; Set RP0 bit = 
+          BANK1</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="149"><font face="Verdana"><b><font size="2">bcf</font></b><font size="2"> TRISB, 7</font></font></td>
+<td width="294"><font face="Verdana" size="2">; Designate RB7 as 
+            output</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="149"><font face="Verdana"><b><font size="2">bcf</font></b><font size="2"> STATUS, RP0</font></font></td>
+<td width="294"><font face="Verdana" size="2">; Reset RP0 bit = 
+            BANK0</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="149"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="294"><font face="Verdana" size="2">; End of 
+        macro</font></td></tr></tbody></table></center></div>
+<p align="left"> </p>
+<p align="left"><font face="Verdana" size="2">Apparently, programs that use 
+      macros are much more legible and flexible. Main drawback of macros is the 
+      amount of memory used - every time macro name is encountered in the 
+      program, the appropriate code from the definition is inserted. This 
+      doesn't necessarily have to be a problem, but be warned if you plan to use 
+      sizeable macros frequently in your program.</font></p>
+<p align="left"><font face="Verdana" size="2">In case that macro uses labels, 
+      they have to be defined as local using the directive <b>local</b>. As an 
+      example, below is the macro for calling certain function if <i>carry</i> 
+      bit in STATUS register is set. If this is not the case, next instruction 
+      in order is executed.</font></p>
+<p align="left"> </p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber45" style="BORDER-COLLAPSE: collapse" width="500">
+<tbody>
+<tr>
+<td width="53"><font face="Verdana" size="2">callc</font></td>
+<td width="148"><font face="Verdana" size="2"><b>macro</b> label</font></td>
+<td width="295"><font face="Verdana" size="2">; Macro callc</font></td></tr>
+<tr>
+<td width="53"><i><font face="Verdana" size="2">local</font></i></td>
+<td width="148"><font face="Verdana" size="2">Exit</font></td>
+<td width="295"><font face="Verdana" size="2">; Defining local label 
+            within macro</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="148"><font face="Verdana" size="2"><b>bnc</b> Exit</font></td>
+<td width="295"><font face="Verdana" size="2">; If C=0 jump to Exit and 
+            exit macro</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="148"><font face="Verdana" size="2"><b>call</b> label</font></td>
+<td width="295"><font face="Verdana" size="2">; If C=1 call subprogram at 
+            the</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="148"><font face="Verdana" size="2"> </font></td>
+<td width="295"><font face="Verdana" size="2">; address label outside 
+            macro</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2">Exit</font></td>
+<td width="148"><font face="Verdana" size="2"> </font></td>
+<td width="295"><font face="Verdana" size="2">; Local label within 
+            macro</font></td></tr>
+<tr>
+<td width="53"><font face="Verdana" size="2"> </font></td>
+<td width="148"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="295"><font face="Verdana" size="2">; End of 
+        macro</font></td></tr></tbody></table></center></div>
+<p align="left"> </p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="Subprograms">5.2 Subprograms</a></font></b></p>
+<p align="left"><font face="Verdana" size="2">Subprogram represents a set of 
+      instructions beginning with a label and ending with the instruction 
+      <i>return</i> or <i>retlw</i>. Its main advantage over macro is that this 
+      set of instructions is placed in only one location of program memory. 
+      These will be executed every time instruction <i>call subprogram_name</i> 
+      is encountered in program. Upon reaching <i>return </i>instruction<i>,</i> 
+      program execution continues at the line succeeding the one subprogram was 
+      called from. Definition of subprogram can be located anywhere in the 
+      program, regardless of the lines in which it is called.</font></p>
+<p align="left"> </p>
+<div align="left">
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber46" style="BORDER-COLLAPSE: collapse" width="500">
+<tbody>
+<tr>
+<td width="44"><font face="Verdana" size="2">Label</font></td>
+<td width="126"><font face="Verdana" size="2"> </font></td>
+<td width="324"><font face="Verdana" size="2">; subprogram is called with 
+            "call Label"</font></td></tr>
+<tr>
+<td width="44"><font face="Verdana" size="2"> </font></td>
+<td width="126"><font face="Verdana" size="2">set of 
+instructions</font></td>
+<td width="324"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="44"><font face="Verdana" size="2"> </font></td>
+<td width="126"><font face="Verdana" size="2">set of 
+instructions</font></td>
+<td width="324"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="44"><font face="Verdana" size="2"> </font></td>
+<td width="126"><font face="Verdana" size="2">set of 
+instructions</font></td>
+<td width="324"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="44"><font face="Verdana" size="2"> </font></td>
+<td width="126"><font face="Verdana"><b><font size="2">return</font></b><font size="2"> or </font><b><font size="2">retlw</font></b></font></td>
+<td width="324"><font face="Verdana" size="2"> </font></td></tr></tbody></table></div>
+<p align="left"> </p>
+<p align="left"><font face="Verdana" size="2">With macros, use of input and 
+      output parameters is very significant. With subprograms, it is not 
+      possible to define parameters within the subprogram as can be done with 
+      macros. Still, subprogram <i>can</i> use predefined variables from the 
+      main program as its parameters.</font></p>
+<p align="left"><font face="Verdana" size="2">Common course of events would be: 
+      defining variables, calling the subprogram that uses them, and then 
+      reading the variables which may have been changed by the 
+      subprogram.</font></p>
+<p align="left"><font face="Verdana" size="2">The following example, 
+      <i>addition.asm</i> adds two variables, PAR1 and PAR2, and stores the 
+      result to variable RES. As 2-byte variables are in question, lower and 
+      higher byte has to be defined for each of these. The program itself is 
+      quite simple; it first adds lower bytes of variables PAR1 and PAR2, then 
+      it adds higher bytes. If two lower bytes total exceeds 255 (maximum for a 
+      byte) carry is added to variable RESH.</font></p>
+<div align="left">
+<table border="0" bordercolor="#ffffff" cellspacing="1" id="AutoNumber47" style="BORDER-COLLAPSE: collapse" width="546">
+<tbody>
+<tr>
+<td width="76">
+<p align="center"><font face="Verdana" size="2"><img border="0" height="64" src="5_chapter_files/Ideja.gif" width="21"/></font></p></td>
+<td width="474"><i><font face="Verdana" size="2">Basic difference between 
+            macro and subprogram is that the macro stands for its definition 
+            code (sparing the programmer from additional typing) and can have 
+            its own parameters while subprogram saves memory, but cannot have 
+            its own parameters.</font></i></td></tr></tbody></table></div>
+<p align="center"><img border="0" height="730" src="5_chapter_files/addition.gif" width="502"/></p>
+<p align="center"><b><font color="#000080" face="Verdana" size="4"><a name="Macros used in examples">5.3 Macros used in the 
+      examples</a></font></b></p>
+<p><font face="Verdana" size="2">Examples given in chapter 6 frequently use 
+      macros <i>ifbit</i>, <i>ifnotbit</i>, <i>digbyte</i>, and <i>pausems</i>, 
+      so these will be explained in detail. The most important thing is to 
+      comprehend the function of the following macros and the way to use them, 
+      without unnecessary bothering with the algorithms itself. All macros are 
+      included in the file <i><a href="pic84.inc">pic84.inc</a></i> 
+      for easier reference.</font></p>
+<p><b><font color="#000080" face="Verdana">5.3.1  Jump to label if bit is 
+      set</font></b></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber48" style="BORDER-COLLAPSE: collapse" width="258">
+<tbody>
+<tr>
+<td width="49"><font face="Verdana" size="2">ifbit</font></td>
+<td width="205"><font face="Verdana"><b><font size="2">macro</font></b><font size="2">  par1, par2, 
+            par3</font></font></td></tr>
+<tr>
+<td width="49"><font face="Verdana" size="2"> </font></td>
+<td width="205"><font face="Verdana"><b><font size="2">btfsc</font></b><font size="2">  par1, 
+          par2</font></font></td></tr>
+<tr>
+<td width="49"><font face="Verdana" size="2"> </font></td>
+<td width="205"><font face="Verdana"><b><font size="2">goto</font></b><font size="2">  par3</font></font></td></tr>
+<tr>
+<td width="49"><font face="Verdana" size="2"> </font></td>
+<td width="205"><b><font face="Verdana" size="2">endm</font></b></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">Macro is called with : ifbit Register, bit, 
+      label</font></p>
+<p><b><font color="#000080" face="Verdana">5.3.2  Jump to label if bit is 
+      cleared</font></b></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber49" style="BORDER-COLLAPSE: collapse" width="258">
+<tbody>
+<tr>
+<td width="63"><font face="Verdana" size="2">ifnotbit</font></td>
+<td width="191"><font face="Verdana"><b><font size="2">macro</font></b><font size="2">  par1, par2, 
+            par3</font></font></td></tr>
+<tr>
+<td width="63"><font face="Verdana" size="2"> </font></td>
+<td width="191"><font face="Verdana"><b><font size="2">btfs</font></b><font size="2"><b>s</b>  par1, 
+            par2</font></font></td></tr>
+<tr>
+<td width="63"><font face="Verdana" size="2"> </font></td>
+<td width="191"><font face="Verdana"><b><font size="2">goto</font></b><font size="2">  par3</font></font></td></tr>
+<tr>
+<td width="63"><font face="Verdana" size="2"> </font></td>
+<td width="191"><b><font face="Verdana" size="2">endm</font></b></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">Macro is called with : ifnotbit Register, 
+      bit, label</font></p>
+<p><font face="Verdana" size="2">Next example shows how to use a macro. Pin 0 
+      on port A is checked and if set, program jumps to label <i>ledoff</i>, 
+      otherwise macro <i>ifnotbit</i> executes, directing the program to label 
+      <i>ledon</i>.</font></p>
+<p align="center"><img border="0" height="479" src="5_chapter_files/macrotest.gif" width="621"/></p>
+<p><b><font color="#000080" face="Verdana">5.3.3  Extracting ones, tens 
+      and hundreds from variable</font></b></p>
+<p><font face="Verdana" size="2">Typical use for this macro is displaying 
+      variables on LCD or 7seg display.</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber50" style="BORDER-COLLAPSE: collapse" width="500">
+<tbody>
+<tr>
+<td width="77"><font face="Verdana" size="2">digbyte</font></td>
+<td width="157"><font face="Verdana"><b><font size="2">macro</font></b><font size="2"> par0</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><i><font size="2">local</font></i><font size="2"> Pon0</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><i><font size="2">local</font></i><font size="2"> Exit1</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><i><font size="2">local</font></i><font size="2"> Exit2</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><i><font size="2">local</font></i><font size="2"> Positive</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><i><font size="2">local</font></i><font size="2"> Negative</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">clrf</font></b><font size="2"> Dig1</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">clrf</font></b><font size="2"> Dig2</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">clrf</font></b><font size="2"> Dig3</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2">Positive</font></td>
+<td width="157"><font face="Verdana" size="2"> </font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">movf</font></b><font size="2"> par0, w</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">movwf</font></b><font size="2"> Digtemp</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">movlw</font></b><font size="2"> .100</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2">Pon0</font></td>
+<td width="157"><font face="Verdana"><b><font size="2">incf</font></b><font size="2"> Dig1</font></font></td>
+<td width="260"><font face="Verdana" size="2">;computing hundreds 
+            digit</font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">subwf</font></b><font size="2"> Digtemp</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">btfsc</font></b><font size="2"> STATUS, C</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">goto</font></b><font size="2"> Pon0</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">decf</font></b><font size="2"> Dig1, w</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">addwf</font></b><font size="2"> Digtemp, f</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2">Exit1</font></td>
+<td width="157"><font face="Verdana"><b><font size="2">movlw</font></b><font size="2"> .10</font></font></td>
+<td width="260"><font face="Verdana" size="2">;computing tens 
+          digit</font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">incf</font></b><font size="2"> Dig2, f</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">subwf</font></b><font size="2"> Digtemp, f</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">btfsc</font></b><font size="2"> STATUS, C</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">goto</font></b><font size="2"> Exit1</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">decf</font></b><font size="2"> Dig2, f</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">addwf</font></b><font size="2"> Digtemp, f</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2">Exit2</font></td>
+<td width="157"><font face="Verdana"><b><font size="2">movf</font></b><font size="2"> Digtemp, w</font></font></td>
+<td width="260"><font face="Verdana" size="2">;computing ones 
+          digit</font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana"><b><font size="2">movwf</font></b><font size="2"> Dig3</font></font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="77"><font face="Verdana" size="2"> </font></td>
+<td width="157"><font face="Verdana" size="2"> </font></td>
+<td width="260"><font face="Verdana" size="2"> </font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">Macro is called with :</font></p>
+<div align="left">
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber51" style="BORDER-COLLAPSE: collapse" width="350">
+<tbody>
+<tr>
+<td width="105"><font face="Verdana"><b><font size="2"> movlw</font></b><font size="2"> .156</font></font></td>
+<td width="241"><font face="Verdana" size="2">; w = 156</font></td></tr>
+<tr>
+<td width="105"><font face="Verdana"><b><font size="2"> movwf</font></b><font size="2"> RES</font></font></td>
+<td width="241"><font face="Verdana" size="2">; RES = w</font></td></tr>
+<tr>
+<td width="105"><font face="Verdana"><b><font size="2"> digbyte</font></b><font size="2"> RES</font></font></td>
+<td width="241"><font face="Verdana" size="2">; now Dec1&lt;-1, 
+            Dec2&lt;-5, Dec3&lt;-6</font></td></tr></tbody></table></div>
+<p><font face="Verdana" size="2">The following example shows how to use macro 
+      <i>digbyte</i> in program. At the beginning, we have to define variables 
+      for storing the result, <i>Dig1</i>, <i>Dig2</i>, <i>Dig3</i>, as well as 
+      auxiliary variable <i>Digtemp</i>.</font></p>
+<p align="center"><img border="0" height="489" src="5_chapter_files/extract.gif" width="500"/></p>
+<p><b><font color="#000080" face="Verdana">5.3.4  Generating pause in 
+      miliseconds (1~65535ms)</font></b></p>
+<p><font face="Verdana" size="2">Purpose of this macro is to provide exact 
+      time delays in program.</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellspacing="0" id="AutoNumber52" style="BORDER-COLLAPSE: collapse" width="562">
+<tbody>
+<tr>
+<td width="74"><font face="Verdana" size="2"> pausems</font></td>
+<td width="137"><font face="Verdana"><b><font size="2">macro</font></b><font size="2"> par1</font></font></td>
+<td width="345"> </td></tr>
+<tr>
+<td width="74"><i><font face="Verdana" size="2"> local</font></i></td>
+<td width="137"><font face="Verdana" size="2">Loop1</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><i><font face="Verdana" size="2"> local</font></i></td>
+<td width="137"><font face="Verdana" size="2">dechi</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><i><font face="Verdana" size="2"> local</font></i></td>
+<td width="137"><font face="Verdana" size="2">Delay1ms</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><i><font face="Verdana" size="2"> local</font></i></td>
+<td width="137"><font face="Verdana" size="2">Loop2</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><i><font face="Verdana" size="2"> local</font></i></td>
+<td width="137"><font face="Verdana" size="2">End</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movlw</b> high 
+          par1</font></td>
+<td width="345"><font face="Verdana" size="2">; Higher byte of parameter 1 
+            goes to HIcnt</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movwf</b> HIcnt</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movlw</b> low 
+          par1</font></td>
+<td width="345"><font face="Verdana" size="2">; Lower byte of parameter 1 
+            goes to LOcnt</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movwf</b> LOcnt</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> Loop1</font></td>
+<td width="137"><font face="Verdana" size="2"> </font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movf</b> LOcnt, 
+          f</font></td>
+<td width="345"><font face="Verdana" size="2">; Decrease HIcnt and LOcnt 
+            necessary</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>btfsc</b> STATUS, 
+          Z</font></td>
+<td width="345"><font face="Verdana" size="2">; number of times and call 
+            subprogram Delay1ms</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>goto</b> dechi</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>call</b> 
+          Delay1ms</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>decf</b> LOcnt, 
+          f</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>goto</b> Loop1</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> dechi</font></td>
+<td width="137"><font face="Verdana" size="2"> </font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movf</b> HIcnt, 
+          f</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>btfsc</b> STATUS, 
+          Z</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>goto</b> End</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>call</b> 
+          Delay1ms</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>decf</b> HIcnt, 
+          f</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>decf</b> LOcnt, 
+          f</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>goto</b> Loop1</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> Delay1ms:</font></td>
+<td width="137"><font face="Verdana" size="2"> </font></td>
+<td width="345"><font face="Verdana" size="2">; Delay1ms produces a one 
+            milisecond delay</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movlw</b> .100</font></td>
+<td width="345"><font face="Verdana" size="2">; 100*10us=1ms</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>movwf</b> 
+          LOOPcnt</font></td>
+<td width="345"><font face="Verdana" size="2">; 
+        LOOPcnt&lt;-100</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> Loop2:</font></td>
+<td width="137"><font face="Verdana" size="2"> </font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">nop</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">nop</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">nop</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">nop</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">nop</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">nop</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">nop</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>decfsz</b> LOOPcnt, 
+            f</font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><font face="Verdana" size="2"><b>goto</b> Loop2</font></td>
+<td width="345"><font face="Verdana" size="2">; Time period necessary to 
+            execute loop Loop2</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">return</font></b></td>
+<td width="345"><font face="Verdana" size="2">; equals 10us</font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> End</font></td>
+<td width="137"><font face="Verdana" size="2"> </font></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr>
+<tr>
+<td width="74"><font face="Verdana" size="2"> </font></td>
+<td width="137"><b><font face="Verdana" size="2">endm</font></b></td>
+<td width="345"><font face="Verdana" size="2"> </font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">This macro is written for an 4MHz oscillator. 
+      For instance, with 8MHz oscillator, pause will be halved. It has very wide 
+      range of applications, from simple code such as blinking diodes to highly 
+      complicated programs that demand  accurate timing. Following example 
+      demonstrates use of macro <i>pausems</i> in a program. At the beginning of 
+      the program we have to define auxiliary variables <i>HIcnt</i>, 
+      <i>LOcnt</i>, and <i>LOPcnt</i>.</font></p>
+<p align="center"><img border="0" height="541" src="5_chapter_files/ledblink.gif" width="500"/></p>
+<p><font face="Verdana" size="2"><br/></font></p></td></tr>
+<tr>
+<td width="100%"> </td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="5_chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="4_07chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="5_chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="5_chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="6_chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="5_chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

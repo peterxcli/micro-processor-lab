@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 2 - Microcontroller PIC16F84</title>
+<body bgcolor="#ffffff">
+<div align="center"><center>
+<table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" id="AutoNumber16" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%"> </td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table background="2_01chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#ff0000" face="Arial Black" size="6">CHAPTER 
+      2</font></b></p>
+<p align="center"><b><font face="Verdana" size="5">Microcontroller 
+      PIC16F84</font></b> </p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><a href="2_01chapter.htm#Introduction">Introduction</a><br/><a href="2_01chapter.htm#CISC, RISC"><br/>CISC, 
+      RISC</a><br/><a href="2_01chapter.htm#Applications">Applications</a><br/><a href="2_01chapter.htm#Clock / instruction cycle">Clock/instruction 
+      cycle</a><br/><a href="2_01chapter.htm#Pipelining">Pipelining</a><br/><a href="2_01chapter.htm#Meaning of pins">Pin 
+      description</a></font> <br/><font face="Verdana" size="2"><br/><a href="2_02chapter.htm">2.1 Clock 
+      generator - oscillator</a><br/><a href="2_03chapter.htm">2.2 
+      Reset</a><br/><a href="2_04chapter.htm">2.3 Central 
+      processing unit</a><br/><a href="2_05chapter.htm">2.4 
+      Ports</a><br/><a href="2_06chapter.htm">2.5 Memory 
+      organization</a><br/><a href="2_07chapter.htm">2.6 
+      Interrupts</a><br/><a href="2_08chapter.htm">2.7 Free 
+      timer TMR0</a><br/><a href="2_09chapter.htm">2.8 EEPROM 
+      Data memory</a></font></p>
+<p> </p>
+<p><b><font color="#000080" face="Verdana" size="4"><a name="Introduction">Introduction</a></font></b></p>
+<p><font face="Verdana" size="2"><b>PIC16F84</b> belongs to a class of 8-bit 
+      microcontrollers of RISC architecture. Its general structure is shown on 
+      the following map representing basic blocks.<br/><br/><b>Program memory</b> 
+      (FLASH)- for storing a written program. <br/>Since memory  made 
+      in FLASH technology can be programmed and cleared more than once, it makes 
+      this microcontroller suitable for device 
+      development. <br/><br/><b>EEPROM</b> - data memory that needs to be 
+      saved when there is no supply.<br/>It is usually used for storing important 
+      data that must not be lost if power supply suddenly stops. For instance, 
+      one such data is an assigned temperature in temperature regulators. If 
+      during a loss of power supply this data was lost, we would have to make 
+      the adjustment once again upon return of supply. Thus our device looses on 
+      self-reliance. <br/><br/><b>RAM </b>- data memory used by a program 
+      during its execution.<br/>In RAM are stored all inter-results or temporary 
+      data during run-time.</font></p>
+<p><font face="Verdana" size="2"><b>PORTA and PORTB</b> are physical 
+      connections between the microcontroller and the outside world. Port A has 
+      five, and port B has eight pins. <br/><br/><b>FREE-RUN TIMER</b> is an 
+      8-bit register inside a microcontroller that works independently of the 
+      program. On every fourth clock of the oscillator it increments its value 
+      until it reaches the maximum (255), and then it starts counting over again 
+      from zero. As we know the exact timing between each two increments of the 
+      timer contents, timer can be used for measuring time which is very useful 
+      with some devices. <br/><br/><b>CENTRAL PROCESSING UNIT</b> has a role 
+      of connective element between other blocks in the microcontroller. It 
+      coordinates the work of other blocks and executes the user 
+      program.</font></p>
+<p align="center"><img border="0" height="285" src="2_01chapter_files/2_1.gif" width="364"/></p>
+<p align="center"> </p>
+<p align="center"><img border="0" height="200" src="2_01chapter_files/2_2.gif" width="456"/></p>
+<p align="center"> </p>
+<p align="left"><b><font color="#000080" face="Verdana" size="4"><a name="CISC, RISC">CISC, RISC</a></font></b></p>
+<p><font face="Verdana" size="2">It has already been said that PIC16F84 has a 
+      RISC architecture. This term is often found in computer literature, and it 
+      needs to be explained here in more detail. Harvard architecture is a newer 
+      concept than von-Neumann's. It rose out of the need to speed up the work 
+      of a microcontroller. In Harvard architecture, data bus and address bus 
+      are separate. Thus a greater flow of data is possible through the central 
+      processing unit, and of course, a greater speed of work. Separating a 
+      program from data memory makes it further possible for instructions not to 
+      have to be 8-bit words. PIC16F84 uses 14 bits for instructions which 
+      allows for all instructions to be one word instructions. It is also 
+      typical for Harvard architecture to have fewer instructions than 
+      von-Neumann's, and to have instructions usually executed in one 
+      cycle. <br/><br/>Microcontrollers with Harvard architecture are also 
+      called "RISC microcontrollers". RISC stands for Reduced Instruction Set 
+      Computer. Microcontrollers with von-Neumann's architecture are called 
+      'CISC microcontrollers'. Title CISC stands for Complex Instruction Set 
+      Computer.</font></p>
+<p><font face="Verdana" size="2">Since PIC16F84 is a RISC microcontroller, 
+      that means that it has a reduced set of instructions, more precisely 35 
+      instructions . (ex. Intel's and Motorola's microcontrollers have over 
+      hundred instructions) All of these instructions are executed in one cycle 
+      except for jump and branch instructions. According to what its maker says, 
+      PIC16F84 usually reaches results of 2:1 in code compression and 4:1 in 
+      speed in relation to other 8-bit microcontrollers in its class.</font></p>
+<p align="left"><b><font color="#000080" face="Verdana" size="4"><a name="Applications">Applications</a></font></b></p>
+<p><font face="Verdana" size="2">PIC16F84 perfectly fits many uses, from 
+      automotive industries and controlling home appliances to industrial 
+      instruments, remote sensors, electrical door locks and safety devices. It 
+      is also ideal for smart cards as well as for battery supplied devices 
+      because of its low consumption.</font></p>
+<p><font face="Verdana" size="2">EEPROM memory makes it easier to apply 
+      microcontrollers to devices where permanent storage of various parameters 
+      is needed (codes for transmitters, motor speed, receiver frequencies, 
+      etc.). Low cost, low consumption, easy handling and flexibility make 
+      PIC16F84 applicable even in areas where microcontrollers had not 
+      previously been considered (example: timer functions, interface 
+      replacement in larger systems, coprocessor applications, etc.).</font></p>
+<p><font face="Verdana" size="2">In System Programmability of this chip (along 
+      with using only two pins in data transfer) makes possible the flexibility 
+      of a product, after assembling and testing have been completed. This 
+      capability can be used to create assembly-line production, to store 
+      calibration data available only after final testing, or it can be used to 
+      improve programs on finished products.</font></p>
+<p align="left"><b><font color="#000080" face="Verdana" size="4"><a name="Clock / instruction cycle">Clock / instruction 
+      cycle</a></font></b></p>
+<p><font face="Verdana" size="2">Clock is microcontroller's main starter, and 
+      is obtained from an external  component called an "oscillator". If we 
+      want to compare a microcontroller with a time clock, our "clock" would 
+      then be a ticking sound we hear from the time clock. In that case, 
+      oscillator could be compared to a spring that is wound so time clock can 
+      run. Also, force used to wind the time clock can be compared to an 
+      electrical supply. <br/><br/>Clock from the oscillator enters a 
+      microcontroller via OSC1 pin where internal circuit of a microcontroller 
+      divides the clock into four even clocks Q1, Q2, Q3, and Q4 which do not 
+      overlap. These four clocks make up one instruction cycle (also called 
+      machine cycle) during which one instruction is executed.</font></p>
+<p><font face="Verdana" size="2">Execution of instruction starts by calling an 
+      instruction that is next in string. Instruction is called from program 
+      memory on every Q1 and is written in instruction register on Q4. Decoding 
+      and execution of instruction are done between the next Q1 and Q4 cycles. 
+      On the following diagram we can see the relationship between instruction 
+      cycle and clock of the oscillator (OSC1) as well as that of internal 
+      clocks Q1-Q4. Program counter (PC) holds information about the address of 
+      the next instruction.</font></p>
+<p align="center"><img border="0" height="225" src="2_01chapter_files/2_3.gif" width="340"/></p>
+<p align="left"><b><font color="#000080" face="Verdana" size="4"><a name="Pipelining">Pipelining</a></font></b></p>
+<p><font face="Verdana" size="2">Instruction cycle consists of cycles Q1, Q2, 
+      Q3 and Q4. Cycles of calling and executing instructions are connected in 
+      such a way that in order to make a call, one instruction cycle is needed, 
+      and one more is needed for decoding and execution. However, due to 
+      pipelining, each instruction is effectively executed in one cycle. If 
+      instruction causes a change on program counter, and PC doesn't point to 
+      the following but to some other address (which can be the case with jumps 
+      or with calling subprograms), two cycles are needed for executing an 
+      instruction. This is so because instruction must be processed again, but 
+      this time from the right address. Cycle of calling begins with Q1 clock, 
+      by writing into instruction register (IR). Decoding and executing begins 
+      with Q2, Q3 and Q4 clocks.</font></p>
+<p align="center"><img border="0" height="218" src="2_01chapter_files/2_4.gif" width="598"/></p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><b>TCY0</b> reads in instruction MOVLW 55h 
+      (it doesn't matter to us what instruction was  executed, because 
+      there is no rectangle pictured on the bottom).<br/><b>TCY1</b> executes 
+      instruction MOVLW 55h and reads in MOVWF PORTB.<br/><b>TCY2</b> executes 
+      MOVWF PORTB and reads in CALL SUB_1.<br/><b>TCY3</b> executes a call of a 
+      subprogram CALL SUB_1, and reads in instruction BSF PORTA, BIT3. As this 
+      instruction is not the one we need, or is not the first instruction of a 
+      subprogram SUB_1 whose execution is next in order, instruction must be 
+      read in again. This is a good example of an instruction needing more than 
+      one cycle. <br/><b>TCY4</b> instruction cycle is totally used up for 
+      reading in the first instruction from a subprogram at address 
+      SUB_1.<br/><b>TCY5</b> executes the first instruction from a subprogram 
+      SUB_1 and reads in the next one.</font></p>
+<p align="left"><b><font color="#000080" face="Verdana" size="4"><a name="Meaning of pins">Pin description</a></font></b></p>
+<p><font face="Verdana" size="2">PIC16F84 has a total of 18 pins. It is most 
+      frequently found in a DIP18 type of case but can also be found in SMD case 
+      which is smaller from a DIP. DIP is an abbreviation for Dual In Package. 
+      SMD is an abbreviation for Surface Mount Devices suggesting that holes for 
+      pins to go through when mounting, aren't necessary in soldering this type 
+      of a component.</font></p>
+<p align="center"><img border="0" height="206" src="2_01chapter_files/2_5.gif" width="116"/></p>
+<p><font face="Verdana" size="2">Pins on PIC16F84 microcontroller have the 
+      following meaning:<br/><br/>Pin no.1 <b>RA2</b> Second pin on port A. Has no 
+      additional function<br/>Pin no.2 <b>RA3</b> Third pin on port A. Has no 
+      additional function.<br/>Pin no.3 <b>RA4</b> Fourth pin on port A. TOCK1 
+      which functions as a timer is also found on this pin <br/>Pin no.4 
+      <b>MCLR</b> Reset input and Vpp programming voltage of a 
+      microcontroller<br/>Pin no.5 <b>Vss</b> Ground of power supply.<br/>Pin no.6 
+      <b>RB0</b> Zero pin on port B. Interrupt input is an additional 
+      function.<br/>Pin no.7 <b>RB1</b> First pin on port B. No additional 
+      function.<br/>Pin no.8 <b>RB2</b> Second pin on port B. No additional 
+      function. <br/>Pin no.9 <b>RB3</b> Third pin on port B. No additional 
+      function. <br/>Pin no.10 <b>RB4</b> Fourth pin on port B. No 
+      additional function.<br/>Pin no.11 <b>RB5</b> Fifth pin on port B. No 
+      additional function.<br/>Pin no.12 <b>RB6</b> Sixth pin on port B. 'Clock' 
+      line in program mode.<br/>Pin no.13 <b>RB7</b> Seventh pin on port B. 
+      'Data' line in program mode.<br/>Pin no.14 <b>Vdd</b> Positive power supply 
+      pole.<br/>Pin no.15 <b>OSC2</b> Pin assigned for connecting with an 
+      oscillator<br/>Pin no.16 <b>OSC1</b> Pin assigned for connecting with an 
+      oscillator<br/>Pin no.17 <b>RA2</b> Second pin on port A. No additional 
+      function<br/>Pin no.18 <b>RA1</b> First pin on port A. No additional 
+      function.</font></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber8" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="2_01chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="1_1_chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="2_01chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="2_01chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_02chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td>
+</tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="2_01chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

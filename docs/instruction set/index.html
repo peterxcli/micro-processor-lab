@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="HTML Tidy for Solaris (vers 6 November 2007), see www.w3.org" name="generator"/>
+<title>Microchip PIC18F Instruction Set</title>
+<style type="text/css">
+	body {
+		font-family: Arial, Helvetica, sans-serif ;
+	}
+	p {
+		font-size: 10pt ;
+		text-align: center ;
+	}
+  </style>
+</head>
+<body>
+<h1>PIC18Fxxx Instruction Set</h1>
+<h2>Byte-oriented File Register Operations</h2>
+<ul>
+<li><a href="pdfs/ADDWF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>ADDWF</strong> —
+     Add WREG to f</a></li>
+<li><a href="pdfs/ADDWFC (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>ADDWFC</strong> —
+     Add WREG and Carry bit to f</a></li>
+<li><a href="pdfs/ANDWF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>ANDWF</strong> —
+     AND WREG with f</a></li>
+<li><a href="pdfs/CLRF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>CLRF</strong> —
+     Clear f</a></li>
+<li><a href="pdfs/COMF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>COMF</strong> —
+     Complement f</a></li>
+<li><a href="pdfs/CPFSEQ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>CPFSEQ</strong> —
+     Compare f with WREG, skip =</a></li>
+<li><a href="pdfs/CPFSGT (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>CPFSGT</strong> —
+     Compare f with WREG, skip if &gt;</a></li>
+<li><a href="pdfs/CPFSLT (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>CPFSLT</strong> —
+     Compare f with WREG, skip if &lt;</a></li>
+<li><a href="pdfs/DECF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>DECF</strong> —
+     Decrement f</a></li>
+<li><a href="pdfs/DECFSZ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>DECFSZ</strong> —
+     Decrement f, Skip if 0</a></li>
+<li><a href="pdfs/DCFSNZ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>DCFSNZ</strong> —
+     Decrement f, Skip if Not 0</a></li>
+<li><a href="pdfs/INCF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>INCF</strong> —
+     Increment f</a></li>
+<li><a href="pdfs/INCFSZ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>INCFSZ</strong> —
+     Increment f, Skip if 0</a></li>
+<li><a href="pdfs/INFSNZ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>INFSNZ</strong> —
+     Increment f, Skip if Not 0</a></li>
+<li><a href="pdfs/IORWF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>IORWF</strong> —
+     Inclusive OR WREG with f</a></li>
+<li><a href="pdfs/MOVF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>MOVF</strong> —
+     Move f</a></li>
+<li><a href="pdfs/MOVFF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>MOVFF</strong> —
+     Move fs (source) to fd (destination)</a></li>
+<li><a href="pdfs/MOVWF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>MOVWF</strong> —
+     Move WREG to f</a></li>
+<li><a href="pdfs/MULWF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>MULWF</strong> —
+     Multiply WREG with f</a></li>
+<li><a href="pdfs/NEGF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>NEGF</strong> —
+     Negate f</a></li>
+<li><a href="pdfs/RLCF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RLCF</strong> —
+     Rotate Left f through Carry</a></li>
+<li><a href="pdfs/RLNCF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RLNCF</strong> —
+     Rotate Left f (No Carry)</a></li>
+<li><a href="pdfs/RRCF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RRCF</strong> —
+     Rotate Right f through Carry</a></li>
+<li><a href="pdfs/RRNCF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RRNCF</strong> —
+     Rotate Right f (No Carry)</a></li>
+<li><a href="pdfs/SETF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>SETF</strong> —
+     Set f</a></li>
+<li><a href="pdfs/SUBFWB (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>SUBFWB</strong> —
+     Subtract f from WREG with borrow</a></li>
+<li><a href="pdfs/SUBWF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>SUBWF</strong> —
+     Subtract WREG from f</a></li>
+<li><a href="pdfs/SUBWFB (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>SUBWFB</strong> —
+     Subtract WREG from f with borrow</a></li>
+<li><a href="pdfs/SWAPF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>SWAPF</strong> —
+     Swap nibbles in f</a></li>
+<li><a href="pdfs/TSTFSZ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TSTFSZ</strong> —
+     Test f, skip if 0</a></li>
+<li><a href="pdfs/XORWF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>XORWF</strong> —
+     Exclusive OR WREG with f</a></li>
+</ul>
+<h2>Bit-oriented File Register Operations</h2>
+<ul>
+<li><a href="pdfs/BCF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BCF</strong> —
+     Bit Clear f</a></li>
+<li><a href="pdfs/BSF (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BSF</strong> —
+     Bit Set f</a></li>
+<li><a href="pdfs/BTFSC (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BTFSC</strong> —
+     Bit Test f, Skip if Clear</a></li>
+<li><a href="pdfs/BTFSS (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BTFSS</strong> —
+     Bit Test f, Skip if Set</a></li>
+<li><a href="pdfs/BTG (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BTG</strong> —
+     Bit Toggle f</a></li>
+</ul>
+<h2>Control Operations</h2>
+<ul>
+<li><a href="pdfs/BC (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BC</strong> —
+     Branch if Carry</a></li>
+<li><a href="pdfs/BN (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BN</strong> —
+     Branch if Negative</a></li>
+<li><a href="pdfs/BNC (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BNC</strong> —
+     Branch if Not Carry</a></li>
+<li><a href="pdfs/BNN (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BNN</strong> —
+     Branch if Not Negative</a></li>
+<li><a href="pdfs/BNOV (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BNOV</strong> —
+     Branch if Not Overflow</a></li>
+<li><a href="pdfs/BNZ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BNZ</strong> —
+     Branch if Not Zero</a></li>
+<li><a href="pdfs/BOV (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BOV</strong> —
+     Branch if Overflow</a></li>
+<li><a href="pdfs/BRA (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BRA</strong> —
+     Branch Unconditionally</a></li>
+<li><a href="pdfs/BZ (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>BZ</strong> —
+     Branch if Zero</a></li>
+<li><a href="pdfs/CALL (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>CALL</strong> —
+     Call subroutine</a></li>
+<li><a href="pdfs/CLRWDT (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>CLRWDT</strong> —
+     Clear Watchdog Timer</a></li>
+<li><a href="pdfs/DAW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>DAW</strong> —
+     Decimal Adjust WREG</a></li>
+<li><a href="pdfs/GOTO (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>GOTO</strong> —
+     Go to address</a></li>
+<li><a href="pdfs/NOP (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>NOP</strong> —
+     No Operation</a></li>
+<li><a href="pdfs/POP (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>POP</strong> —
+     Pop top of return stack (TOS)</a></li>
+<li><a href="pdfs/PUSH (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>PUSH</strong> —
+     Push top of return stack (TOS)</a></li>
+<li><a href="pdfs/RCALL (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RCALL</strong> —
+     Relative Call</a></li>
+<li><a href="pdfs/RESET (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RESET</strong> —
+     Software device RESET</a></li>
+<li><a href="pdfs/RETFIE (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RETFIE</strong> —
+     Return from interrupt enable</a></li>
+<li><a href="pdfs/RETLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RETLW</strong> —
+     Return with literal in WREG</a></li>
+<li><a href="pdfs/RETURN (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RETURN</strong> —
+     Return from Subroutine</a></li>
+<li><a href="pdfs/SLEEP (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>SLEEP</strong> —
+     Go into Standby mode</a></li>
+</ul>
+<h2>Literal Operations</h2>
+<ul>
+<li><a href="pdfs/ADDLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>ADDLW</strong> —
+     Add literal and WREG</a></li>
+<li><a href="pdfs/ANDLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>ANDLW</strong> —
+     AND literal with WREG</a></li>
+<li><a href="pdfs/IORLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>IORLW</strong> —
+     Inclusive OR literal with WREG</a></li>
+<li><a href="pdfs/LFSR (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>LFSR</strong> —
+     Move literal to FSRx</a></li>
+<li><a href="pdfs/MOVLB (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>MOVLB</strong> —
+     Move literal to BSR&lt;3:0&gt;</a></li>
+<li><a href="pdfs/MOVLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>MOVLW</strong> —
+     Move literal to WREG</a></li>
+<li><a href="pdfs/MULLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>MULLW</strong> —
+     Multiply literal with WREG</a></li>
+<li><a href="pdfs/RETLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>RETLW</strong> —
+     Return with literal in WREG</a></li>
+<li><a href="pdfs/SUBLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>SUBLW</strong> —
+     Subtract WREG from literal</a></li>
+<li><a href="pdfs/XORLW (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>XORLW</strong> —
+     Exclusive OR literal with WREG</a></li>
+</ul>
+<h2>Data Memory &amp; Program Memory Operations</h2>
+<ul>
+<li><a href="pdfs/TBLRD (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLRD*</strong> —
+     Table Read</a></li>
+<li><a href="pdfs/TBLRD (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLRD*+</strong> —
+     Table Read with post-increment</a></li>
+<li><a href="pdfs/TBLRD (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLRD*-</strong> —
+     Table Read with post-decrement</a></li>
+<li><a href="pdfs/TBLRD (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLRD+*</strong> —
+     Table Read with pre-increment</a></li>
+<li><a href="pdfs/TBLWT (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLWT*</strong> —
+     Table Write</a></li>
+<li><a href="pdfs/TBLWT (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLWT*+</strong> —
+     Table Write with post-increment</a></li>
+<li><a href="pdfs/TBLWT (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLWT*-</strong> —
+     Table Write with post-decrement</a></li>
+<li><a href="pdfs/TBLWT (Microchip PIC18F Instruction Set).pdf" title="Download PDF version"><strong>TBLWT+*</strong> —
+     Table Write with pre-increment</a></li>
+</ul>
+</body>
+</html>

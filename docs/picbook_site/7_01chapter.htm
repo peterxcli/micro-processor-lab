@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_01chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#ff0000" face="Arial Black" size="6"><b>CHAPTER 
+      </b></font><b><font color="#ff0000" face="Arial Black" size="6">7</font></b></p>
+<p align="center"><b><font face="Verdana" size="5">Examples</font></b></p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><a href="7_01chapter.htm#Introduction">Introduction</a></font></p>
+<p><font face="Verdana" size="2"><a href="7_01chapter.htm#7.1 Supplying the microcontroller">7.1 
+      Supplying the microcontroller</a><br/><a href="7_02chapter.htm">7.2 LED 
+      diodes</a><br/><a href="7_03chapter.htm">7.3 Push 
+      buttons</a><br/><a href="7_04chapter.htm">7.4 
+      Optocoupler</a><br/> <a href="7_04chapter.htm#7.4.1 Optocoupler on an input line">7.4.1 
+      Optocouper on input line</a><br/>
+       <a href="7_04chapter.htm#7.4.2 Optocoupler on an output line">7.4.2 
+      Optocoupler on output line</a><br/>
+<a href="7_05chapter.htm">7.5 
+      Relay</a><br/><a href="7_06chapter.htm">7.6 
+      Generating sound</a><br/><a href="7_07chapter.htm">7.7 Shift 
+      registers</a><br/> <a href="7_07chapter.htm">7.7.1 Input 
+      shift register</a><br/> <a href="7_07chapter.htm">7.7.2 Output 
+      shift register</a><br/><a href="7_08chapter.htm">7.8 7-seg 
+      display (multiplexing)</a><br/><a href="7_09chapter.htm">7.9 LCD 
+      display</a><br/><a href="7_10chapter.htm">7.10 
+      Software SCI communication</a></font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><b><a name="Introduction">Introduction</a></b></font> </p>
+<p><font face="Verdana" size="2">Examples given in this chapter will show you 
+      how to connect the PIC microcontroller with other peripheral components or 
+      devices when developing your own microcontroller system. Each example 
+      contains detailed description of hardware with electrical outline and 
+      comments on the program. </font> </p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="7.1 Supplying the microcontroller">7.1 Supplying the 
+      microcontroller</a></b></font></p>
+<p><font face="Verdana" size="2">Generally speaking, the correct voltage 
+      supply is of utmost importance for the proper functioning of the 
+      microcontroller system. It can easily be compared to a man breathing in 
+      the air. It is more likely that a man who is breathing in fresh air will 
+      live longer than a man who's living in a polluted environment.<br/><br/>For 
+      a proper function of any microcontroller, it is necessary to provide a 
+      stable source of supply, a sure reset when you turn it on and an 
+      oscillator. According to technical specifications by the manufacturer of 
+      PIC microcontroller, supply voltage should move between 2.0V to 6.0V in 
+      all versions. The simplest solution to the source of supply is using the 
+      voltage stabilizer LM7805 which gives stable +5V on its output. One such 
+      source is shown in the picture below. </font></p>
+<p align="center"><img border="0" height="225" src="7_01chapter_files/01.gif" width="434"/> </p>
+<p><font face="Verdana" size="2">In order to function properly, or in order to 
+      have stable 5V at the output (pin 3), input voltage on pin 1 of LM7805 
+      should be between 7V through 24V. Depending on current consumption of 
+      device we will use the appropriate type of voltage stabilizer LM7805. 
+      There are several versions of LM7805. For current consumption of up to 1A 
+      we should use the version in TO-220 case with the capability of additional 
+      cooling. If the total consumption is 50mA, we can use 78L05 (stabilizer 
+      version in small TO - 92 packaging for current of up to 100mA).</font>
+</p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_01chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><font color="#ffffff"><a href="6_chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></font></b></td>
+<td align="middle" background="7_01chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_01chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_02chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_01chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

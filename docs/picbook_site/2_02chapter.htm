@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 2 - Microcontroller PIC16F84</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+</center></div>
+<div align="center">
+<center>
+<table background="2_02chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">2.1 Clock 
+      generator - oscillator</font></b></p>
+<p><font face="Verdana" size="2">Oscillator circuit is used for providing a 
+      microcontroller with a clock. Clock is needed so that microcontroller 
+      could execute a program or program instructions.<br/><br/></font><font face="Verdana" size="4">Types of oscillators</font><font face="Verdana" size="2"><br/><br/>PIC16F84 can work with four different configurations of an 
+      oscillator. Since configurations with crystal oscillator and 
+      resistor-capacitor (RC) are the ones that are used most frequently, these 
+      are the only ones we will mention here. Microcontroller type with a 
+      crystal oscillator has in its designation XT, and a microcontroller with 
+      resistor-capacitor pair has a designation RC. This is important because 
+      you need to mention the type of oscillator when buying a 
+      microcontroller. <br/><br/></font><font face="Verdana" size="4">XT 
+      Oscillator</font></p>
+<table border="0" cellpadding="0" cellspacing="0" width="753">
+<tbody>
+<tr>
+<td rowspan="4" width="277"><font face="Verdana" size="2">Crystal oscillator 
+            is kept in metal housing with two pins where you have written down 
+            the frequency at which crystal oscillates. One ceramic capacitor of 
+            30pF whose other end is connected to the ground needs to be 
+            connected with each pin.</font>
+<p><font face="Verdana" size="2">Oscillator and capacitors can be packed 
+            in joint case with three pins. Such element is called ceramic 
+            resonator and is represented in charts like the one below. Center 
+            pins of the element is the ground, while end pins are connected with 
+            OSC1 and OSC2 pins on the microcontroller. When designing a device, 
+            the rule is to place an oscillator nearer a microcontroller, so as 
+            to avoid any interference on lines on which microcontroller is 
+            receiving a clock.</font></p></td>
+<td width="476">
+<p align="center"><img border="0" height="189" src="2_02chapter_files/2_6.gif" width="323"/></p></td></tr>
+<tr>
+<td width="476">
+<p align="center"> </p></td></tr>
+<tr>
+<td width="476">
+<p align="center"><img border="0" height="171" src="2_02chapter_files/2_7.gif" width="240"/></p></td></tr>
+<tr>
+<td width="476">
+<p align="center"> </p></td></tr></tbody></table>
+<p><font face="Verdana" size="4">RC Oscillator</font> <font face="Verdana" size="2"><br/><br/>In applications where great time precision is not 
+      necessary, RC oscillator offers additional savings during purchase. 
+      Resonant frequency of RC oscillator depends on supply voltage rate, 
+      resistance R, capacity C and working temperature. It should be mentioned 
+      here that resonant frequency is also influenced by normal variations in 
+      process parameters, by tolerance of external R and C components, 
+      etc.</font></p>
+<p align="center"><img border="0" height="194" src="2_02chapter_files/2_8.gif" width="487"/></p>
+<p><font face="Verdana" size="2">Above diagram shows how RC oscillator is 
+      connected with PIC16F84. With value of resistor R being below 2.2k, 
+      oscillator can become unstable, or it can even stop the oscillation. With 
+      very high value of R (ex.1M) oscillator becomes very sensitive to noise 
+      and humidity. It is recommended that value of resistor R should be between 
+      3 and 100k. Even though oscillator will work without an external capacitor 
+      (C=0pF), capacitor above 20pF should still be used for noise and 
+      stability. No matter which oscillator is being used, in order to get a 
+      clock that microcontroller works upon, a clock of the oscillator must be 
+      divided by 4. Oscillator clock divided by 4 can also be obtained on 
+      OSC2/CLKOUT pin, and can be used for testing or synchronizing other 
+      logical circuits.</font></p>
+<p align="center"><img border="0" height="133" src="2_02chapter_files/2_9.gif" width="512"/></p>
+<p><font face="Verdana" size="2">Following a supply, oscillator starts 
+      oscillating. Oscillation at first has an unstable period and amplitude, 
+      but after some period of time it becomes stabilized.</font></p>
+<p align="center"><img border="0" height="232" src="2_02chapter_files/2_10.gif" width="582"/></p>
+<p><font face="Verdana" size="2">To prevent such inaccurate clock from 
+      influencing microcontroller's performance, we need to keep the 
+      microcontroller in reset state during stabilization of oscillator's clock. 
+      Diagram above shows a typical shape of a signal which microcontroller gets 
+      from the quartz oscillator.</font></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber8" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="2_02chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_01chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="2_02chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="2_02chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_03chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="2_02chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

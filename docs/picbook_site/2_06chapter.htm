@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 2 - Microcontroller PIC16F84</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="2_06chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">2.5 Memory 
+      organization</font></b></p>
+<p><font face="Verdana" size="2">PIC16F84 has two separate memory blocks, one 
+      for data and the other for program. EEPROM memory with GPR and SFR 
+      registers in RAM memory make up the data block, while FLASH memory makes 
+      up the program block. <br/><br/></font><font face="Verdana" size="4">Program memory</font><font face="Verdana" size="2"><br/><br/>Program 
+      memory has been carried out in FLASH technology which makes it possible to 
+      program a microcontroller many times before it's installed into a device, 
+      and even after its installment if eventual changes in program or process 
+      parameters should occur. The size of program memory is 1024 locations with 
+      14 bits width where locations zero and four are reserved for reset and 
+      interrupt vector.<br/><br/></font><font face="Verdana" size="4">Data 
+      memory</font><font face="Verdana" size="2"><br/><br/>Data memory consists of 
+      EEPROM and RAM memories. EEPROM memory consists of 64 eight bit locations 
+      whose contents is not lost during loosing of power supply. EEPROM is 
+      not  directly addressable, but is accessed indirectly through EEADR 
+      and EEDATA registers. As EEPROM memory usually serves for storing 
+      important parameters (for example, of a given temperature in temperature 
+      regulators) , there is a strict procedure for writing in EEPROM which must 
+      be followed in order to avoid accidental writing. RAM memory for data 
+      occupies space on a memory map from location 0x0C to 0x4F which comes to 
+      68 locations. Locations of RAM memory are also called GPR registers which 
+      is an abbreviation for <i>General Purpose Registers</i>. GPR registers can 
+      be accessed regardless of which bank is selected at the 
+      moment. <br/><br/></font><font face="Verdana" size="4">SFR 
+      registers</font><font face="Verdana" size="2"><br/><br/>Registers which take up 
+      first 12 locations in banks 0 and 1 are registers of specialized function 
+      assigned with certain blocks of the microcontroller. These are called 
+      <i>Special Function Registers</i>.</font></p>
+<p align="center"><img border="0" height="700" src="2_06chapter_files/2_19.gif" width="590"/></p>
+<p><font face="Verdana" size="4">Memory Banks</font> <font face="Verdana" size="2"><br/><br/>Beside this 'length' division to SFR and GPR registers, 
+      memory map is also divided in 'width' (see preceding map) to two areas 
+      called 'banks'. Selecting one of the banks is done via RP0 bit in STATUS 
+      register.<br/><br/><b>Example:</b><br/></font><font face="Courier New" size="2">  bcf STATUS, RP0 </font><font face="Verdana" size="2"><br/><br/>Instruction BCF clears bit RP0 (RP0=0) in STATUS register 
+      and thus sets up bank 0.<br/><br/></font><font face="Courier New" size="2">  bsf STATUS, RP0 </font><font face="Verdana" size="2"><br/><br/>Instruction BSF sets the bit RP0 (RP0=1) in STATUS register 
+      and thus sets up bank1.<br/><br/>It is useful to consider what would happen 
+      if the wrong bank was selected. Let's assume that we have selected bank 0 
+      at the beginning of the program, and that we now want to write to certain 
+      register located in bank 1, say TRISB. Although we specified the name of 
+      the register TRISB, data will be actually stored to a bank 0 register at 
+      the appropriate address, which is PORTB in our example.</font></p><font face="Courier New" size="2">
+<blockquote>
+<blockquote>
+<blockquote>BANK0 macro<br/>      Bcf 
+            STATUS, RP0   ;Select memory bank 
+            0<br/>      endm<br/><br/>BANK1 
+            macro<br/>      Bsf STATUS, 
+            RP0   ;Select memory bank 
+            1<br/>      endm</blockquote></blockquote></blockquote></font>
+<p></p>
+<p><font face="Verdana" size="2">Bank selection can be also made via directive 
+      <i>banksel</i> after which name of the register to be accessed is 
+      specified. In this manner, there is no need to memorize which register is 
+      in which bank.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tbody>
+<tr>
+<td width="55">
+<p align="center"><img border="0" height="64" src="2_06chapter_files/Ideja.gif" width="21"/></p></td>
+<td width="545"><font face="Verdana" size="2"><i>Locations 0Ch - 4Fh are 
+            general purpose registers (GPR) which are used as RAM memory. When 
+            locations 8Ch - CFh in Bank 1 are accessed, we actually access the 
+            exact same locations in Bank 0. In other words , whenever you wish 
+            to access one of the GPR registers, there is no need to worry about 
+            which bank we are in!</i> </font></td></tr></tbody></table>
+<p><font face="Verdana" size="4">Program Counter</font> <font face="Verdana" size="2"><br/><br/>Program counter (PC) is a 13-bit register that contains the 
+      address of the instruction being executed. It is physically carried out as 
+      a combination of a 5-bit register PCLATH for the five higher bits of the 
+      address, and the 8-bit register PCL for the lower 8 bits of the 
+      address.</font></p>
+<p><font face="Verdana" size="2">By its incrementing or change (i.e. in case 
+      of jumps) microcontroller executes program instructions 
+      step-by-step.<br/><br/></font><font face="Verdana" size="4">Stack</font> <font face="Verdana" size="2"><br/><br/>PIC16F84 has a 13-bit stack with 8 levels, or 
+      in other words, a group of 8 memory locations, 13 bits wide, with special 
+      purpose. Its basic role is to keep the value of program counter after a 
+      jump from the main program to an address of a subprogram . In order for a 
+      program to know how to go back to the point where it started from, it has 
+      to return the value of a program counter from a stack. When moving from a 
+      program to a subprogram, program counter is being pushed onto a stack 
+      (example of this is CALL instruction). When executing instructions such as 
+      RETURN, RETLW or RETFIE which were executed at the end of a subprogram, 
+      program counter was taken from a stack so that program could continue 
+      where was stopped before it was interrupted. These operations of placing 
+      on and taking off from a program counter stack are called PUSH and POP, 
+      and are named according to similar instructions on some bigger 
+      microcontrollers.<br/><br/></font><font face="Verdana" size="4">In System 
+      Programming</font> <font face="Verdana" size="2"><br/><br/>In order to program a 
+      program memory, microcontroller must be set to special working mode by 
+      bringing up MCLR pin to 13.5V, and supply voltage Vdd has to be stabilized 
+      between 4.5V to 5.5V. Program memory can be programmed serially using two 
+      'data/clock' pins which must previously be separated from device lines, so 
+      that errors wouldn't come up during programming.<br/><br/></font><font face="Verdana" size="4">Addressing modes</font> <font face="Verdana" size="2"><br/><br/>RAM memory locations can be accessed directly or 
+      indirectly.<br/><br/></font><font face="Verdana" size="4">Direct 
+      Addressing</font> <font face="Verdana" size="2"><br/><br/>Direct Addressing is 
+      done through a 9-bit address. This address is obtained by connecting 7th 
+      bit of direct address of an instruction with two bits (RP1, RP0) from 
+      STATUS register as is shown on the following picture. Any access to SFR 
+      registers is an example of direct addressing. </font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Bsf STATUS, RP0 ;Bankl<br/>movlw 
+        0xFF      ;w=0xFF<br/>movwf 
+        TRISA     ;address of TRISA register is taken 
+        from<br/>                
+        ;instruction movwf </font></p></blockquote>
+<p align="center"><font face="Verdana" size="2"><img border="0" height="354" src="2_06chapter_files/2_20.gif" width="349"/> </font></p>
+<p align="center"><font face="Verdana" size="2"><b>Direct 
+      addressing</b></font></p>
+<p><font face="Verdana" size="4">Indirect Addressing</font> <font face="Verdana" size="2"><br/><br/>Indirect unlike direct addressing does not take an address 
+      from an instruction but derives it from IRP bit of STATUS and FSR 
+      registers. Addressed location is accessed via INDF register which in fact 
+      holds the address indicated by a FSR. In other words, any instruction 
+      which uses INDF as its register in reality accesses data indicated by a 
+      FSR register. Let's say, for instance, that one general purpose register 
+      (GPR) at address 0Fh contains a value of 20. By writing a value of 0Fh in 
+      FSR register we will get a register indicator at address 0Fh, and by 
+      reading from INDF register, we will get a value of 20, which means that we 
+      have read from the first register its value without accessing it directly 
+      (but via FSR and INDF). It appears that this type of addressing does not 
+      have any advantages over direct addressing, but certain needs do exist 
+      during programming which can be solved smoothly only through indirect 
+      addressing.</font></p>
+<p><font face="Verdana" size="2">Indirect addressing is very convenient for 
+      manipulating data arrays located in GPR registers. In this case, it is 
+      necessary to initialize FSR register with a starting address of the array, 
+      and the rest of the data can be accessed by incrementing the FSR 
+      register.</font></p>
+<p> </p>
+<p align="center"><img border="0" height="397" src="2_06chapter_files/2_21.gif" width="404"/></p>
+<p><font face="Verdana" size="2">Such examples include sending a set of data 
+      via serial communication, working with buffers and indicators (which will 
+      be discussed further in a chapter with examples), or erasing a part of RAM 
+      memory (16 locations) as in the following instance.</font></p>
+<p align="center"><img border="0" height="144" src="2_06chapter_files/2_21a.gif" width="487"/></p>
+<p><font face="Verdana" size="2">Reading data from INDF register when the 
+      contents of FSR register is equal to zero returns the value of zero, and 
+      writing to it results in NOP operation (no operation).</font></p>
+<p> </p></td></tr>
+<tr>
+<td width="100%"> </td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber29" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="2_06chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_05chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="2_06chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="2_06chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_07chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="2_06chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

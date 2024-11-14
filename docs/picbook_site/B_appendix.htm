@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : appendix B - Numeric Systems</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="B_appendix_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#ff0000" face="Arial Black" size="6">Appendix 
+      B</font></b></p>
+<p align="center"><font face="Verdana" size="5"><b>Numerical Systems</b></font>
+</p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><a href="B_appendix.htm#Introduction">Introduction</a>
+</font></p>
+<p><font face="Verdana" size="2"><a href="B_appendix.htm#B.1 Decimal numeric system">B.1 
+      Decimal numerical system</a><br/><a href="B_appendix.htm#B.2 Binary numeric system">B.2 
+      Binary numerical system</a><br/><a href="B_appendix.htm#B.3 Hexadecimal numeric system">B.3 
+      Hexadecimal numerical system</a></font></p>
+<p> </p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><b><a name="Introduction">Introduction</a></b></font> </p>
+<p><font face="Verdana" size="2">It was always difficult for people to accept 
+      the fact that some things differ from them or their way of thinking. That 
+      is probably one of the reasons why numerical systems which differ from a 
+      decimal are still hard to understand. Still, whether we want it or not, 
+      reality is different. Decimal numerical system that people use in everyday 
+      life is so far behind the binary system used by millions of computers 
+      around the world. <br/><br/>Each numerical system are based on some 
+      basis. With a decimal numerical system, that basis is 10, with binary 2, 
+      and with a hexadecimal system 16. The value of each decimal is determined 
+      by its position in relation to the whole number represented in the given 
+      numerical system. The sum of values of each decimal gives the value of the 
+      whole number. Binary and hexadecimal numerical systems are especially 
+      interesting for the subject of this book. Beside these, we will also 
+      discuss a decimal system, in order to compare it with the other two. Even 
+      though a decimal numerical system is a subject we are well acquainted 
+      with, we will discuss it here because of its relatedness to other 
+      numerical systems. </font></p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="B.1 Decimal numeric system">B.1 Decimal numerical 
+      system</a></b></font> </p>
+<p><font face="Verdana" size="2">Decimal numerical system is defined by its 
+      basis 10 and decimal space that is counted from right to left, and 
+      consists of numbers 0,1, 2, 3, 4, 5, 6, 7, 8, 9. That means that the end 
+      right digit of the total sum is multiplied by 1, next one by 10, next by 
+      100, etc. <br/><br/><b>Example:</b> </font></p>
+<p align="center"><img border="0" height="138" src="B_appendix_files/01.gif" width="225"/> </p>
+<p><font face="Verdana" size="2">Operations of addition, subtraction, 
+      division, and multiplication in a decimal numerical system are used in a 
+      way that is already known to us, so we won't discuss it further. 
+      </font></p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="B.2 Binary numeric system">B.2 Binary numerical 
+      system</a></b></font> </p>
+<p><font face="Verdana" size="2">Binary numerical system differs in many 
+      aspects from the decimal system we are used to in our everyday lives. Its 
+      numerical basis is 2, and each number can have only two values, '1' or 
+      '0'. Binary numerical system is used in computers and microcontrollers 
+      because it is far more suitable for processing than a decimal system. 
+      Usually, binary number consists of binary digits 8, 16 or 32, and it is 
+      not important in view of the contents of our book to discuss why. It will 
+      be enough for now to adopt this information. <br/><br/><b>Example:</b>
+</font></p>
+<p align="center"><font face="Verdana" size="2">10011011 binary number with 8 
+      digits </font></p>
+<p><font face="Verdana" size="2">In order to understand the logic of binary 
+      numbers, we will consider an example. Let's say that we have a small chest 
+      with four drawers, and that we need to tell someone to bring something 
+      from one of the drawers to us. Nothing is more simple, we will say left 
+      side, bottom (drawer), and the desired drawer is clearly defined. However, 
+      if we had to do this without the use of instructions like left, right, 
+      beneath, above, etc., then we would have a problem. There are many 
+      solution to this problem, but we should look for one that is most 
+      beneficent and practical! Lets designate rows with A, and types with B. If 
+      A=1, it refers to the upper row of drawers, and for A=0, bottom row. 
+      Similarly with columns, B=1 represents the left column, and B=0, the right 
+      (next picture). Now it is already easier to explain from which drawer we 
+      need something. We simply need to state one of the four combinations: 00, 
+      01, 10 or 11. This characteristic naming of each drawer individually is 
+      nothing but binary numerical representation, or conversion of common 
+      numbers from a decimal into binary form. In other words, references like 
+      "first, second, third and fourth" are exchanged with "00,01, 10 and 11". 
+      </font></p>
+<p align="center"><img border="0" height="159" src="B_appendix_files/02.gif" width="252"/> </p>
+<p><font face="Verdana" size="2">What remains is for us to get acquainted with 
+      logic that is used with binary numerical system, or how to get a numerical 
+      value from a series of zeros and ones in a way we can understand, of 
+      course. This procedure is called conversion from a binary to a decimal 
+      number.<br/><br/><b>Example:</b> </font></p>
+<p align="center"><img border="0" height="206" src="B_appendix_files/03.gif" width="273"/> </p>
+<p><font face="Verdana" size="2">As you can see, converting a binary number 
+      into a decimal number is done by calculating the expression on the left 
+      side. Depending on the position in a binary number, digits carry different 
+      values which are multiplied by themselves, and by adding them we get a 
+      decimal number we can understand. Let's further suppose that there are few 
+      marbles in each of the drawers: 2 in the first one, 4 in the second 
+      drawer, 7 in the third and 3 in the fourth drawer. Let's also say to the 
+      one who's opening the drawers to use binary representation in answer. 
+      Under these conditions, question would be as follows: "How many marbles 
+      are there in 01?", and the answer would be: "There are 100 marbles in 01." 
+      It should be noted that both question and the answer are very clear even 
+      though we did not use the standard terms. It should further be noted that 
+      for decimal numbers from 0 to 3 it is enough to have two binary digits, 
+      and that for all values above that we must add new binary digits. So, for 
+      numbers from 0 to 7 it is enough to have three digits, for numbers from 0 
+      to 15, four, etc. Simply said, the biggest number that can be represented 
+      by a binary digit is the one obtained when basis 2 is graded onto a number 
+      of binary digits in a binary number and thus obtained number is 
+      decremented by one.<br/><br/><b>Example:</b> </font></p>
+<p align="center"><img border="0" height="21" src="B_appendix_files/04.gif" width="119"/> </p>
+<p><font face="Verdana" size="2">This means that it is possible to represent 
+      decimal numbers from 0 to 15 with 4 binary digits, including numbers '0' 
+      and '15', or 16 different values.<br/>Operations which exist in decimal 
+      numerical system also exist in a binary system. For reasons of clarity and 
+      legibility, we will review addition and subtraction only in this 
+      chapter. <br/><br/>Basic rules that apply to binary addition are: 
+      </font></p>
+<p align="center"><img border="0" height="62" src="B_appendix_files/05.gif" width="200"/> </p>
+<p><font face="Verdana" size="2">Addition is done so that digits in the same 
+      numerical positions are added, similar to the decimal numerical system. If 
+      both digits being added are zero, their sum remains zero, and if they are 
+      '0' and '1', result is '1'. The sum of two ones gives two, in binary 
+      representation it will be a zero, but with transferring '1' to a higher 
+      position that is added to digits from that 
+      position.<br/><br/><b>Example:</b> </font></p>
+<p align="center"><img border="0" height="66" src="B_appendix_files/06.gif" width="195"/> </p>
+<p><font face="Verdana" size="2">We can check whether result is correct by 
+      transferring these number to decimal numerical system and by performing 
+      addition in it. With a transfer we get a value 10 as the first number, 
+      value 9 as the second, and value 19 as the sum. Thus we have proven that 
+      operation was done correctly. Trouble comes when sum is greater than what 
+      can be represented by a binary number with a given number of binary 
+      digits. Different solutions can be applied then, one of which is expanding 
+      the number of binary digits in the sum as in the previous 
+      example.<br/><br/>Subtraction, like addition is done on the same principle. 
+      The result of subtraction between two zeros, or two ones remains a zero. 
+      When subtracting one from zero, we have to borrow one from binary digit 
+      which has a higher value in the binary 
+      number.<br/><br/><b>Example:</b></font> </p>
+<p align="center"><img border="0" height="66" src="B_appendix_files/07.gif" width="215"/> </p>
+<p><font face="Verdana" size="2">By checking the result as we did with 
+      addition, when we translate these binary numbers we get decimal numbers 10 
+      and 9. Their difference corresponds to number 1 which is what we get in 
+      subtraction. </font></p>
+<p align="center"><font color="#000080" face="Verdana" size="4"><b><a name="B.3 Hexadecimal numeric system">B.3 Hexadecimal numerical 
+      system</a></b></font> </p>
+<p><font face="Verdana" size="2">Hexadecimal numerical system has a number 16 
+      as its basis. Since the basis of a numerical system is 16, there are 16 
+      different digits that can be found in a hexadecimal number. Those digits 
+      are "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F". Letters A, B, C, D, 
+      E and F are nothing but values 10, 11, 12, 13, 14 and 15. They are 
+      introduced as a replacement to make writing easier. As with a binary 
+      system, here too, we can determine with same formula what is the biggest 
+      decimal number we can represent with a specific number of hexadecimal 
+      digits.<br/><br/><b>Example: With two hexadecimal digits</b></font>
+<p align="center"><img border="0" height="21" src="B_appendix_files/08.gif" width="149"/>
+<p><font face="Verdana" size="2">Usually, hexadecimal number is written with a 
+      prefix "$" or "0x" ,or suffix"h" , to emphasize the numerical system. 
+      Thus, number A37E would be written more correctly as $A37E, 0xA37E, or 
+      A37Eh. In order to translate a hexadecimal number into a binary numerical 
+      system it is not necessary to perform any calculation but simple exchange 
+      of hexadecimal digits with binary digits. Since the maximum value of a 
+      hexadecimal number is 15, that means that it is enough to use 4 binary 
+      digits for one hexadecimal digit.<br/><br/><b>Example:</b></font>
+<p align="center"><img border="0" height="53" src="B_appendix_files/09.gif" width="169"/> </p>
+<p><font face="Verdana" size="2">By checking, that is transferring both 
+      numbers into decimal numerical system, we get a number 228 which proves 
+      the accuracy of our action. <br/><br/>In order to get a decimal 
+      equivalent of a hexadecimal number, we need to multiply each digit of a 
+      number with number 16 which is gradated by the position of that digit in 
+      hexadecimal number.<br/><br/><b>Example:</b></font> </p>
+<p align="center"><img border="0" height="138" src="B_appendix_files/10.gif" width="225"/> </p>
+<p><font face="Verdana" size="2">Addition is, like in two preceding examples, 
+      performed in a similar manner.<br/><br/><b>Example:</b></font> </p>
+<p align="center"><img border="0" height="59" src="B_appendix_files/11.gif" width="182"/> </p>
+<p><font face="Verdana" size="2">We need to add corresponding number digits. 
+      If their sum is equal 16, write 0 and transfer one to the next higher 
+      place. If their sum is greater than 16, write value above and transfer 1 
+      to the next higher digit.Eg. if sum is 19 (19=16+3) write 3 and transfer 1 
+      to the next higher place. By checking, we get 14891 as the first number, 
+      and second is 43457. Their sum is 58348, which is a number $E3EC when it 
+      is transferred into a decimal numerical system. Subtraction is an 
+      identical process to those in previous two numerical systems. If the 
+      number we are subtracting  is smaller, we borrow from the next place 
+      of higher value.<br/><br/><b>Example:</b></font> </p>
+<p align="center"><img border="0" height="59" src="B_appendix_files/12.gif" width="169"/> </p>
+<p><font face="Verdana" size="2">By checking this result, we get values 11590 
+      for the first number and 5970 for the second, where their difference is 
+      5620, which corresponds to a number $15F4 after a transfer into a decimal 
+      numerical system.</font> </p>
+<p align="left"><font face="Verdana" size="4">Conclusion</font></p>
+<p><font face="Verdana" size="2">Binary numerical system is still the one that 
+      is most in use, decimal the one that's easiest to understand, and a 
+      hexadecimal is somewhere between those two systems. It's easy conversion 
+      to a binary numerical system and easy memorization make it, along with 
+      binary and decimal systems, one of the most important numerical systems. 
+      </font></p>
+<p> </p></p></p></p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber89" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="B_appendix_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="A_appendix.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="B_appendix_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="B_appendix_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="C_appendix.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="B_appendix_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

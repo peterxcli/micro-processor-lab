@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 2 - Microcontroller PIC16F84</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="2_08chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#000080" face="Verdana" size="4"><b>2.7 Free-run 
+      timer TMR0</b></font></p>
+<p><font face="Verdana" size="2">Timers are usually the most complicated parts 
+      of a microcontroller, so it is necessary to set aside more time for 
+      understanding them thoroughly. Through their application it is possible to 
+      establish relations between a real dimension such as "time" and a variable 
+      which represents status of a timer within a microcontroller. Physically, 
+      timer is a register whose value is continually increasing to 255, and then 
+      it starts all over again: 0, 1, 2, 3, 4...255....0,1, 2, 
+      3......etc.</font></p>
+<p align="center"><img border="0" height="512" src="2_08chapter_files/2_27.gif" width="586"/></p>
+<p><font face="Verdana" size="2">This incrementing is done in the background 
+      of everything a microcontroller does. It is up to programmer to think up a 
+      way how he will take advantage of this characteristic for his needs. One 
+      of the ways is increasing some variable on each timer overflow. If we know 
+      how much time a timer needs to make one complete round, then multiplying 
+      the value of a variable by that time will yield the total amount of 
+      elapsed time. <br/><br/>PIC16F84 has an 8-bit timer. Number of bits 
+      determines what value timer counts to before starting to count from zero 
+      again. In the case of an 8-bit timer, that number is 256. A simplified 
+      scheme of relation between a timer and a prescaler is represented on the 
+      previous diagram. Prescaler is a name for the part of a microcontroller 
+      which divides oscillator clock before it will reach logic that increases 
+      timer status. Number which divides a clock is defined through first three 
+      bits in OPTION register. The highest divisor is 256. This actually means 
+      that only at every 256th clock, timer value would increase by one. This 
+      provides us with the ability to measure longer timer periods.</font></p>
+<p align="center"><img border="0" height="251" src="2_08chapter_files/2_28.gif" width="597"/></p>
+<p><font face="Verdana" size="2">After each count up to 255, timer resets its 
+      value to zero and starts with a new cycle of counting to 255. During each 
+      transition from 255 to zero, T0IF bit in INTCOM register is set. If 
+      interrupts are allowed to occur, this can be taken advantage of in 
+      generating interrupts and in processing interrupt routine. It is up to 
+      programmer to reset T0IF bit in interrupt routine, so that new interrupt, 
+      or new overflow could be detected. Beside the internal oscillator clock, 
+      timer status can also be increased by the external clock on RA4/TOCKI pin. 
+      Choosing one of these two options is done in OPTION register through T0CS 
+      bit. If this option of external clock was selected, it would be possible 
+      to define the edge of a signal (rising or falling), on which timer would 
+      increase its value.</font></p>
+<p align="center"><img border="0" height="403" src="2_08chapter_files/2_29.gif" width="624"/></p>
+<p><font face="Verdana" size="2">In practice, one of the typical example that 
+      is solved via external clock and a timer is counting full turns of an axis 
+      of some production machine, like transformer winder for instance. Let's 
+      wind four metal screws on the axis of a winder. These four screws will 
+      represent metal convexity. Let's place now the inductive sensor at a 
+      distance of 5mm from the head of a screw. Inductive sensor will generate 
+      the falling signal every time the head of the screw is parallel with 
+      sensor head. Each signal will represent one fourth of a full turn, and the 
+      sum of all full turns will be found in TMR0 timer. Program can easily read 
+      this data from the timer through a data bus. <br/><br/>The following 
+      example illustrates how to initialize timer to signal falling edges from 
+      external clock source with a prescaler 1:4. Timer works in "polig" 
+      mode.</font></p>
+<p><img border="0" height="233" src="2_08chapter_files/2_29a.gif" width="595"/></p>
+<p><font face="Verdana" size="2"><br/>The same example can be carried out 
+      through an interrupt in the following way:</font></p>
+<p align="center"><img border="0" height="294" src="2_08chapter_files/2_26b.gif" width="438"/></p>
+<p><font face="Verdana" size="2">Prescaler can be assigned either timer TMR0 
+      or a watchdog. Watchdog is a mechanism which microcontroller uses to 
+      defend itself against programs getting stuck. As with any other electrical 
+      circuit, so with a microcontroller too can occur failure, or some work 
+      impairment. Unfortunately, microcontroller also has  program where 
+      problems can occur as well. When this happens, microcontroller will stop 
+      working and will remain in that state until someone resets it. Because of 
+      this, watchdog mechanism has been introduced. After a certain period of 
+      time, watchdog resets the microcontroller (microcontroller in fact resets 
+      itself). Watchdog works on a simple principle: if timer overflow occurs, 
+      microcontroller is reset, and it starts executing a program all over 
+      again. In this way, reset will occur in case of both correct and incorrect 
+      functioning. Next step is preventing reset in case of correct functioning, 
+      which is done by writing zero in WDT register (instruction CLRWDT) every 
+      time it nears its overflow. Thus program will prevent a reset as long as 
+      it's executing correctly. Once it gets stuck, zero will not be written, 
+      overflow of WDT timer and a reset will occur which will bring the 
+      microcontroller back to correct functioning again. <br/><br/>Prescaler 
+      is accorded to timer TMR0, or to watchdog timer trough  PSA bit in 
+      OPTION register. By clearing PSA bit, prescaler will be accorded to timer 
+      TMR0. When prescaler is accorded to timer TMR0, all instructions of 
+      writing to TMR0 register (CLRF TMR0, MOVWF TMR0, BSF TMR0,...) will clear 
+      prescaler. When prescaler is assigned to a watchdog timer, only CLRWDT 
+      instruction will clear a prescaler and watchdog timer at the same time . 
+      Prescaler change is completely under programmer's control, and can be 
+      changed while program is running.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tbody>
+<tr>
+<td width="50">
+<p align="center"><img border="0" height="64" src="2_08chapter_files/Ideja.gif" width="21"/></p></td>
+<td width="550"><font face="Verdana" size="2"><i>There is only one 
+            prescaler and one timer. Depending on the needs, they are assigned 
+            either to timer TMR0 or to a 
+watchdog.</i></font></td></tr></tbody></table>
+<p><font face="Verdana" size="4">OPTION Control Register</font></p>
+<p align="center"><img border="0" height="110" src="2_08chapter_files/2_30.gif" width="479"/></p>
+<p><font face="Verdana" size="2"><i>bit 7</i> <b>RBPU</b> (<i>PORTB Pull-up 
+      Enable bit</i>) <br/>This bit turns internal pull-up resistors on port 
+      B on or off. <br/>1 = 'pull-up' resistors turned on<br/>0 = 'pull-up' 
+      resistors turned off</font></p>
+<p><font face="Verdana" size="2"><i>bit 6</i> I<b>NTEDG</b> (<i>Interrupt Edge 
+      Select bit</i>)<br/>If occurrence of interrupts was enabled, this bit would 
+      determine at what edge interrupt on RB0/INT pin would  occur.<br/>1 = 
+      rising edge<br/>0 = falling edge</font></p>
+<p><font face="Verdana" size="2"><i>bit 5</i> <b>T0CS</b> (<i>TMR0 Clock 
+      Source Select bit</i>)<br/>This pin enables a free-run timer to increment 
+      its value either from an internal oscillator, i.e. every 1/4  of 
+      oscillator clock, or via external impulses on RA4/T0CKI pin.<br/>1 = 
+      external impulses<br/>0 = 1/4 internal clock</font></p>
+<p><font face="Verdana" size="2"><i>bit 4</i> <b>T0SE</b> (<i>TMR0 Source Edge 
+      Select bit</i>)<br/><br/>If trigger TMR0 was enabled with impulses from a 
+      RA4/T0CKI pin, this bit would determine whether it would  be on the 
+      rising or falling edge of a signal. <br/>1 = falling edge<br/>0 = 
+      rising edge</font></p>
+<p><font face="Verdana" size="2"><i>bit 3</i> <b>PSA</b> (<i>Prescaler 
+      Assignment bit</i>)<br/>Bit which assigns prescaler between TMR0 and 
+      watchdog timer.<br/>1 = prescaler is assigned to watchdog timer.<br/>0 = 
+      prescaler is assigned to free timer TMR0</font></p>
+<p><font face="Verdana" size="2"><i>Bit 0:2</i> <b>PS0, PS1, PS2</b> 
+      (<i>Prescaler Rate Select bit</i>) <br/>In case of 4MHz oscillator, 
+      one instruction cycle (4 internal clocks) lasts 1</font><font size="2">µ</font><font face="Verdana" size="2">s. Numbers in the following table 
+      show the time period in </font><font size="2">µ</font><font face="Verdana" size="2">s between incrementing TMR or WDT.</font></p>
+<p align="center"><img border="0" height="124" src="2_08chapter_files/2_31.gif" width="267"/></p>
+<p><font face="Verdana" size="2"><br/> </font></p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber34" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="2_08chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_07chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="2_08chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="2_08chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_09chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="2_08chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

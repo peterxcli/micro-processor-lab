@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : appendix A - Instruction Set</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="A_appendix_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#ff0000" face="Arial Black" size="6">Appendix 
+      A</font></b></p>
+<p align="center">  <font color="#000000" face="Verdana" size="5"><b>Instruction Set</b></font></p>
+<p align="center"> </p>
+<p><font face="Verdana" size="2"><a href="A_appendix.htm#Introduction">Introduction</a><br/><br/><a href="A_appendix.htm#Instruction Set in PIC16Cxx Microcontroller Family">Instruction 
+      set in PIC16Cxx microcontroller family</a> <br/><a href="A_appendix.htm#Data Transfer">Data 
+      Transfer</a><br/><a href="A_appendix.htm#Arithmetic and logic">Arithmetic 
+      and logic</a><br/><a href="A_appendix.htm#Bit Operations">Bit 
+      operations</a><br/><a href="A_appendix.htm#Directing a program flow">Directing 
+      the program flow </a><br/><a href="A_appendix.htm#Instruction Execution Period">Instruction 
+      execution period</a><br/><a href="A_appendix.htm#Word list">Word 
+      list</a></font><br/><font face="Verdana" size="2"><a href="A_appendix.htm#Instruction List">Instruction 
+      list</a></font></p>
+<p> </p>
+<p align="left"><b><font color="#000080" face="Verdana" size="4"><a name="Introduction">Introduction</a></font></b></p>
+<p><font face="Verdana" size="2">We have already mentioned that 
+      microcontroller is not like any other integrated circuit. When they come 
+      out of production most integrated circuits are ready to be built into 
+      devices which is not the case with microcontrollers. In order to "make" 
+      microcontroller perform a task, we have to tell it exactly what to do, or 
+      in other words we must write the program microcontroller will execute. We 
+      will describe in this chapter instructions which make up the assembler, or 
+      lower-level program language for PIC microcontrollers. </font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Instruction Set in PIC16Cxx Microcontroller Family">Instruction Set 
+      in PIC16Cxx Microcontroller Family</a></font> </p>
+<p><font face="Verdana" size="2">Complete set which includes 35 instructions 
+      is given in the following table. A reason for such a small number of 
+      instructions lies primarily in the fact that we are talking about a RISC 
+      microcontroller whose instructions are well optimized considering the 
+      speed of work, architectural simplicity and code compactness. The only 
+      drawback is that programmer is expected to master "uncomfortable" 
+      technique of using a reduced set of 35 instructions. </font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Data Transfer">Data transfer</a></font> </p>
+<p><font face="Verdana" size="2">Transfer of data in a microcontroller is done 
+      between work (W) register and an 'f' register that represents any location 
+      in internal RAM (regardless whether those are special or general purpose 
+      registers).<br/><br/>First three instructions (look at the following table) 
+      provide for a constant being written in W register (MOVLW is short for 
+      MOVe Literal to W), and for data to be copied from W register onto RAM and 
+      data from RAM to be copied onto W register (or on the same RAM location, 
+      at which point only the status of Z flag changes). Instruction CLRF writes 
+      constant 0 in 'f ' register, and CLRW writes constant 0 in register W. 
+      SWAPF instruction exchanges places of the 4-bit nibbles field inside a 
+      register. </font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Arithmetic and logic">Arithmetic and logic</a></font> </p>
+<p><font face="Verdana" size="2">Of all arithmetic operations, PIC like most 
+      microcontrollers supports only subtraction and addition. Flags C, DC and Z 
+      are set depending on a result of addition or subtraction, but with one 
+      exception: since subtraction is performed like addition of a negative 
+      value, C flag is inverse following a subtraction. In other words, it is 
+      set if operation is possible, and reset if larger number was subtracted 
+      from a smaller one. <br/><br/>Logic unit of PIC has capability of 
+      performing operations AND, OR, EX-OR, complementing (COMF) and rotation 
+      (RLF and RRF).<br/>Instructions which rotate the register contents move 
+      bits inside a register through flag C by one space to the left (toward bit 
+      7), or to the right (toward bit 0). Bit which "comes out" of a register is 
+      written in flag C, and value of C flag is written in a bit on the 
+      "opposite side" of the register. </font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Bit Operations">Bit operations</a></font> </p>
+<p><font face="Verdana" size="2">Instructions BCF and BSF do setting or 
+      cleaning of one bit anywhere in the memory. Even though this seems like a 
+      simple operation, it is executed so that CPU first reads the whole byte, 
+      changes one bit in it and then writes in the entire byte at the same 
+      place. </font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Directing a program flow">Directing a program flow</a></font> </p>
+<p><font face="Verdana" size="2">Instructions GOTO, CALL and RETURN are 
+      executed the same way as on all other microcontrollers, only stack is 
+      independent of internal RAM and limited to eight levels. <br/>'RETLW 
+      k' instruction is identical with RETURN instruction, except that before 
+      coming back from a subprogram a constant defined by instruction operand is 
+      written in W register. This instruction enables us to design easily the 
+      Look-up tables (lists). Mostly we use them by determining data position on 
+      our table adding it to the address at which the table begins, and then we 
+      read data from that location (which is usually found in program 
+      memory). <br/><br/>Table can be formed as a subprogram which consists 
+      of a series of 'RETLW k' instructions, where 'k' constants are members of 
+      the table. </font></p>
+<p align="center"><img border="0" height="154" src="A_appendix_files/prog1.gif" width="166"/> </p>
+<p><font face="Verdana" size="2">We write the position of a member of our 
+      table in W register, and using CALL instruction we call a subprogram which 
+      creates the table. First subprogram line ADDWF PCL, f adds the position of 
+      a W register member to the starting address of our table, found in PCL 
+      register, and so we get the real data address in program memory. When 
+      returning from a subprogram we will have in W register the contents of an 
+      addressed table member. In a previous example, constant 'k2' will be in W 
+      register following a return from a subprogram.<br/><br/>RETFIE (RETurn From 
+      Interrupt - Interrupt Enable) is a return from interrupt routine and 
+      differs from a RETURN only in that it automatically sets GIE (Global 
+      Interrupt Enable) bit. Upon an interrupt, this bit is automatically 
+      cleared. As interrupt begins, only the value of program counter is put at 
+      the top of a stack. No automatic storing of register values and status is 
+      provided.<br/><br/>Conditional jumps are synthesized into two instructions: 
+      BTFSC and BTFSS. Depending on a bit status in 'f' register that is being 
+      tested, instructions skip or don't skip over the next program instruction. 
+      </font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Instruction Execution Period">Instruction Execution 
+      Period</a></font> </p>
+<p><font face="Verdana" size="2">All instructions are executed in one cycle 
+      except for conditional branch instructions if condition was true, or if 
+      the contents of program counter was changed by some instruction. In that 
+      case, execution requires two instruction cycles, and the second cycle is 
+      executed as NOP (No Operation). Four oscillator clocks make up one 
+      instruction cycle. If we are using an oscillator with 4MHz frequency, the 
+      normal time for executing an instruction is 1 µs, and in case of 
+      conditional branching, execution period is 2 µs. </font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Word list">Word list</a></font> </p>
+<p><font face="Verdana" size="2"><b>f</b>       
+      any memory location in a 
+      microcontroller<br/><b>W</b>     work 
+      register<br/><b>b</b>      bit position in 'f' 
+      register<br/><b>d</b>      destination 
+      bit<br/><i>label</i>  group of eight characters which marks the 
+      beginning of a part of the program<br/><b>TOS</b>  top of 
+      stack<br/><b>[]      
+      </b>option<br/><b>&lt;&gt;</b>   bit position inside 
+      register</font> </p>
+<p align="center"><img border="0" height="751" src="A_appendix_files/table.gif" width="613"/> </p>
+<p><font face="Verdana" size="2">*1 If I/O port is source operand, status on 
+      microcontroller pins is read<br/>*2 If this instruction is executed on TMR 
+      register and if d=1, prescaler assigned to that timer will automatically 
+      be cleared<br/>*3 If PC was modified, or test result =1, instruction was 
+      executed in two cycles.</font></p>
+<p align="left"><font color="#000080" face="Verdana" size="4"><a name="Instruction List">Instruction List</a></font></p>
+<p><font face="Verdana" size="2">Appendix contains all instructions presented 
+      separately with examples for their use. Syntax, description and its 
+      effects on status bits are given for each instruction. </font></p>
+<ul>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.1 Write constant in W register">A.1 
+        MOVLW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.2 Copy W to f">A.2 
+        MOVWF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.3 Copy f to d">A.3 
+        MOVF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.4 Write 0 in W">A.4 
+        CLRW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.5">A.5 
+        CLRF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.6 Copy the nibbles from 'f' to 'd' crosswise">A.6 
+        SWAPF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.7 Add W to a constant">A.7 
+        ADDLW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.8 Add W to 'f'">A.8 
+        ADDWF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.9 Subtract W from a constant">A.9 
+        SUBLW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.10 Subtract W from 'f'">A.10 
+        SUBWF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.11 Logic I W with constant">A.11 
+        ANDLW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.12 Logic I W with f">A.12 
+        ANDWF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.13 Logic ILI W with constant">A.13 
+        IORLW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.14 Logic ILI W with f">A.14 
+        IORWF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.15 Logic exclusive ILI W with constant">A.15 
+        XORLW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.16 Logic exclusive ILI W with 'f'">A.16 
+        XORWF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.17 Increment 'f'">A.17 
+        INCF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.18 Decrement f">A.18 
+        DECF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.19 Rotate f to the left through CARRY">A.19 
+        RLF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.20 Rotate f to the right through CARRY">A.20 
+        RRF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.21 Complement f">A.21 
+        COMF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.22 Reset bit b in f">A.22 
+        BCF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.23 Set bit b in f">A.23 
+        BSF</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.24 Test bit 'b' in 'f', skip if it = 0 ">A.24 
+        BTFSC</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.25 Test bit 'b' in 'f', skip if =1">A.25 
+        BTFSS</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.26 Increment 'f', skip if=0">A.26 
+        INCFSZ</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.27 Decrement f, skip if = 0">A.27 
+        DECFSZ</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.28 Jump to address">A.28 
+        GOTO</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.29 Call a program">A.29 
+        CALL</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.30 Return from a subprogram">A.30 
+        RETURN</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.31 Return from a subprogram with constant in W">A.31 
+        RETLW</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.32 Return from interrupt routine">A.32 
+        RETFIE</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.33 No operation">A.33 
+        NOP</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.34 Initialize watchdog timer">A.34 
+        CLRWDT</a></font>
+<li><font face="Verdana" size="2"><a href="A_appendix.htm#A.35 Stand by mode">A.35 
+        SLEEP</a></font> </li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>
+<p> </p>
+<p><a name="A.1 Write constant in W register"><font face="Verdana" size="4">A.1 MOVLW     Write constant in W 
+      register</font></a> </p>
+<p><img border="0" height="254" src="A_appendix_files/01.gif" width="598"/> </p>
+<p><a name="A.2 Copy W to f"><font face="Verdana" size="4">A.2 
+      MOVWF      Copy W to f</font></a> </p>
+<p><font face="Verdana" size="2"><img border="0" height="369" src="A_appendix_files/02.gif" width="599"/> </font></p>
+<p><a name="A.3 Copy f to d"><font face="Verdana" size="4">A.3 
+      MOVF      Copy f to d</font></a> </p>
+<p><img border="0" height="478" src="A_appendix_files/03.gif" width="599"/> </p>
+<p><a name="A.4 Write 0 in W"><font face="Verdana" size="4">A.4 
+      CLRW      Write 0 in W</font></a> </p>
+<p><font face="Verdana" size="2"><img border="0" height="223" src="A_appendix_files/04.gif" width="597"/> </font></p>
+<p><a name="A.5"><font face="Verdana" size="4">A.5 Write 0 in f</font></a> </p>
+<p><font face="Verdana" size="2"><img border="0" height="366" src="A_appendix_files/05.gif" width="599"/> </font></p>
+<p><a name="A.6 Copy the nibbles from 'f' to 'd' crosswise"><font face="Verdana" size="4">A.6 SWAPF      Copy the 
+      nibbles from f to d crosswise</font></a> </p>
+<p><img border="0" height="351" src="A_appendix_files/06.gif" width="599"/> </p>
+<p><a name="A.7 Add W to a constant"><font face="Verdana" size="4">A.7 
+      ADDLW      Add W to a constant</font></a> </p>
+<p><img border="0" height="302" src="A_appendix_files/07.gif" width="599"/> </p>
+<p><a name="A.8 Add W to 'f'"><font face="Verdana" size="4">A.8 
+      ADDWF      Add W to f</font></a> </p>
+<p><img border="0" height="414" src="A_appendix_files/08.gif" width="599"/> </p>
+<p><a name="A.9 Subtract W from a constant"><font face="Verdana" size="4">A.9 
+      SUBLW      Subtract W from a constant</font></a>
+</p>
+<p><img border="0" height="416" src="A_appendix_files/09.gif" width="599"/> </p>
+<p><a name="A.10 Subtract W from 'f'"><font face="Verdana" size="4">A.10 
+      SUBWF      Subtract W from f</font></a> </p>
+<p><img border="0" height="335" src="A_appendix_files/10.gif" width="599"/> </p>
+<p><a name="A.11 Logic I W with constant"><font face="Verdana" size="4">A.11 
+      ANDLW      Logic AND W with constant</font></a>
+</p>
+<p><img border="0" height="367" src="A_appendix_files/11.gif" width="599"/> </p>
+<p><a name="A.12 Logic I W with f"><font face="Verdana" size="4">A.12 
+      ANDWF      Logic AND W with f</font></a> </p>
+<p><img border="0" height="401" src="A_appendix_files/12.gif" width="599"/> </p>
+<p><a name="A.13 Logic ILI W with constant"><font face="Verdana" size="4">A.13 
+      IORLW      Logic OR W with constant</font></a>
+</p>
+<p><img border="0" height="334" src="A_appendix_files/13.gif" width="599"/> </p>
+<p><a name="A.14 Logic ILI W with f"><font face="Verdana" size="4">A.14 
+      IORWF      Logic OR W with f</font></a> </p>
+<p><img border="0" height="364" src="A_appendix_files/14.gif" width="599"/> </p>
+<p><a name="A.15 Logic exclusive ILI W with constant"><font face="Verdana" size="4">A.15 XORLW      Logic exclusive OR W with 
+      constant</font></a> </p>
+<p><img border="0" height="352" src="A_appendix_files/15.gif" width="599"/> </p>
+<p><a name="A.16 Logic exclusive ILI W with 'f'"><font face="Verdana" size="4">A.16 XORWF      Logic exclusive OR W with 
+      f</font></a> </p>
+<p><img border="0" height="400" src="A_appendix_files/16.gif" width="599"/> </p>
+<p><a name="A.17 Increment 'f'"><font face="Verdana" size="4">A.17 
+      INCF      Increment f</font></a> </p>
+<p><img border="0" height="413" src="A_appendix_files/17.gif" width="599"/> </p>
+<p><a name="A.18 Decrement f"><font face="Verdana" size="4">A.18 
+      DECF      Decrement f</font></a> </p>
+<p><img border="0" height="413" src="A_appendix_files/18.gif" width="599"/> </p>
+<p><a name="A.19 Rotate f to the left through CARRY"><font face="Verdana" size="4">A.19 RLF      Rotate f to the left through 
+      CARRY</font></a> </p>
+<p><img border="0" height="415" src="A_appendix_files/19.gif" width="599"/> </p>
+<p><a name="A.20 Rotate f to the right through CARRY"><font face="Verdana" size="4">A.20 RRF      Rotate f to the right 
+      through CARRY</font></a> </p>
+<p><img border="0" height="431" src="A_appendix_files/20.gif" width="599"/> </p>
+<p><a name="A.21 Complement f"><font face="Verdana" size="4">A.21 
+      COMF      Complement f</font></a> </p>
+<p><img border="0" height="386" src="A_appendix_files/21.gif" width="599"/> </p>
+<p><a name="A.22 Reset bit b in f"><font face="Verdana" size="4">A.22 
+      BCF      Reset bit b in f</font></a> </p>
+<p><img border="0" height="353" src="A_appendix_files/22.gif" width="599"/> </p>
+<p><a name="A.23 Set bit b in f"><font face="Verdana" size="4">A.23 
+      BSF      Set bit b in f</font></a> </p>
+<p><img border="0" height="352" src="A_appendix_files/23.gif" width="599"/> </p>
+<p><a name="A.24 Test bit 'b' in 'f', skip if it = 0 "><font face="Verdana" size="4">A.24 BTFSC      Test bit b in 
+      f, skip if it = 0</font></a> </p>
+<p><img border="0" height="384" src="A_appendix_files/24.gif" width="599"/> </p>
+<p><a name="A.25 Test bit 'b' in 'f', skip if =1"><font face="Verdana" size="4">A.25 BTFSS      Test bit b in f, skip if 
+      =1</font></a> </p>
+<p><img border="0" height="386" src="A_appendix_files/25.gif" width="599"/> </p>
+<p><a name="A.26 Increment 'f', skip if=0"><font face="Verdana" size="4">A.26 
+      INCFSZ      Increment f, skip if=0</font></a>
+</p>
+<p><img border="0" height="385" src="A_appendix_files/26.gif" width="599"/> </p>
+<p><a name="A.27 Decrement f, skip if = 0"><font face="Verdana" size="4">A.27 
+      DECFSZ      Decrement f, skip if = 0</font></a>
+</p>
+<p><img border="0" height="384" src="A_appendix_files/27.gif" width="599"/> </p>
+<p><a name="A.28 Jump to address"><font face="Verdana" size="4">A.28 
+      GOTO      Jump to address</font></a> </p>
+<p><img border="0" height="272" src="A_appendix_files/28.gif" width="599"/> </p>
+<p><a name="A.29 Call a program"><font face="Verdana" size="4">A.29 
+      CALL      Call a program</font></a> </p>
+<p><img border="0" height="368" src="A_appendix_files/29.gif" width="599"/> </p>
+<p><a name="A.30 Return from a subprogram"><font face="Verdana" size="4">A.30 
+      RETURN      Return from a subprogram</font></a>
+</p>
+<p><img border="0" height="223" src="A_appendix_files/30.gif" width="599"/> </p>
+<p><a name="A.31 Return from a subprogram with constant in W"><font face="Verdana" size="4">A.31 RETLW Return from a subprogram with constant in 
+      W</font></a> </p>
+<p><img border="0" height="272" src="A_appendix_files/31.gif" width="599"/> </p>
+<p><a name="A.32 Return from interrupt routine"><font face="Verdana" size="4">A.32 RETFIE      Return from interrupt 
+      routine</font></a> </p>
+<p><img border="0" height="241" src="A_appendix_files/32.gif" width="599"/> </p>
+<p><a name="A.33 No operation"><font face="Verdana" size="4">A.33 
+      NOP      No operation</font></a> </p>
+<p><img border="0" height="192" src="A_appendix_files/33.gif" width="599"/> </p>
+<p><a name="A.34 Initialize watchdog timer"><font face="Verdana" size="4">A.34 
+      CLRWDT      Initialize watchdog timer</font></a>
+</p>
+<p><img border="0" height="337" src="A_appendix_files/34.gif" width="599"/> </p>
+<p><a name="A.35 Stand by mode"><font face="Verdana" size="4">A.35 
+      SLEEP      Stand by mode</font></a> </p>
+<p><img border="0" height="336" src="A_appendix_files/35.gif" width="599"/> </p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber84" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="A_appendix_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_10chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="A_appendix_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="A_appendix_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="B_appendix.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div></body></head></html>

@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_09chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><font color="#000080"><font face="Verdana" size="4"><b>7.9 
+      </b></font><b><font face="Verdana" size="4">LCD Display</font></b></font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" id="AutoNumber70" style="BORDER-COLLAPSE: collapse" width="100%">
+<tbody>
+<tr>
+<td rowspan="2" valign="top" width="50%"><font face="Verdana" size="2">More 
+            microcontroller devices are using 'smart LCD' displays to output 
+            visual information. The following discussion covers the connection 
+            of a <b>Hitachi LCD display</b> to a PIC microcontroller. LCD 
+            displays designed around Hitachi's LCD HD44780 module, are 
+            inexpensive, easy to use, and it is even possible to produce a 
+            readout using the 8 x 80 pixels of the display. Hitachi LCD displays 
+            have a standard ASCII set of characters plus Japanese, Greek and 
+            mathematical symbols.</font></td>
+<td align="middle" width="50%"><img border="0" height="108" src="7_09chapter_files/LCD_display.gif" width="238"/></td></tr>
+<tr>
+<td align="middle" width="50%"><b><font face="Verdana" size="2">A 16x2 
+            line Hitachi HD44780 
+      display</font></b></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">For a 8-bit data bus, the display requires a 
+      +5V supply plus 11 I/O lines. For a 4-bit data bus it only requires the 
+      supply lines plus seven extra lines. When the LCD display is not enabled, 
+      data lines are tri-state which means they are in a state of high 
+      impendance (as though they are disconnected) and this means they do not 
+      interfere with the operation of the microcontroller when the display is 
+      not being addressed. <br/><br/>The LCD also requires 3 "control" lines 
+      from the microcontroller.</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellpadding="2" cellspacing="0" id="AutoNumber71" style="BORDER-COLLAPSE: collapse" width="100%">
+<tbody>
+<tr>
+<td valign="top" width="20%"><font face="Verdana" style="FONT-SIZE: 9pt"><b>Enable (E)</b></font></td>
+<td width="80%"><font face="Verdana" style="FONT-SIZE: 9pt">This  
+            line allows access to the display through R/W and RS lines. When 
+            this line is low, the LCD is disabled and ignores signals from R/W 
+            and RS. When (E) line is high, the LCD checks the state of the two 
+            control lines and responds accordingly.</font></td></tr>
+<tr>
+<td valign="top" width="20%"><font face="Verdana" style="FONT-SIZE: 9pt"><b>Read/Write (R/W)</b></font></td>
+<td width="80%"><font face="Verdana" style="FONT-SIZE: 9pt">This line 
+            determines the direction of data between the LCD and 
+            microcontroller. When it is low, data is written to the LCD. When it 
+            is high, data is read from the LCD.</font></td></tr>
+<tr>
+<td valign="top" width="20%"><font face="Verdana" style="FONT-SIZE: 9pt"><b>Register select (RS)</b></font></td>
+<td width="80%"><font face="Verdana" style="FONT-SIZE: 9pt">With the 
+            help of this line, the LCD interprets the type of data on data 
+            lines. When it is low, an instruction is being written to the LCD. 
+            When it is high, a character is being written to the 
+        LCD.</font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">Logic status on control 
+      lines:<br/><br/><b>E</b>     0 Access to LCD 
+      disabled<br/>       1 Access to LCD 
+      enabled<br/><br/><b>R/W</b> 0 Writing data to 
+      LCD<br/>       1 Reading data from 
+      LCD<br/><br/><b>RS</b>    0 
+      Instruction<br/>       1 
+      Character<br/><br/>Writing data to the LCD is done in several 
+      steps:<br/><br/>Set R/W bit to low <br/>Set RS bit to logic 0 or 1 
+      (instruction or character)<br/>Set data to data lines (if it is 
+      writing)<br/>Set E line to high <br/>Set E line to low <br/>Read 
+      data from data lines (if it is reading)<br/><br/>Reading data from the LCD 
+      is done in the same way, but control line R/W has to be high. When we send 
+      a high to the LCD, it will reset and wait for instructions. Typical 
+      instructions sent to LCD display after a reset are: turning on a display, 
+      turning on a cursor and writing characters from left to right. When 
+      the LCD is initialized, it is ready to continue receiving data or 
+      instructions. If it receives a character, it will write it on the display 
+      and move the cursor one space to the right. The Cursor marks the next 
+      location where a character will be written. When we want to write a string 
+      of characters, first we need to set up the starting address, and then send 
+      one character at a time. Characters that can be shown on the display are 
+      stored in data display (DD) RAM. The size of DDRAM is 80 bytes.</font></p>
+<table border="0" bordercolor="#ffffff" id="AutoNumber72" style="BORDER-COLLAPSE: collapse" width="100%">
+<tbody>
+<tr>
+<td valign="top" width="48%"><font face="Verdana" size="2">The LCD display 
+            also possesses 64 bytes of Character-Generator (CG) RAM. This memory 
+            is used for characters defined by the user. Data in CG RAM is 
+            represented as an 8-bit character bit-map. Each character takes 
+            up 8 bytes of CG RAM, so the total number of characters, which the 
+            user can define is eight. In order to read in the character bit-map 
+            to the LCD display, we must first set the CG RAM address to starting 
+            point (usually 0), and then write data to the display. The 
+            definition of a 'special' character is given in the 
+          picture.</font></td>
+<td width="52%">
+<p align="center"><img border="0" height="181" src="7_09chapter_files/32.gif" width="201"/></p></td></tr></tbody></table>
+<p><font face="Verdana" size="2">Before we access DD RAM after defining a 
+      special character, the program must set the DD RAM address. Writing and 
+      reading data from any LCD memory is done from the last address which was 
+      set up using set-address instruction. Once the address of DD RAM is set, a 
+      new written character will be displayed at the appropriate place on the 
+      screen. Until now we discussed the operation of writing and reading to an 
+      LCD as if it were an ordinary memory. But this is not so. The LCD 
+      controller needs 40 to 120 microseconds (uS) for writing and reading. 
+      Other operations can take up to 5 mS. During that time, the 
+      microcontroller can not access the LCD, so a program needs to know when 
+      the LCD is busy. We can solve this in two ways.</font></p>
+<p align="center"><img border="0" height="311" src="7_09chapter_files/33.gif" width="333"/></p>
+<p><font face="Verdana" size="2">One way is to check the BUSY bit found on 
+      data line D7. This is not the best method because LCD's can get stuck, and 
+      program will then stay forever in a loop checking the BUSY bit. The other 
+      way is to introduce a delay in the program. The delay has to be long 
+      enough for the LCD to finish the operation in process. Instructions for 
+      writing to and reading from an LCD memory are shown in the previous 
+      table.<br/><br/>
+      At the beginning we mentioned that we needed 11 I/O lines to 
+      communicate with an LCD. However, we can communicate with an LCD through a 
+      4-bit data bus. Thus we can reduce the total number of communication lines 
+      to seven. The wiring for connection via a 4-bit data bus is shown in the 
+      diagram below. In this example we use an LCD display with 2x16 characters, 
+      labeled LM16X212 by Japanese maker SHARP. The message 'character' is 
+      written in the first row: and two special characters '~' and '}' are 
+      displayed. In the second row we have produced the word 
+      'microElectronika'.</font></p>
+<p align="center"><img border="0" height="313" src="7_09chapter_files/34.gif" width="599"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Connecting an LCD display to 
+      a microcontroller</b></font></p>
+<p><font face="Verdana" size="2">File <b>lcd.inc</b> contains a group of 
+      macros for use when working with LCD displays.</font></p>
+<p align="center"><img border="0" height="2611" src="7_09chapter_files/lcd_inc.gif" width="576"/></p>
+<p><b><font face="Verdana">Using the macro for LCD support</font></b></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellpadding="2" cellspacing="0" id="AutoNumber73" style="BORDER-COLLAPSE: collapse" width="100%">
+<tbody>
+<tr>
+<td valign="top" width="12%"><b><font face="Verdana" style="FONT-SIZE: 9pt">lcd</font></b><font face="Verdana" style="FONT-SIZE: 9pt"><b>init</b></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana" style="FONT-SIZE: 9pt">Macro used to initialize port connected to LCD. LCD is 
+            configured to work in 4-bit mode.</font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdinit</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana"><span style="FONT-WEIGHT: 700; FONT-SIZE: 9pt">lcdtext</span></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdtext prints the text of up to 16 
+            characters, which is specified as a macro parameter. First parameter 
+            selects the line in which to start printing. If select is zero, text 
+            is printed from the current cursor position.</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdtext 1, 
+        "microelectronika"</span></font></td>
+</tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdtext 1, "Temperature1"  ;Print the 
+            text starting from line 1, character 1</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdtext 2, 
+            "temp="              
+            ;Print the text starting from line 2, character 
+1</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdtext 0, "     
+            C"                
+            ;Print C in the rest of the line 2</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana"><span style="FONT-WEIGHT: 700; FONT-SIZE: 9pt">lcdcmd</span></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">Sends command 
+instructions</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDCLR</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'00000001'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Clear display, cursor 
+        home</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDCH</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'00000010'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Cursor home</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDCL</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'00000100'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Move the cursor to the 
+        left</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDCR</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'00000110'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Move the cursor to the 
+        right</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDSL</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'00011000'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Move the content of display to the 
+            left</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDSR</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'00011100'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Move the content of display to the 
+            right</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDL1</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'10000000'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Select line 1</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="18%"><font face="Verdana"><span style="FONT-SIZE: 9pt">LCDL2</span></font></td>
+<td valign="top" width="16%"><font face="Verdana"><span style="FONT-SIZE: 9pt">=  b'11000000'</span></font></td>
+<td valign="top" width="54%"><font face="Verdana"><span style="FONT-SIZE: 9pt">;Select line 2</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdcmd LCDCH</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana"><span style="FONT-WEIGHT: 700; FONT-SIZE: 9pt">lcdbyte</span></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">Prints one byte variable and omits leading 
+            zeros</span></font></td></tr>
+<tr>
+<td valign="top" width="12%"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td colspan="3" valign="top" width="88%"><font face="Verdana"><span style="FONT-SIZE: 9pt">lcdbyte  
+        Temperature</span></font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">When working with a microcontroller the 
+      numbers are presented in a binary form. As such, they cannot be displayed 
+      on a display. That's why it is necessary to change the numbers from a 
+      binary system into a decimal system so they can be easily understood. For 
+      printing the variables lcdbyte and lcdword we have used the macros 
+      <i>digbyte</i> and <i>digword</i> which convert the numbers from binary 
+      system into a decimal system and print the result on LCD. Main program has 
+      the purpose of demonstrating use of LCD display. At the start it's 
+      necessary to declare variables LCDbuf, LCDtemp, Digtemp, Dig1, Dig2, and 
+      Dig3 used by the macros for LCD support. It is also necessary to state the 
+      port of microcontroller that LCD is connected to. Program initializes the 
+      LCD and demonstrates printing text and 8-bit variable temp.</font></p>
+<p align="center"><img border="0" height="1067" src="7_09chapter_files/lcd_asm.gif" width="556"/></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber69" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_09chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_08chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_09chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_09chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_10chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_09chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

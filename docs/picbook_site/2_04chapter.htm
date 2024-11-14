@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 2 - Microcontroller PIC16F84</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+</center></div>
+<div align="center">
+<center>
+<table background="2_04chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">2.3 Central 
+      Processing Unit</font></b></p>
+<p><font face="Verdana" size="2">Central processing unit (CPU) is the brain of 
+      a microcontroller. That part is responsible for finding and fetching the 
+      right instruction which needs to be executed, for decoding that 
+      instruction, and finally for its execution.</font></p>
+<p><font face="Verdana" size="2">Central processing unit connects all parts of 
+      the microcontroller into one whole. Surely, its most important function is 
+      to decode program instructions. When programmer writes a program, 
+      instructions have a clear form like MOVLW 0x20. However, in order for a 
+      microcontroller to understand that, this 'letter' form of an instruction 
+      must be translated into a series of zeros and ones which is called an 
+      'opcode'. This transition from a letter to binary form is done by 
+      translators such as assembler translator (also known as an assembler). 
+      Instruction thus fetched from program memory must be decoded by a central 
+      processing unit. We can then select from the table of all the instructions 
+      a set of actions which execute a assigned task defined by instruction. As 
+      instructions may within themselves contain assignments which require 
+      different transfers of data from one memory into another, from memory onto 
+      ports, or some other calculations, CPU must be connected with all parts of 
+      the microcontroller. This is made possible through a data bus and an 
+      address bus.</font></p>
+<p><font face="Verdana" size="2">Arithmetic logic unit is responsible for 
+      performing operations of adding, subtracting, moving (left or right within 
+      a register) and logic operations. Moving data inside a register is also 
+      known as 'shifting'. PIC16F84 contains an 8-bit arithmetic logic unit and 
+      8-bit work registers.</font></p>
+<p><font face="Verdana" size="2">In instructions with two operands, ordinarily 
+      one operand is in work register (W register), and the other is one of the 
+      registers or a constant. By operand we mean the contents on which some 
+      operation is being done, and a register is any one of the GPR or SFR 
+      registers. GPR is an abbreviation for 'General Purposes Registers', and 
+      SFR for 'Special Function Registers'. In instructions with one operand, an 
+      operand is either W register or one of the registers. As an addition in 
+      doing operations in arithmetic and logic, ALU controls status bits (bits 
+      found in STATUS register). Execution of some instructions affects status 
+      bits, which depends on the result itself. Depending on which instruction 
+      is being executed, ALU can affect values of Carry (C), Digit Carry (DC), 
+      and Zero (Z) bits in STATUS register.</font></p>
+<p><font face="Verdana" size="4">STATUS Register</font> </p>
+<p align="center"><img border="0" height="143" src="2_04chapter_files/2_16.gif" width="457"/></p>
+<p><font face="Verdana" size="2"><i>bit 7</i> <b>IRP</b> (Register Bank Select 
+      bit) <br/>Bit whose role is to be an eighth bit for purposes of 
+      indirect addressing the internal RAM.<br/>1 = bank 2 and 3<br/>0 = bank 0 
+      and 1 (from 00h to FFh)</font></p>
+<p><font face="Verdana" size="2"><i>bits 6:5</i> <b>RP1:RP0</b> (Register Bank 
+      Select bits) <br/>These two bits are upper part of the address for 
+      direct addressing. As instructions which address the memory directly have 
+      only seven bits, they need one more bit in order to address all 256 bytes 
+      which is how many bytes PIC16F84 has. RP1 bit is not used, but is left for 
+      some future expansions of this microcontroller.<br/>01 = first bank<br/>00 = 
+      zero bank</font></p>
+<p><font face="Verdana" size="2"><i>bit 4</i> <b>TO</b> Time-out ; Watchdog 
+      overflow.<br/>Bit is set after turning on the supply and execution of 
+      CLRWDT and SLEEP instructions. Bit is reset when watchdog gets to the end 
+      signaling that overflow took place.<br/>1 = overflow did not occur<br/>0 = 
+      overflow did occur</font></p>
+<p><font face="Verdana" size="2"><i>bit 3</i> <b>PD</b> (Power-down 
+      bit)<br/>This bit is set whenever power supply is brought to a 
+      microcontroller : as it starts running, after each regular reset and after 
+      execution of instruction CLRWDT. Instruction SLEEP resets it when 
+      microcontroller falls into low consumption mode. Its repeated setting is 
+      possible via reset or by turning the supply off/on . Setting can be 
+      triggered also by a signal on RB0/INT pin, change on RB port, upon writing 
+      to internal DATA EEPROM, and by a Watchdog.<br/>1 = after supply has been 
+      turned on<br/>0 = executing SLEEP instruction</font></p>
+<p><font face="Verdana" size="2"><i>bit 2</i> <b>Z</b> (Zero bit) Indication 
+      of a zero result<br/>This bit is set when the result of an executed 
+      arithmetic or  logic operation is zero. <br/>1 = result equals 
+      zero<br/>0 = result does not equal zero</font></p>
+<p><font face="Verdana" size="2"><i>bit 1</i> <b>DC</b> (Digit Carry) DC 
+      Transfer<br/>Bit affected by operations of addition, subtraction. Unlike C 
+      bit, this bit represents transfer from the fourth resulting place. It is 
+      set in case of subtracting smaller from greater number and is reset in the 
+      other case. <br/>1 = transfer occurred on the fourth bit according to 
+      the order of the result<br/>0 = transfer did not occur<br/>DC bit is 
+      affected by ADDWF, ADDLW, SUBLW, SUBWF instructions.</font></p>
+<p><font face="Verdana" size="2"><i>bit 0</i> <b>C</b> (Carry) Transfer<br/>Bit 
+      that is affected by operations of addition, subtraction and 
+      shifting. <br/>1 = transfer occurred from the highest resulting 
+      bit <br/>0 = transfer did not occur<br/>C bit is affected by ADDWF, 
+      ADDLW, SUBLW, SUBWF 
+instructions.<br/><br/> </font></p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber19" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="2_04chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_03chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="2_04chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="2_04chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_05chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="2_04chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

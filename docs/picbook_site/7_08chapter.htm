@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_08chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">7.8 
+      Seven-Segment Display (multiplexing)</font></b></p>
+<p><font face="Verdana" size="2">The segments in a 7-segment display are 
+      arranged to form a single digit from 0 to F as shown in the 
+      animation:</font> </p>
+<p align="center"><img border="0" height="65" src="7_08chapter_files/7-SegDisplay.gif" width="45"/> </p>
+<p><font face="Verdana" size="2">We can display a multi-digit number by 
+      connecting additional displays. Even though LCD displays are more 
+      comfortable to work with, 7-segment displays are still standard in the 
+      industry. This is due to their temperature robustness, visibility and wide 
+      viewing angle. Segments are marked with non-capital letters: a, b, c, d, 
+      e, f, g and dp, where dp is the decimal point. The 8 LEDs inside each 
+      display can be arranged with a common cathode or common anode. With a 
+      common cathode display, the common cathode must be connected to the 0V 
+      rail  and the LEDs are turned on with a logic one. Common anode 
+      displays must have the common anode connected to the +5V rail. The 
+      segments are turned on with a logic zero. The size of a display is 
+      measured in millimeters, the height of the digit itself (not the housing, 
+      but the digit!). Displays are available with a digit height of 7,10, 13.5, 
+      20, or 25 millimeters. They come in different colors, including: red, 
+      orange, and green.</font></p>
+<p><font face="Verdana" size="2">The simplest way to drive a display is via a 
+      display driver. These are available for up to 4 
+      displays. Alternatively displays can be driven by a microcontroller 
+      and if more than one display is required, the method of driving them is 
+      called "multiplexing."</font></p>
+<p><font face="Verdana" size="2">The main difference between the two methods 
+      is the number of "drive lines." A special driver may need only a single 
+      "clock" line and the driver chip will access all the segments and 
+      increment the display. If a single display is to be driven from a 
+      microcontroller, 7 lines will be needed plus one for the decimal point. 
+      For each additional display, only one extra line is needed. To 
+      produce a 4, 5 or 6 digit display, all the 7-segment displays are 
+      connected in parallel. The common line (the common-cathode line) is taken 
+      out separately and this line is taken low for a short period of time to 
+      turn on the display. Each display is turned on  at a rate above 
+      100 times per second, and it will appear that all the displays are turned 
+      on at the same time. As each display is turned on, the appropriate 
+      information must be delivered to it so that it will give the correct 
+      reading. Up to 6 displays can be accessed like this without the brightness 
+      of each display being affected. Each display is turned on very hard for 
+      one-sixth the time and the POV (persistence of vision) of our eye thinks 
+      the display is turned on the whole time. Therefore, the program has 
+      to ensure the proper timing, else the unpleasant blinking of display will 
+      occur.</font></p>
+<p align="center"><img border="0" height="379" src="7_08chapter_files/29.gif" width="550"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Connecting a microcontroller 
+      to 7-segment displays in multiplex mode</b></font></p>
+<p><font face="Verdana" size="2">Program "7seg.asm" displays decimal value of 
+      a number stored in variable D.</font></p>
+<p><font face="Verdana" size="2">Example:</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellpadding="0" cellspacing="0" id="AutoNumber65" style="BORDER-COLLAPSE: collapse" width="420">
+<tbody>
+<tr>
+<td width="88"><font face="Verdana" size="2">movlw .21</font></td>
+<td width="332"> </td></tr>
+<tr>
+<td width="88"><font face="Verdana" size="2">movlw D</font></td>
+<td width="332"><font face="Verdana" size="2">; number 21 will be printed 
+            on 7seg display</font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">Displaying digits is carried out in multiplex 
+      mode which means that the microcontroller alternately prints ones digit 
+      and tens digit. TMR0 interrupt serves for generating a time period, so 
+      that the program enters the interrupt routine every 5ms and performs 
+      multiplexing. In the interrupt routine, first step is deciding which 
+      segment should be turned on. In case that the tens digit was previously 
+      on, it should be turned off, set the mask for printing the ones digit on 
+      7seg display which lasts 5ms, i.e. until the next interrupt.</font></p>
+<p><font face="Verdana" size="2">For extracting the ones digit and the tens 
+      digit, macro <i>digbyte</i> is used. It stores the hundreds digit, the 
+      tens digit, and the ones digit into variables Dig1, Dig2, and Dig3. In our 
+      case, upon macro execution, Dig1 will equal 0, Dig2 will equal 2, and Dig3 
+      will equal 1.</font></p>
+<p><font face="Verdana" size="2">Realization of the macro is given in the 
+      following listing:</font></p>
+<p align="center"><img border="0" height="494" src="7_08chapter_files/digit_inc.gif" width="556"/></p>
+<p><font face="Verdana" size="2">The following example shows the use of the 
+      macro in a program. Program prints a specified 2-digit number on a 7seg 
+      display in multiplex mode.</font></p>
+<p align="center"><img border="0" height="1539" src="7_08chapter_files/7seg_asm.gif" width="558"/></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber64" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_08chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_07chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_08chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_08chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_09chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_08chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

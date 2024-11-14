@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_05chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">7.5 
+      Relay</font></b></p>
+<p><font face="Verdana" size="2">The relay is an electromechanical device, 
+      which transforms an electrical signal into mechanical movement. It 
+      consists of a coil of insulated wire on a metal core, and a metal armature 
+      with one or more contacts. When a supply voltage was delivered to the 
+      coil, current would flow and a magnetic field would be produced that 
+      moves the armature to close one set of contacts and/or open another set. 
+      When power is removed from the relay, the magnetic flux in the coil 
+      collapses and produces a fairly high voltage in the opposite direction. 
+      This voltage can damage the driver transistor and thus a reverse-biased 
+      diode is connected across the coil to "short-out" the spike when it 
+      occurs.</font> </p>
+<p align="center"><img border="0" height="417" src="7_05chapter_files/15.gif" width="553"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Connecting a relay to the 
+      microcontroller via transistor</b></font></p>
+<p><font face="Verdana" size="2"><br/>Since microcontroller cannot provide 
+      sufficient supply for a relay coil (approx. 100+mA is required; 
+      microcontroller pin can provide up to 25mA), a transistor is used for 
+      adjustment purposes, its collector circuit containing the relay coil. When 
+      a logical one is delivered to transistor base, transistor activates the 
+      relay, which then, using its contacts, connects other elements in the 
+      circuit. Purpose of the resistor at the transistor base is to keep a 
+      logical zero on base to prevent the relay from activating by mistake. This 
+      ensures that only a clean logical one on RA3 activates the 
+      relay.</font></p>
+<p align="center"><img border="0" height="435" src="7_05chapter_files/16.gif" width="579"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Connecting the optocoupler 
+      and relay to a microcontroller</b></font></p>
+<p><font face="Verdana" size="2">A relay can also be activated via an 
+      optocoupler which at the same time amplifies the current related to the 
+      output of the microcontroller and provides a high degree of isolation. 
+      High current optocouplers usually contain a 'Darlington' output transistor 
+      to provide high output current.</font></p>
+<p><font face="Verdana" size="2">Connecting via an optocoupler is recommended 
+      especially for microcontroller applications, where relays are used fro 
+      starting high power load, such as motors or heaters, whose voltage 
+      instability can put the microcontroller at risk. In our example, when LED 
+      is activated on some of the output port pins, the relay is 
+      started. Below is the program needed to activate the relay, and 
+      includes some of the already discussed macros.</font></p>
+<p align="center"><img border="0" height="849" src="7_05chapter_files/relay_asm.gif" width="560"/></p>
+<p><font face="Verdana" size="2"><br/> </font></p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber49" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_05chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_04chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_05chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_05chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_06chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_05chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

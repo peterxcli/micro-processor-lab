@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 2 - Microcontroller PIC16F84</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="2_07chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">2.6 
+      Interrupts</font></b></p>
+<p><font face="Verdana" size="2">Interrupts are a mechanism of a 
+      microcontroller which enables it to respond to some events at the 
+      moment they occur, regardless of what microcontroller is doing at the 
+      time. This is a very important part, because it provides connection 
+      between a microcontroller and environment which surrounds it. Generally, 
+      each interrupt changes the program flow, interrupts it and after executing 
+      an interrupt subprogram (interrupt routine) it continues from that same 
+      point on. </font></p>
+<p align="center"><img border="0" height="391" src="2_07chapter_files/2_22.gif" width="617"/></p>
+<p align="center"><b><font face="Verdana" size="2">One of the possible sources 
+      of interrupt and how it affects the main program</font></b></p>
+<p><font face="Verdana" size="2">Control register of an interrupt is called 
+      INTCON and can be accessed regardless of the bank selected. Its role is to 
+      allow or disallowed interrupts, and in case they are not allowed, it 
+      registers single interrupt requests through its own 
+      bits.<br/><br/></font><font face="Verdana" size="4">INTCON Register</font></p>
+<p align="center"><img border="0" height="164" src="2_07chapter_files/2_23.gif" width="396"/></p>
+<p><font face="Verdana" size="2"><i>Bit 7</i> <b>GIE</b> (<i>Global Interrupt 
+      Enable bit</i>) Bit which enables or disables all interrupts.<br/>1 = all 
+      interrupts are enabled<br/>0 = all interrupts are disabled</font></p>
+<p><font face="Verdana" size="2"><i>Bit 6</i> <b>EEIE</b> (<i>EEPROM Write 
+      Complete Interrupt Enable bit</i>) Bit which enables an interrupt at the 
+      end of a writing routine to EEPROM<br/>1 = interrupt enabled<br/>0 = 
+      interrupt disabled<br/>If EEIE and EEIF (which is in EECON1 register) are 
+      set simultaneously , an interrupt will occur.</font></p>
+<p><font face="Verdana" size="2"><i>bit 5</i> <b>T0IE</b> (<i>TMR0 Overflow 
+      Interrupt Enable bit</i>) Bit which enables interrupts during counter TMR0 
+      overflow.<br/>1 = interrupt enabled<br/>0 = interrupt disabled<br/>If T0IE 
+      and T0IF are set simultaneously, interrupt will occur.</font></p>
+<p><font face="Verdana" size="2"><i>bit 4</i> <b>INTE</b> (<i>INT External 
+      Interrupt Enable bit</i>) Bit which enables external interrupt from pin 
+      RB0/INT.<br/>1 = external interrupt enabled<br/>0 = external interrupt 
+      disabled<br/>If INTE and INTF are set simultaneously, an interrupt will 
+      occur.</font></p>
+<p><font face="Verdana" size="2"><i>bit 3</i> <b>RBIE</b> (<i>RB port change 
+      Interrupt Enable bit</i>) Enables interrupts to occur at the change of 
+      status of pins 4, 5, 6, and 7 of port B. <br/>1 = enables interrupts 
+      at the change of status<br/>0 =interrupts disabled at the change of 
+      status<br/>If RBIE and RBIF are simultaneously set, an interrupt will 
+      occur.</font></p>
+<p><font face="Verdana" size="2"><i>bit 2</i> <b>T0IF</b> (<i>TMR0 Overflow 
+      Interrupt Flag bit</i>) Overflow of counter TMR0.<br/>1 = counter changed 
+      its status from FFh to 00h<br/>0 = overflow did not occur<br/>Bit must be 
+      cleared in program in order for an interrupt to be detected.</font></p>
+<p><font face="Verdana" size="2"><i>bit 1</i> <b>INTF</b> (<i>INT External 
+      Interrupt Flag bit</i>) External interrupt occurred.<br/>1 = interrupt 
+      occurred<br/>0 = interrupt did not occur<br/>If a rising or falling edge was 
+      detected on pin RB0/INT, (which is defined with bit INTEDG in OPTION 
+      register), bit INTF is set.</font></p>
+<p><font face="Verdana" size="2"><i>bit 0</i> <b>RBIF</b> (<i>RB Port Change 
+      Interrupt Flag bit</i>) Bit which informs about changes on pins 4, 5, 6 
+      and 7 of port B.<br/>1 = at least one pin has changed its status<br/>0 = no 
+      change occurred on any of the pins<br/>Bit has to be cleared in an 
+      interrupt subroutine to be able to detect further 
+      interrupts.<br/> </font></p>
+<p align="center"><img border="0" height="312" src="2_07chapter_files/2_24.gif" width="617"/></p>
+<p><font face="Verdana" size="2">PIC16F84 has four interrupt 
+      sources:<br/><br/>1. Termination of writing data to EEPROM<br/>2. TMR0 
+      interrupt caused by timer overflow<br/>3. Interrupt during alteration on 
+      RB4, RB5, RB6 and RB7 pins of port B.<br/>4. External interrupt from 
+      RB0/INT pin of microcontroller<br/><br/>Generally speaking, each interrupt 
+      source has two bits joined to it. One enables interrupts, and the other 
+      detects when interrupts occur. There is one common bit called GIE which 
+      can be used to disallow or enable all interrupts simultaneously. This bit 
+      is very useful when writing a program because it allows for all interrupts 
+      to be disabled for a period of time, so that execution of some important 
+      part of a program would not be interrupted. When instruction which resets 
+      GIE bit was executed (GIE=0, all interrupts disallowed), any interrupt 
+      that remained unsolved should be ignored. Interrupts which remained 
+      unsolved and were ignored, are processed when GIE bit (GIE=1, all 
+      interrupts allowed) would be cleared. When interrupt was answered, GIE bit 
+      was cleared so that any additional interrupts would be disabled, return 
+      address was pushed onto stack and address 0004h was written in program 
+      counter - only after this does replying to an interrupt begin! After 
+      interrupt is processed, bit whose setting caused an interrupt must be 
+      cleared, or interrupt routine would  automatically be processed over 
+      again during a return to the main program.<br/><br/></font><font face="Verdana" size="4">Keeping the contents of important registers</font>
+<font face="Verdana" size="2"><br/><br/>Only return value of program counter is 
+      stored on a stack during an interrupt (by return value of program counter 
+      we mean the address of the instruction which was to be executed, but 
+      wasn't because interrupt occurred). Keeping only the value of program 
+      counter is often not enough. Some registers which are already in use in 
+      the main program can also be in use in interrupt routine. If they were not 
+      retained, main program would during a return from an interrupt routine get 
+      completely different values in those registers, which would cause an error 
+      in the program. One example for such a case is contents of the work 
+      register W. If we suppose that main program was using work register W for 
+      some of its operations, and if it had stored in it some value that's 
+      important for the following instruction, then an interrupt which occurs 
+      before that instruction would change the value of work register W which 
+      would directly be influenced the main program.<br/><br/>Procedure of 
+      recording important registers before going to an interrupt routine is 
+      called PUSH, while the procedure which brings recorded values back, is 
+      called POP. PUSH and POP are instructions with some other microcontrollers 
+      (Intel), but are so widely accepted that a whole operation is named after 
+      them. PIC16F84 does not have instructions like PUSH and POP, and they have 
+      to be programmed. </font></p>
+<p align="center"><img border="0" height="391" src="2_07chapter_files/2_26.gif" width="570"/></p>
+<p align="center"><b><font face="Verdana" size="2">Common error: saving the 
+      value wasn't done before entering the interrupt routine</font></b></p>
+<p><font face="Verdana" size="2">Due to simplicity and frequent usage, these 
+      parts of the program can be made as macros. The concept of a Macro is 
+      explained in "Program assembly language". In the following example, 
+      contents of W and STATUS registers are stored in W_TEMP and STATUS_TEMP 
+      variables prior to interrupt routine. At the beginning of PUSH routine we 
+      need to check presently selected bank because W_TEMP and STATUS_TEMP are 
+      found in bank 0. For exchange of data between these registers, SWAPF 
+      instruction is used instead of MOVF because it does not affect the STATUS 
+      register bits.<br/><br/>Example is an assembler program for following 
+      steps:<br/><br/>1. Testing the current bank<br/>2. Storing W register 
+      regardless of the current bank<br/>3. Storing STATUS register in bank 
+      0.<br/>4. Executing interrupt routine for interrupt processing (ISR)<br/>5. 
+      Restores STATUS register<br/>6. Restores W register<br/><br/>If there are 
+      some more variables or registers that need to be stored, then they need to 
+      be kept after storing STATUS register (step 3), and brought back before 
+      STATUS register is restored (step 5). </font></p>
+<p align="center"><font face="Verdana" size="2"><img border="0" height="478" src="2_07chapter_files/2_26a.gif" width="447"/> </font></p>
+<p><font face="Verdana" size="2">The same example can be carried out using 
+      macros, thus getting a more legible program. Macros that are already 
+      defined can be used for writing new macros. Macros BANK1 and BANK0 which 
+      are explained in "Memory organization" chapter are used with macros 'push' 
+      and 'pop'. </font></p>
+<p align="center"><font face="Verdana" size="2"><img border="0" height="294" src="2_07chapter_files/2_26b.gif" width="438"/> </font></p>
+<p><font face="Verdana" size="4">External interrupt on RB0/INT pin of 
+      microcontroller</font> <font face="Verdana" size="2"><br/><br/>External 
+      interrupt on RB0/INT pin is triggered by rising signal edge (if bit 
+      INTEDG=1 in OPTION&lt;6&gt; register), or falling edge (if INTEDG=0). When 
+      correct signal appears on INT pin, INTF bit is set in INTCON register. 
+      INTF bit (INTCON&lt;1&gt;) must be cleared in interrupt routine, so that 
+      interrupt wouldn't occur again while going back to the main program. This 
+      is an important part of the program which programmer must not forget, or 
+      program will constantly go into interrupt routine. Interrupt can be turned 
+      off by resetting INTE control bit (INTCON&lt;4&gt;). Possible application 
+      of this interrupt could be measuring the impulse width or pause length, 
+      i.e. input signal frequency. Impulse duration can be measured by first 
+      enabling the interrupt on rising edge, and upon its appearing, starting 
+      the timer and then enabling the interrupt on falling edge. Timer should be 
+      stopped upon the appearing of falling edge - measured time period 
+      represents the impulse duration.<br/><br/></font><font face="Verdana" size="4">Interrupt during a TMR0 counter overflow</font> <font face="Verdana" size="2"><br/><br/>Overflow of TMR0 counter (from FFh to 00h) will set T0IF 
+      (INTCON&lt;2&gt;) bit. This is very important interrupt because many real 
+      problems can be solved using this interrupt. One of the examples is time 
+      measurement. If we know how much time counter needs in order to complete 
+      one cycle from 00h to FFh, then a number of interrupts multiplied by that 
+      amount of time will yield the total of elapsed time. In interrupt routine 
+      some variable would be incremented in RAM memory, value of that variable 
+      multiplied by the amount of time the counter needs to count through a 
+      whole cycle, would yield total elapsed time. Interrupt can be turned 
+      on/off by setting/resetting T0IE (INTCON&lt;5&gt;) 
+      bit.<br/><br/><br/></font><font face="Verdana" size="4">Interrupt upon a change 
+      on pins 4, 5, 6 and 7 of port B</font> <font face="Verdana" size="2"><br/><br/>Change of input signal on PORTB &lt;7:4&gt; sets RBIF 
+      (INTCON&lt;0&gt;) bit. Four pins RB7, RB6, RB5 and RB4 of port B, can 
+      trigger an interrupt which occurs when status on them changes from logic 
+      one to logic zero, or vice versa. For pins to be sensitive to this change, 
+      they must be defined as input. If any one of them is defined as output, 
+      interrupt will not be generated at the change of status. If they are 
+      defined as input, their current state is compared to the old value which 
+      was stored at the last reading from port B.<br/><br/></font><font face="Verdana" size="4">Interrupt upon finishing write-subroutine to 
+      EEPROM</font> <font face="Verdana" size="2"><br/><br/>This interrupt is of 
+      practical nature only. Since writing to one EEPROM location takes about 
+      10ms (which is a long time in the notion of a microcontroller), it doesn't 
+      pay off to a microcontroller to wait for writing to end. Thus interrupt 
+      mechanism is added which allows the microcontroller to continue executing 
+      the main program, while writing in EEPROM is being done in the background. 
+      When writing is completed, interrupt informs the microcontroller that 
+      writing has ended. EEIF bit, through which this informing is done, is 
+      found in EECON1 register. Occurrence of an interrupt can be disabled by 
+      resetting the EEIE bit in INTCON register. <br/><br/></font><font face="Verdana" size="4">Interrupt initialization</font> <font face="Verdana" size="2"><br/><br/>In order to use an interrupt mechanism of a 
+      microcontroller, some preparatory tasks need to be performed. These 
+      procedures are in short called "initialization". By initialization we 
+      define to what interrupts the microcontroller will respond, and which ones 
+      it will ignore. If we do not set the bit that allows a certain interrupt, 
+      program will not execute an interrupt subprogram. Through this we can 
+      obtain control over interrupt occurrence, which is very useful.</font></p>
+<p align="center"><img border="0" height="50" src="2_07chapter_files/2_26c.gif" width="496"/></p>
+<p><font face="Verdana" size="2">The above example shows initialization of 
+      external interrupt on RB0 pin of a microcontroller. Where we see one being 
+      set, that means that interrupt is enabled. Occurrence of other interrupts 
+      is not allowed, and interrupts are disabled altogether until GIE bit is 
+      set to one.<br/><br/>The following example shows a typical way of handling 
+      interrupts. PIC16F84 has got a single location for storing the address of 
+      an interrupt subroutine. This means that first we need to detect which 
+      interrupt is at hand (if more than one interrupt source is available), and 
+      then we can execute that part of a program which refers to that 
+      interrupt.</font></p>
+<p align="center"><img border="0" height="577" src="2_07chapter_files/2_26d.gif" width="569"/></p>
+<table border="0" cellpadding="0" cellspacing="0" width="755">
+<tbody>
+<tr>
+<td width="50">
+<p align="center"><img border="0" height="64" src="2_07chapter_files/Ideja.gif" width="21"/></p></td>
+<td width="705"><font face="Verdana" size="2"><i>Return from interrupt 
+            routine can be accomplished with instructions RETURN, RETLW and 
+            RETFIE. It is recommended that instruction RETFIE be used because 
+            that instruction is the only one which automatically sets the GIE 
+            bit which  allows new interrupts to occur.</i></font>
+<p> </p></td></tr></tbody></table></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber39" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="2_07chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_06chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="2_07chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="2_07chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="2_08chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="2_07chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>

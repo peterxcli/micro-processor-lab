@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>PIC microcontrollers : chapter 7 - Examples</title>
+<body bgcolor="#ffffff">
+<div align="center">
+<center>
+<table background="7_10chapter_files/grid.gif" border="0" bordercolor="#111111" cellpadding="4" cellspacing="0" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td width="100%">
+<p align="center"><b><font color="#000080" face="Verdana" size="4">7.10 
+      </font></b><font color="#000080"><b><font face="Verdana" size="4">Serial 
+      Communication</font></b></font></p>
+<p><font face="Verdana" size="2">SCI is an abbreviation for Serial 
+      Communication Interface and, as a special subsystem, it exists on most 
+      microcontrollers. When it is not available, as is the case with PIC16F84, 
+      it can be created in software.</font></p>
+<p align="center"><img border="0" height="120" src="7_10chapter_files/42.gif" width="321"/></p>
+<p><font face="Verdana" size="2">As with hardware communication, we use 
+      standard NRZ (Non Return to Zero) format also known as 8 (9)-N-1, or 8 or 
+      9 data bits, without parity bit and with one stop bit. <b>Free line</b> is 
+      defined as the status of <b>logic one</b>. Start of transmission - 
+      <b>Start Bit,</b> has the status of <b>logic zero</b>. The data bits 
+      follow the start bit (the first bit is the low significant bit), and after 
+      the bits we place the <b>Stop Bit</b> of <b>logic one</b>. The duration of 
+      the stop bit 'T' depends on the transmission rate and is adjusted 
+      according to the needs of the transmission. For the transmission speed of 
+      9600 baud, T is 104 uS.</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellpadding="0" cellspacing="0" id="AutoNumber75" style="BORDER-COLLAPSE: collapse" width="500">
+<tbody>
+<tr>
+<td colspan="2" width="251"><font face="Verdana" size="2">Pin designations 
+            on RS232 connector</font></td>
+<td rowspan="12" width="249">
+<p align="center"><font face="Verdana" size="2"><img border="0" height="146" src="7_10chapter_files/43.gif" width="91"/></font></p></td></tr>
+<tr>
+<td colspan="2" width="251"> </td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">1. CD</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Carrier 
+            Detect)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">2. RXD</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Receive 
+          Data)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">3. TXD</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Transmit 
+          Data)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">4. DTR</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Data terminal 
+            Ready)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">5. GND</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Ground)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">6. DSR</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Data Set 
+            Ready)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">7. RTS</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Request To 
+            Send)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">8. CTS</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Clear To 
+          Send)</font></i></td></tr>
+<tr>
+<td width="85"><font face="Verdana" size="2">9. RI</font></td>
+<td width="166"><i><font face="Verdana" size="2">(Ring 
+            Indicator)</font></i></td></tr>
+<tr>
+<td width="85"> </td>
+<td width="166"> </td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">In order to connect a microcontroller to a 
+      serial port on a PC computer, we need to adjust the level of the signals 
+      so communicating can take place. The signal level on a PC is -10V for 
+      logic zero, and +10V for logic one. Since the signal level on the 
+      microcontroller is +5V for logic one, and 0V for logic zero, we need an 
+      intermediary stage that will convert the levels. One chip specially 
+      designed for this task is MAX232. This chip receives signals from -10 to 
+      +10V and converts them into 0 and 5V.</font></p>
+<p><font face="Verdana" size="2">The circuit for this interface is shown in 
+      the diagram below:</font></p>
+<p align="center"><img border="0" height="471" src="7_10chapter_files/44.gif" width="587"/></p>
+<p align="center"><font face="Verdana" size="2"><b>Connecting a microcontroller 
+      to a PC via a MAX232 line interface chip</b></font></p>
+<p><font face="Verdana" size="2">File RS232.inc contains a group of macros 
+      used for serial communication.</font></p>
+<p align="center"><img border="0" height="1371" src="7_10chapter_files/rs232_inc.gif" width="558"/></p>
+<p align="left"><font face="Verdana" size="2">Using the macro for serial 
+      communication:</font></p>
+<div align="center">
+<center>
+<table border="0" bordercolor="#ffffff" cellpadding="0" cellspacing="0" id="AutoNumber76" style="BORDER-COLLAPSE: collapse" width="500">
+<tbody>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"><b>rs232init</b></font></td>
+<td valign="top" width="381"><font face="Verdana" style="FONT-SIZE: 9pt">Macro for initializing the pin for transmitting data 
+            (TX-pin).</font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td valign="top" width="381"><font face="Verdana" style="FONT-SIZE: 9pt">RS232init</font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="381"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"><b>Sendw</b></font></td>
+<td valign="top" width="381"><font face="Verdana" style="FONT-SIZE: 9pt">Sending ASCII value of data found in W 
+          register.</font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">movlw 't'</span></font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">call Sendw</span></font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="381"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana"><span style="FONT-WEIGHT: 700; FONT-SIZE: 9pt">rs232text</span></font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">Sending ASCII value of a specified 
+            text</span></font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">rs232 "microelectronika"</span></font></td>
+</tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="381"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana"><span style="FONT-WEIGHT: 700; FONT-SIZE: 9pt">rs232byte</span></font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">Sending ASCII value of decimal digits of 
+            8-bit variable</span></font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana"><span style="FONT-SIZE: 9pt"> Example:</span></font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">movlw .123</span></font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">movwf TXdata</span></font></td></tr>
+<tr>
+<td valign="top" width="119"><font face="Verdana" style="FONT-SIZE: 9pt"> </font></td>
+<td valign="top" width="381"><font face="Verdana"><span style="FONT-SIZE: 9pt">rs232byte TXdata   ;Send '1', '2', 
+            '3'</span></font></td></tr></tbody></table></center></div>
+<p><font face="Verdana" size="2">When rs232.inc file is used, it is necessary 
+      to declare variables Rstemp and TXD at the beginning of the main 
+      program.</font></p>
+<p><font face="Verdana" size="2">Example:</font></p>
+<p><font face="Verdana" size="2">As a demonstration of a serial communication, 
+      we have an example which sends text and the content of variable 
+      <i>cnt</i>. Text is sent via macro rs232text, while variable <i>cnt</i> is 
+      sent via macro rs232byte. This operation repeats itself after 500ms, with 
+      incrementing <i>cnt</i> in the process. This example can be easily 
+      modified to have button(s) for sending specified data.</font></p>
+<p> </p></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+<table border="0" bordercolor="#111111" bordercolordark="#ffffff" bordercolorlight="#ffffff" cellpadding="0" cellspacing="0" height="18" id="AutoNumber74" style="BORDER-COLLAPSE: collapse" width="760">
+<tbody>
+<tr>
+<td align="middle" background="7_10chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="7_09chapter.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Previous page</font></a></font></b></td>
+<td align="middle" background="7_10chapter_files/bg_title.gif" valign="top" width="50%"><font face="Verdana"><b><font color="#ffffff" size="2"><a href="picbook.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Table of contents</font></a></font></b></font></td>
+<td align="middle" background="7_10chapter_files/bg_title.gif" valign="top" width="25%"><b><font color="#ffffff" face="Verdana" size="2"><a href="A_appendix.htm" style="TEXT-DECORATION: none"><font color="#ffffff">Next 
+page</font></a></font></b></td></tr></tbody></table></center></div>
+<div align="center">
+<center>
+</center></div>
+<script src="7_10chapter_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>
+</body></head></html>
