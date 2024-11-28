@@ -1,0 +1,1000 @@
+8866 1732784926359 XXXX 1732784926359, Thread 8866: XXXX 1732784926359, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784926460 XXXX 1732784926460, Thread 8866: XXXX 1732784926460, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784926462 XXXX 1732784926462, Thread 8866: XXXX 1732784926462, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784926564 XXXX 1732784926564, Thread 8866: XXXX 1732784926564, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784926566 XXXX 1732784926566, Thread 8866: XXXX 1732784926566, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784926676 XXXX 1732784926676, Thread 8866: XXXX 1732784926676, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784926678 XXXX 1732784926678, Thread 8866: XXXX 1732784926678, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784926778 XXXX 1732784926778, Thread 8866: XXXX 1732784926778, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784926780 XXXX 1732784926780, Thread 8866: XXXX 1732784926780, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784926882 XXXX 1732784926882, Thread 8866: XXXX 1732784926882, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784926884 XXXX 1732784926884, Thread 8866: XXXX 1732784926884, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784926989 XXXX 1732784926989, Thread 8866: XXXX 1732784926989, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784926992 XXXX 1732784926992, Thread 8866: XXXX 1732784926992, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927091 XXXX 1732784927091, Thread 8866: XXXX 1732784927091, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927093 XXXX 1732784927093, Thread 8866: XXXX 1732784927093, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927195 XXXX 1732784927195, Thread 8866: XXXX 1732784927195, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927197 XXXX 1732784927197, Thread 8866: XXXX 1732784927197, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927302 XXXX 1732784927302, Thread 8866: XXXX 1732784927302, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927304 XXXX 1732784927304, Thread 8866: XXXX 1732784927304, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927407 XXXX 1732784927407, Thread 8866: XXXX 1732784927407, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927408 XXXX 1732784927408, Thread 8866: XXXX 1732784927408, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927512 XXXX 1732784927512, Thread 8866: XXXX 1732784927512, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927514 XXXX 1732784927514, Thread 8866: XXXX 1732784927514, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927619 XXXX 1732784927619, Thread 8866: XXXX 1732784927619, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927625 XXXX 1732784927625, Thread 8866: XXXX 1732784927625, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927727 XXXX 1732784927727, Thread 8866: XXXX 1732784927727, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927729 XXXX 1732784927729, Thread 8866: XXXX 1732784927729, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927831 XXXX 1732784927831, Thread 8866: XXXX 1732784927831, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927833 XXXX 1732784927833, Thread 8866: XXXX 1732784927833, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784927938 XXXX 1732784927938, Thread 8866: XXXX 1732784927938, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784927941 XXXX 1732784927941, Thread 8866: XXXX 1732784927941, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928051 XXXX 1732784928051, Thread 8866: XXXX 1732784928051, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928052 XXXX 1732784928052, Thread 8866: XXXX 1732784928052, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928162 XXXX 1732784928162, Thread 8866: XXXX 1732784928162, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928163 XXXX 1732784928163, Thread 8866: XXXX 1732784928163, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928268 XXXX 1732784928268, Thread 8866: XXXX 1732784928268, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928269 XXXX 1732784928269, Thread 8866: XXXX 1732784928269, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928374 XXXX 1732784928374, Thread 8866: XXXX 1732784928374, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928376 XXXX 1732784928376, Thread 8866: XXXX 1732784928376, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928480 XXXX 1732784928480, Thread 8866: XXXX 1732784928480, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928483 XXXX 1732784928483, Thread 8866: XXXX 1732784928483, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928581 XXXX 1732784928581, Thread 8866: XXXX 1732784928581, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928583 XXXX 1732784928583, Thread 8866: XXXX 1732784928583, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928686 XXXX 1732784928686, Thread 8866: XXXX 1732784928686, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928687 XXXX 1732784928687, Thread 8866: XXXX 1732784928687, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928792 XXXX 1732784928792, Thread 8866: XXXX 1732784928792, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928793 XXXX 1732784928793, Thread 8866: XXXX 1732784928793, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928893 XXXX 1732784928893, Thread 8866: XXXX 1732784928893, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928896 XXXX 1732784928896, Thread 8866: XXXX 1732784928896, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784928995 XXXX 1732784928994, Thread 8866: XXXX 1732784928994, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784928996 XXXX 1732784928996, Thread 8866: XXXX 1732784928996, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929096 XXXX 1732784929096, Thread 8866: XXXX 1732784929096, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929099 XXXX 1732784929099, Thread 8866: XXXX 1732784929099, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929200 XXXX 1732784929200, Thread 8866: XXXX 1732784929200, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929202 XXXX 1732784929202, Thread 8866: XXXX 1732784929202, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929304 XXXX 1732784929304, Thread 8866: XXXX 1732784929304, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929306 XXXX 1732784929306, Thread 8866: XXXX 1732784929306, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929416 XXXX 1732784929416, Thread 8866: XXXX 1732784929416, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929418 XXXX 1732784929418, Thread 8866: XXXX 1732784929418, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929519 XXXX 1732784929519, Thread 8866: XXXX 1732784929519, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929520 XXXX 1732784929520, Thread 8866: XXXX 1732784929520, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929625 XXXX 1732784929625, Thread 8866: XXXX 1732784929625, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929626 XXXX 1732784929626, Thread 8866: XXXX 1732784929626, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929729 XXXX 1732784929729, Thread 8866: XXXX 1732784929729, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929731 XXXX 1732784929731, Thread 8866: XXXX 1732784929731, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929834 XXXX 1732784929834, Thread 8866: XXXX 1732784929834, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929836 XXXX 1732784929836, Thread 8866: XXXX 1732784929836, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784929935 XXXX 1732784929935, Thread 8866: XXXX 1732784929935, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784929937 XXXX 1732784929937, Thread 8866: XXXX 1732784929937, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930040 XXXX 1732784930040, Thread 8866: XXXX 1732784930040, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930042 XXXX 1732784930042, Thread 8866: XXXX 1732784930042, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930145 XXXX 1732784930145, Thread 8866: XXXX 1732784930145, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930146 XXXX 1732784930146, Thread 8866: XXXX 1732784930146, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930250 XXXX 1732784930250, Thread 8866: XXXX 1732784930250, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930252 XXXX 1732784930252, Thread 8866: XXXX 1732784930252, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930355 XXXX 1732784930355, Thread 8866: XXXX 1732784930355, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930357 XXXX 1732784930357, Thread 8866: XXXX 1732784930357, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930460 XXXX 1732784930460, Thread 8866: XXXX 1732784930460, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930462 XXXX 1732784930462, Thread 8866: XXXX 1732784930462, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930566 XXXX 1732784930566, Thread 8866: XXXX 1732784930566, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930568 XXXX 1732784930568, Thread 8866: XXXX 1732784930568, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930670 XXXX 1732784930670, Thread 8866: XXXX 1732784930670, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930671 XXXX 1732784930671, Thread 8866: XXXX 1732784930671, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930775 XXXX 1732784930775, Thread 8866: XXXX 1732784930775, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930776 XXXX 1732784930776, Thread 8866: XXXX 1732784930776, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930880 XXXX 1732784930880, Thread 8866: XXXX 1732784930880, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930882 XXXX 1732784930882, Thread 8866: XXXX 1732784930882, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784930985 XXXX 1732784930985, Thread 8866: XXXX 1732784930985, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784930986 XXXX 1732784930986, Thread 8866: XXXX 1732784930986, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931090 XXXX 1732784931090, Thread 8866: XXXX 1732784931090, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931092 XXXX 1732784931092, Thread 8866: XXXX 1732784931092, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931204 XXXX 1732784931204, Thread 8866: XXXX 1732784931204, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931206 XXXX 1732784931206, Thread 8866: XXXX 1732784931206, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931309 XXXX 1732784931309, Thread 8866: XXXX 1732784931309, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931311 XXXX 1732784931311, Thread 8866: XXXX 1732784931311, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931411 XXXX 1732784931411, Thread 8866: XXXX 1732784931411, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931413 XXXX 1732784931413, Thread 8866: XXXX 1732784931413, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931523 XXXX 1732784931523, Thread 8866: XXXX 1732784931523, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931524 XXXX 1732784931524, Thread 8866: XXXX 1732784931524, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931629 XXXX 1732784931629, Thread 8866: XXXX 1732784931629, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931631 XXXX 1732784931631, Thread 8866: XXXX 1732784931631, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931735 XXXX 1732784931735, Thread 8866: XXXX 1732784931735, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931736 XXXX 1732784931736, Thread 8866: XXXX 1732784931736, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931842 XXXX 1732784931842, Thread 8866: XXXX 1732784931842, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931843 XXXX 1732784931843, Thread 8866: XXXX 1732784931843, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784931945 XXXX 1732784931945, Thread 8866: XXXX 1732784931945, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784931947 XXXX 1732784931947, Thread 8866: XXXX 1732784931947, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932047 XXXX 1732784932047, Thread 8866: XXXX 1732784932047, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932049 XXXX 1732784932049, Thread 8866: XXXX 1732784932049, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932152 XXXX 1732784932152, Thread 8866: XXXX 1732784932152, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932154 XXXX 1732784932154, Thread 8866: XXXX 1732784932154, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932258 XXXX 1732784932258, Thread 8866: XXXX 1732784932258, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932261 XXXX 1732784932261, Thread 8866: XXXX 1732784932261, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932363 XXXX 1732784932363, Thread 8866: XXXX 1732784932363, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932366 XXXX 1732784932366, Thread 8866: XXXX 1732784932366, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932467 XXXX 1732784932467, Thread 8866: XXXX 1732784932467, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932468 XXXX 1732784932468, Thread 8866: XXXX 1732784932468, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932569 XXXX 1732784932569, Thread 8866: XXXX 1732784932569, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932571 XXXX 1732784932571, Thread 8866: XXXX 1732784932571, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932674 XXXX 1732784932674, Thread 8866: XXXX 1732784932674, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932675 XXXX 1732784932675, Thread 8866: XXXX 1732784932675, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932780 XXXX 1732784932780, Thread 8866: XXXX 1732784932780, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932781 XXXX 1732784932781, Thread 8866: XXXX 1732784932781, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932881 XXXX 1732784932881, Thread 8866: XXXX 1732784932881, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932883 XXXX 1732784932883, Thread 8866: XXXX 1732784932883, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784932992 XXXX 1732784932992, Thread 8866: XXXX 1732784932992, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784932994 XXXX 1732784932994, Thread 8866: XXXX 1732784932994, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933094 XXXX 1732784933094, Thread 8866: XXXX 1732784933094, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933095 XXXX 1732784933095, Thread 8866: XXXX 1732784933095, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933198 XXXX 1732784933198, Thread 8866: XXXX 1732784933198, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933200 XXXX 1732784933200, Thread 8866: XXXX 1732784933200, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933304 XXXX 1732784933304, Thread 8866: XXXX 1732784933304, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933309 XXXX 1732784933309, Thread 8866: XXXX 1732784933309, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933415 XXXX 1732784933415, Thread 8866: XXXX 1732784933415, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933417 XXXX 1732784933417, Thread 8866: XXXX 1732784933417, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933520 XXXX 1732784933520, Thread 8866: XXXX 1732784933520, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933522 XXXX 1732784933522, Thread 8866: XXXX 1732784933522, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933625 XXXX 1732784933625, Thread 8866: XXXX 1732784933625, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933627 XXXX 1732784933627, Thread 8866: XXXX 1732784933627, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933727 XXXX 1732784933727, Thread 8866: XXXX 1732784933727, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933729 XXXX 1732784933729, Thread 8866: XXXX 1732784933729, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933832 XXXX 1732784933832, Thread 8866: XXXX 1732784933832, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933835 XXXX 1732784933835, Thread 8866: XXXX 1732784933835, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784933938 XXXX 1732784933938, Thread 8866: XXXX 1732784933938, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784933941 XXXX 1732784933941, Thread 8866: XXXX 1732784933941, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934043 XXXX 1732784934043, Thread 8866: XXXX 1732784934043, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934045 XXXX 1732784934045, Thread 8866: XXXX 1732784934045, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934149 XXXX 1732784934149, Thread 8866: XXXX 1732784934149, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934151 XXXX 1732784934151, Thread 8866: XXXX 1732784934151, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934254 XXXX 1732784934254, Thread 8866: XXXX 1732784934254, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934256 XXXX 1732784934256, Thread 8866: XXXX 1732784934256, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934356 XXXX 1732784934356, Thread 8866: XXXX 1732784934356, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934357 XXXX 1732784934357, Thread 8866: XXXX 1732784934357, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934459 XXXX 1732784934459, Thread 8866: XXXX 1732784934459, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934461 XXXX 1732784934461, Thread 8866: XXXX 1732784934461, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934564 XXXX 1732784934564, Thread 8866: XXXX 1732784934564, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934565 XXXX 1732784934565, Thread 8866: XXXX 1732784934565, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934665 XXXX 1732784934665, Thread 8866: XXXX 1732784934665, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934666 XXXX 1732784934666, Thread 8866: XXXX 1732784934666, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934770 XXXX 1732784934770, Thread 8866: XXXX 1732784934770, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934772 XXXX 1732784934772, Thread 8866: XXXX 1732784934772, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934875 XXXX 1732784934875, Thread 8866: XXXX 1732784934875, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934877 XXXX 1732784934877, Thread 8866: XXXX 1732784934877, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784934977 XXXX 1732784934977, Thread 8866: XXXX 1732784934977, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784934978 XXXX 1732784934978, Thread 8866: XXXX 1732784934978, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935083 XXXX 1732784935083, Thread 8866: XXXX 1732784935083, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935084 XXXX 1732784935084, Thread 8866: XXXX 1732784935084, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935186 XXXX 1732784935186, Thread 8866: XXXX 1732784935186, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935187 XXXX 1732784935187, Thread 8866: XXXX 1732784935187, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935291 XXXX 1732784935291, Thread 8866: XXXX 1732784935291, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935294 XXXX 1732784935294, Thread 8866: XXXX 1732784935293, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935396 XXXX 1732784935396, Thread 8866: XXXX 1732784935396, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935398 XXXX 1732784935398, Thread 8866: XXXX 1732784935398, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935501 XXXX 1732784935501, Thread 8866: XXXX 1732784935501, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935503 XXXX 1732784935503, Thread 8866: XXXX 1732784935503, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935606 XXXX 1732784935606, Thread 8866: XXXX 1732784935606, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935609 XXXX 1732784935609, Thread 8866: XXXX 1732784935609, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935712 XXXX 1732784935712, Thread 8866: XXXX 1732784935712, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935713 XXXX 1732784935713, Thread 8866: XXXX 1732784935713, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935813 XXXX 1732784935813, Thread 8866: XXXX 1732784935813, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935816 XXXX 1732784935816, Thread 8866: XXXX 1732784935816, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784935918 XXXX 1732784935918, Thread 8866: XXXX 1732784935918, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784935920 XXXX 1732784935920, Thread 8866: XXXX 1732784935920, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936026 XXXX 1732784936026, Thread 8866: XXXX 1732784936026, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936029 XXXX 1732784936029, Thread 8866: XXXX 1732784936029, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936132 XXXX 1732784936132, Thread 8866: XXXX 1732784936132, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936134 XXXX 1732784936134, Thread 8866: XXXX 1732784936134, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936238 XXXX 1732784936238, Thread 8866: XXXX 1732784936238, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936239 XXXX 1732784936239, Thread 8866: XXXX 1732784936239, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936340 XXXX 1732784936340, Thread 8866: XXXX 1732784936340, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936342 XXXX 1732784936342, Thread 8866: XXXX 1732784936342, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936445 XXXX 1732784936445, Thread 8866: XXXX 1732784936445, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936447 XXXX 1732784936447, Thread 8866: XXXX 1732784936447, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936548 XXXX 1732784936548, Thread 8866: XXXX 1732784936548, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936551 XXXX 1732784936551, Thread 8866: XXXX 1732784936551, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936663 XXXX 1732784936663, Thread 8866: XXXX 1732784936663, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936666 XXXX 1732784936666, Thread 8866: XXXX 1732784936666, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936769 XXXX 1732784936769, Thread 8866: XXXX 1732784936769, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936772 XXXX 1732784936772, Thread 8866: XXXX 1732784936772, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936890 XXXX 1732784936870, Thread 8866: XXXX 1732784936870, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936892 XXXX 1732784936892, Thread 8866: XXXX 1732784936892, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784936975 XXXX 1732784936975, Thread 8866: XXXX 1732784936975, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784936977 XXXX 1732784936977, Thread 8866: XXXX 1732784936977, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937081 XXXX 1732784937081, Thread 8866: XXXX 1732784937081, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937084 XXXX 1732784937084, Thread 8866: XXXX 1732784937084, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937189 XXXX 1732784937189, Thread 8866: XXXX 1732784937189, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937192 XXXX 1732784937192, Thread 8866: XXXX 1732784937192, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937295 XXXX 1732784937295, Thread 8866: XXXX 1732784937295, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937297 XXXX 1732784937297, Thread 8866: XXXX 1732784937297, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937396 XXXX 1732784937396, Thread 8866: XXXX 1732784937396, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937400 XXXX 1732784937400, Thread 8866: XXXX 1732784937400, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937504 XXXX 1732784937504, Thread 8866: XXXX 1732784937504, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937507 XXXX 1732784937507, Thread 8866: XXXX 1732784937507, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937607 XXXX 1732784937607, Thread 8866: XXXX 1732784937607, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937610 XXXX 1732784937610, Thread 8866: XXXX 1732784937610, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937708 XXXX 1732784937708, Thread 8866: XXXX 1732784937708, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937710 XXXX 1732784937710, Thread 8866: XXXX 1732784937709, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937816 XXXX 1732784937816, Thread 8866: XXXX 1732784937816, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937819 XXXX 1732784937819, Thread 8866: XXXX 1732784937819, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784937918 XXXX 1732784937918, Thread 8866: XXXX 1732784937918, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784937921 XXXX 1732784937921, Thread 8866: XXXX 1732784937921, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938029 XXXX 1732784938029, Thread 8866: XXXX 1732784938029, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938032 XXXX 1732784938032, Thread 8866: XXXX 1732784938032, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938135 XXXX 1732784938135, Thread 8866: XXXX 1732784938135, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938137 XXXX 1732784938137, Thread 8866: XXXX 1732784938137, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938239 XXXX 1732784938239, Thread 8866: XXXX 1732784938239, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938243 XXXX 1732784938243, Thread 8866: XXXX 1732784938243, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938345 XXXX 1732784938345, Thread 8866: XXXX 1732784938345, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938348 XXXX 1732784938348, Thread 8866: XXXX 1732784938348, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938459 XXXX 1732784938459, Thread 8866: XXXX 1732784938459, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938461 XXXX 1732784938461, Thread 8866: XXXX 1732784938461, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938564 XXXX 1732784938564, Thread 8866: XXXX 1732784938564, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938566 XXXX 1732784938566, Thread 8866: XXXX 1732784938566, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938669 XXXX 1732784938669, Thread 8866: XXXX 1732784938669, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938672 XXXX 1732784938672, Thread 8866: XXXX 1732784938672, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938775 XXXX 1732784938775, Thread 8866: XXXX 1732784938775, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938777 XXXX 1732784938777, Thread 8866: XXXX 1732784938777, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938875 XXXX 1732784938875, Thread 8866: XXXX 1732784938875, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938877 XXXX 1732784938877, Thread 8866: XXXX 1732784938877, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784938979 XXXX 1732784938979, Thread 8866: XXXX 1732784938979, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784938981 XXXX 1732784938981, Thread 8866: XXXX 1732784938981, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939081 XXXX 1732784939081, Thread 8866: XXXX 1732784939081, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939084 XXXX 1732784939084, Thread 8866: XXXX 1732784939084, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939187 XXXX 1732784939187, Thread 8866: XXXX 1732784939187, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939189 XXXX 1732784939189, Thread 8866: XXXX 1732784939189, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939291 XXXX 1732784939291, Thread 8866: XXXX 1732784939291, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939293 XXXX 1732784939293, Thread 8866: XXXX 1732784939293, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939394 XXXX 1732784939394, Thread 8866: XXXX 1732784939394, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939396 XXXX 1732784939396, Thread 8866: XXXX 1732784939396, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939500 XXXX 1732784939499, Thread 8866: XXXX 1732784939499, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939503 XXXX 1732784939503, Thread 8866: XXXX 1732784939503, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939605 XXXX 1732784939605, Thread 8866: XXXX 1732784939605, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939607 XXXX 1732784939607, Thread 8866: XXXX 1732784939607, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939707 XXXX 1732784939707, Thread 8866: XXXX 1732784939707, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939710 XXXX 1732784939710, Thread 8866: XXXX 1732784939710, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939809 XXXX 1732784939809, Thread 8866: XXXX 1732784939809, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939811 XXXX 1732784939811, Thread 8866: XXXX 1732784939811, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784939914 XXXX 1732784939914, Thread 8866: XXXX 1732784939914, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784939917 XXXX 1732784939917, Thread 8866: XXXX 1732784939917, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940019 XXXX 1732784940019, Thread 8866: XXXX 1732784940019, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940021 XXXX 1732784940021, Thread 8866: XXXX 1732784940021, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940124 XXXX 1732784940124, Thread 8866: XXXX 1732784940124, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940126 XXXX 1732784940126, Thread 8866: XXXX 1732784940126, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940226 XXXX 1732784940226, Thread 8866: XXXX 1732784940226, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940228 XXXX 1732784940228, Thread 8866: XXXX 1732784940228, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940332 XXXX 1732784940332, Thread 8866: XXXX 1732784940332, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940334 XXXX 1732784940334, Thread 8866: XXXX 1732784940334, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940437 XXXX 1732784940437, Thread 8866: XXXX 1732784940436, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940439 XXXX 1732784940439, Thread 8866: XXXX 1732784940439, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940540 XXXX 1732784940540, Thread 8866: XXXX 1732784940540, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940542 XXXX 1732784940542, Thread 8866: XXXX 1732784940542, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940645 XXXX 1732784940645, Thread 8866: XXXX 1732784940645, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940648 XXXX 1732784940648, Thread 8866: XXXX 1732784940648, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940748 XXXX 1732784940748, Thread 8866: XXXX 1732784940748, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940750 XXXX 1732784940750, Thread 8866: XXXX 1732784940750, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940851 XXXX 1732784940851, Thread 8866: XXXX 1732784940851, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940853 XXXX 1732784940853, Thread 8866: XXXX 1732784940853, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784940958 XXXX 1732784940958, Thread 8866: XXXX 1732784940958, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784940961 XXXX 1732784940961, Thread 8866: XXXX 1732784940961, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941063 XXXX 1732784941063, Thread 8866: XXXX 1732784941063, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941065 XXXX 1732784941065, Thread 8866: XXXX 1732784941065, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941169 XXXX 1732784941169, Thread 8866: XXXX 1732784941169, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941171 XXXX 1732784941171, Thread 8866: XXXX 1732784941171, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941272 XXXX 1732784941272, Thread 8866: XXXX 1732784941272, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941274 XXXX 1732784941274, Thread 8866: XXXX 1732784941274, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941378 XXXX 1732784941378, Thread 8866: XXXX 1732784941378, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941380 XXXX 1732784941380, Thread 8866: XXXX 1732784941380, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941483 XXXX 1732784941483, Thread 8866: XXXX 1732784941483, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941485 XXXX 1732784941485, Thread 8866: XXXX 1732784941485, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941589 XXXX 1732784941589, Thread 8866: XXXX 1732784941589, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941591 XXXX 1732784941591, Thread 8866: XXXX 1732784941591, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941693 XXXX 1732784941693, Thread 8866: XXXX 1732784941693, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941695 XXXX 1732784941695, Thread 8866: XXXX 1732784941695, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941798 XXXX 1732784941798, Thread 8866: XXXX 1732784941798, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941801 XXXX 1732784941801, Thread 8866: XXXX 1732784941801, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784941905 XXXX 1732784941905, Thread 8866: XXXX 1732784941905, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784941907 XXXX 1732784941907, Thread 8866: XXXX 1732784941907, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942009 XXXX 1732784942009, Thread 8866: XXXX 1732784942009, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942011 XXXX 1732784942011, Thread 8866: XXXX 1732784942011, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942118 XXXX 1732784942118, Thread 8866: XXXX 1732784942118, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942121 XXXX 1732784942121, Thread 8866: XXXX 1732784942121, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942230 XXXX 1732784942230, Thread 8866: XXXX 1732784942230, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942232 XXXX 1732784942232, Thread 8866: XXXX 1732784942232, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942336 XXXX 1732784942336, Thread 8866: XXXX 1732784942336, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942338 XXXX 1732784942338, Thread 8866: XXXX 1732784942338, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942442 XXXX 1732784942441, Thread 8866: XXXX 1732784942440, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942444 XXXX 1732784942444, Thread 8866: XXXX 1732784942444, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942546 XXXX 1732784942546, Thread 8866: XXXX 1732784942546, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942548 XXXX 1732784942548, Thread 8866: XXXX 1732784942548, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942650 XXXX 1732784942650, Thread 8866: XXXX 1732784942650, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942652 XXXX 1732784942652, Thread 8866: XXXX 1732784942652, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942756 XXXX 1732784942756, Thread 8866: XXXX 1732784942756, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942762 XXXX 1732784942762, Thread 8866: XXXX 1732784942762, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942858 XXXX 1732784942858, Thread 8866: XXXX 1732784942858, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942860 XXXX 1732784942860, Thread 8866: XXXX 1732784942860, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784942966 XXXX 1732784942966, Thread 8866: XXXX 1732784942966, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784942968 XXXX 1732784942968, Thread 8866: XXXX 1732784942968, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943072 XXXX 1732784943072, Thread 8866: XXXX 1732784943072, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943074 XXXX 1732784943074, Thread 8866: XXXX 1732784943074, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943177 XXXX 1732784943177, Thread 8866: XXXX 1732784943177, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943180 XXXX 1732784943180, Thread 8866: XXXX 1732784943180, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943282 XXXX 1732784943282, Thread 8866: XXXX 1732784943282, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943284 XXXX 1732784943284, Thread 8866: XXXX 1732784943284, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943388 XXXX 1732784943388, Thread 8866: XXXX 1732784943388, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943389 XXXX 1732784943389, Thread 8866: XXXX 1732784943389, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943493 XXXX 1732784943493, Thread 8866: XXXX 1732784943493, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943495 XXXX 1732784943495, Thread 8866: XXXX 1732784943495, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943596 XXXX 1732784943596, Thread 8866: XXXX 1732784943596, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943599 XXXX 1732784943599, Thread 8866: XXXX 1732784943599, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943703 XXXX 1732784943703, Thread 8866: XXXX 1732784943703, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943705 XXXX 1732784943705, Thread 8866: XXXX 1732784943705, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943809 XXXX 1732784943809, Thread 8866: XXXX 1732784943809, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943811 XXXX 1732784943811, Thread 8866: XXXX 1732784943811, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784943915 XXXX 1732784943915, Thread 8866: XXXX 1732784943915, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784943917 XXXX 1732784943917, Thread 8866: XXXX 1732784943917, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944023 XXXX 1732784944023, Thread 8866: XXXX 1732784944023, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944025 XXXX 1732784944025, Thread 8866: XXXX 1732784944025, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944123 XXXX 1732784944123, Thread 8866: XXXX 1732784944123, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944125 XXXX 1732784944125, Thread 8866: XXXX 1732784944125, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944224 XXXX 1732784944224, Thread 8866: XXXX 1732784944224, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944226 XXXX 1732784944226, Thread 8866: XXXX 1732784944226, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944326 XXXX 1732784944326, Thread 8866: XXXX 1732784944326, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944328 XXXX 1732784944328, Thread 8866: XXXX 1732784944328, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944432 XXXX 1732784944432, Thread 8866: XXXX 1732784944432, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944434 XXXX 1732784944434, Thread 8866: XXXX 1732784944434, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944537 XXXX 1732784944537, Thread 8866: XXXX 1732784944537, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944539 XXXX 1732784944539, Thread 8866: XXXX 1732784944539, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944645 XXXX 1732784944645, Thread 8866: XXXX 1732784944645, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944647 XXXX 1732784944647, Thread 8866: XXXX 1732784944647, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944750 XXXX 1732784944750, Thread 8866: XXXX 1732784944750, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944752 XXXX 1732784944752, Thread 8866: XXXX 1732784944752, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944858 XXXX 1732784944858, Thread 8866: XXXX 1732784944858, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944860 XXXX 1732784944860, Thread 8866: XXXX 1732784944860, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784944963 XXXX 1732784944963, Thread 8866: XXXX 1732784944963, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784944965 XXXX 1732784944965, Thread 8866: XXXX 1732784944965, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945067 XXXX 1732784945067, Thread 8866: XXXX 1732784945067, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945069 XXXX 1732784945069, Thread 8866: XXXX 1732784945069, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945171 XXXX 1732784945171, Thread 8866: XXXX 1732784945171, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945173 XXXX 1732784945173, Thread 8866: XXXX 1732784945173, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945274 XXXX 1732784945274, Thread 8866: XXXX 1732784945274, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945276 XXXX 1732784945276, Thread 8866: XXXX 1732784945276, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945378 XXXX 1732784945378, Thread 8866: XXXX 1732784945378, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945380 XXXX 1732784945380, Thread 8866: XXXX 1732784945380, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945484 XXXX 1732784945484, Thread 8866: XXXX 1732784945484, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945486 XXXX 1732784945486, Thread 8866: XXXX 1732784945486, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945593 XXXX 1732784945593, Thread 8866: XXXX 1732784945593, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945595 XXXX 1732784945595, Thread 8866: XXXX 1732784945595, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945693 XXXX 1732784945693, Thread 8866: XXXX 1732784945693, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945695 XXXX 1732784945695, Thread 8866: XXXX 1732784945695, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945803 XXXX 1732784945803, Thread 8866: XXXX 1732784945803, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945805 XXXX 1732784945805, Thread 8866: XXXX 1732784945805, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784945909 XXXX 1732784945909, Thread 8866: XXXX 1732784945909, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784945911 XXXX 1732784945911, Thread 8866: XXXX 1732784945911, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946015 XXXX 1732784946015, Thread 8866: XXXX 1732784946015, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946018 XXXX 1732784946018, Thread 8866: XXXX 1732784946018, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946126 XXXX 1732784946126, Thread 8866: XXXX 1732784946126, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946129 XXXX 1732784946129, Thread 8866: XXXX 1732784946129, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946231 XXXX 1732784946231, Thread 8866: XXXX 1732784946231, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946233 XXXX 1732784946233, Thread 8866: XXXX 1732784946233, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946332 XXXX 1732784946332, Thread 8866: XXXX 1732784946332, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946334 XXXX 1732784946334, Thread 8866: XXXX 1732784946334, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946434 XXXX 1732784946434, Thread 8866: XXXX 1732784946434, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946436 XXXX 1732784946436, Thread 8866: XXXX 1732784946436, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946543 XXXX 1732784946543, Thread 8866: XXXX 1732784946543, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946545 XXXX 1732784946545, Thread 8866: XXXX 1732784946545, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946649 XXXX 1732784946649, Thread 8866: XXXX 1732784946649, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946650 XXXX 1732784946650, Thread 8866: XXXX 1732784946650, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946750 XXXX 1732784946750, Thread 8866: XXXX 1732784946750, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946752 XXXX 1732784946752, Thread 8866: XXXX 1732784946752, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946856 XXXX 1732784946856, Thread 8866: XXXX 1732784946856, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946858 XXXX 1732784946858, Thread 8866: XXXX 1732784946858, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784946961 XXXX 1732784946961, Thread 8866: XXXX 1732784946961, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784946963 XXXX 1732784946963, Thread 8866: XXXX 1732784946963, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947064 XXXX 1732784947064, Thread 8866: XXXX 1732784947064, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947066 XXXX 1732784947066, Thread 8866: XXXX 1732784947066, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947165 XXXX 1732784947165, Thread 8866: XXXX 1732784947165, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947167 XXXX 1732784947167, Thread 8866: XXXX 1732784947167, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947273 XXXX 1732784947273, Thread 8866: XXXX 1732784947273, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947275 XXXX 1732784947275, Thread 8866: XXXX 1732784947275, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947376 XXXX 1732784947376, Thread 8866: XXXX 1732784947376, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947380 XXXX 1732784947380, Thread 8866: XXXX 1732784947380, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947481 XXXX 1732784947481, Thread 8866: XXXX 1732784947481, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947483 XXXX 1732784947483, Thread 8866: XXXX 1732784947483, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947586 XXXX 1732784947586, Thread 8866: XXXX 1732784947586, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947588 XXXX 1732784947588, Thread 8866: XXXX 1732784947588, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947694 XXXX 1732784947694, Thread 8866: XXXX 1732784947694, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947696 XXXX 1732784947696, Thread 8866: XXXX 1732784947696, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947819 XXXX 1732784947819, Thread 8866: XXXX 1732784947819, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947821 XXXX 1732784947821, Thread 8866: XXXX 1732784947821, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784947925 XXXX 1732784947925, Thread 8866: XXXX 1732784947925, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784947926 XXXX 1732784947926, Thread 8866: XXXX 1732784947926, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948029 XXXX 1732784948029, Thread 8866: XXXX 1732784948029, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948031 XXXX 1732784948031, Thread 8866: XXXX 1732784948031, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948139 XXXX 1732784948139, Thread 8866: XXXX 1732784948139, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948143 XXXX 1732784948143, Thread 8866: XXXX 1732784948143, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948244 XXXX 1732784948244, Thread 8866: XXXX 1732784948244, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948246 XXXX 1732784948246, Thread 8866: XXXX 1732784948246, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948352 XXXX 1732784948352, Thread 8866: XXXX 1732784948352, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948354 XXXX 1732784948354, Thread 8866: XXXX 1732784948354, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948458 XXXX 1732784948458, Thread 8866: XXXX 1732784948458, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948461 XXXX 1732784948461, Thread 8866: XXXX 1732784948461, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948562 XXXX 1732784948562, Thread 8866: XXXX 1732784948562, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948564 XXXX 1732784948564, Thread 8866: XXXX 1732784948564, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948668 XXXX 1732784948668, Thread 8866: XXXX 1732784948668, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948673 XXXX 1732784948673, Thread 8866: XXXX 1732784948673, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948774 XXXX 1732784948774, Thread 8866: XXXX 1732784948774, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948775 XXXX 1732784948775, Thread 8866: XXXX 1732784948775, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948878 XXXX 1732784948878, Thread 8866: XXXX 1732784948878, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948879 XXXX 1732784948879, Thread 8866: XXXX 1732784948879, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784948984 XXXX 1732784948984, Thread 8866: XXXX 1732784948984, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784948986 XXXX 1732784948986, Thread 8866: XXXX 1732784948986, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949090 XXXX 1732784949090, Thread 8866: XXXX 1732784949090, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949093 XXXX 1732784949093, Thread 8866: XXXX 1732784949093, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949197 XXXX 1732784949197, Thread 8866: XXXX 1732784949197, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949198 XXXX 1732784949198, Thread 8866: XXXX 1732784949198, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949301 XXXX 1732784949301, Thread 8866: XXXX 1732784949301, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949302 XXXX 1732784949302, Thread 8866: XXXX 1732784949302, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949407 XXXX 1732784949407, Thread 8866: XXXX 1732784949407, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949410 XXXX 1732784949410, Thread 8866: XXXX 1732784949410, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949513 XXXX 1732784949513, Thread 8866: XXXX 1732784949513, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949514 XXXX 1732784949514, Thread 8866: XXXX 1732784949514, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949617 XXXX 1732784949617, Thread 8866: XXXX 1732784949617, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949618 XXXX 1732784949618, Thread 8866: XXXX 1732784949618, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949725 XXXX 1732784949725, Thread 8866: XXXX 1732784949725, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949727 XXXX 1732784949727, Thread 8866: XXXX 1732784949727, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949826 XXXX 1732784949826, Thread 8866: XXXX 1732784949826, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949831 XXXX 1732784949831, Thread 8866: XXXX 1732784949831, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784949927 XXXX 1732784949927, Thread 8866: XXXX 1732784949927, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784949929 XXXX 1732784949929, Thread 8866: XXXX 1732784949929, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950036 XXXX 1732784950036, Thread 8866: XXXX 1732784950036, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950037 XXXX 1732784950037, Thread 8866: XXXX 1732784950037, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950139 XXXX 1732784950139, Thread 8866: XXXX 1732784950139, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950140 XXXX 1732784950140, Thread 8866: XXXX 1732784950140, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950245 XXXX 1732784950245, Thread 8866: XXXX 1732784950245, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950247 XXXX 1732784950247, Thread 8866: XXXX 1732784950247, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950350 XXXX 1732784950350, Thread 8866: XXXX 1732784950350, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950352 XXXX 1732784950352, Thread 8866: XXXX 1732784950352, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950454 XXXX 1732784950454, Thread 8866: XXXX 1732784950454, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950456 XXXX 1732784950456, Thread 8866: XXXX 1732784950456, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950556 XXXX 1732784950556, Thread 8866: XXXX 1732784950556, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950558 XXXX 1732784950558, Thread 8866: XXXX 1732784950558, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950657 XXXX 1732784950657, Thread 8866: XXXX 1732784950657, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950658 XXXX 1732784950658, Thread 8866: XXXX 1732784950658, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950758 XXXX 1732784950758, Thread 8866: XXXX 1732784950758, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950760 XXXX 1732784950760, Thread 8866: XXXX 1732784950760, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950860 XXXX 1732784950860, Thread 8866: XXXX 1732784950860, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950861 XXXX 1732784950861, Thread 8866: XXXX 1732784950861, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784950968 XXXX 1732784950968, Thread 8866: XXXX 1732784950968, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784950969 XXXX 1732784950969, Thread 8866: XXXX 1732784950969, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951077 XXXX 1732784951077, Thread 8866: XXXX 1732784951077, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951078 XXXX 1732784951078, Thread 8866: XXXX 1732784951078, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951181 XXXX 1732784951181, Thread 8866: XXXX 1732784951181, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951182 XXXX 1732784951182, Thread 8866: XXXX 1732784951182, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951286 XXXX 1732784951286, Thread 8866: XXXX 1732784951286, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951288 XXXX 1732784951288, Thread 8866: XXXX 1732784951288, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951394 XXXX 1732784951394, Thread 8866: XXXX 1732784951393, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951395 XXXX 1732784951395, Thread 8866: XXXX 1732784951395, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951498 XXXX 1732784951498, Thread 8866: XXXX 1732784951498, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951500 XXXX 1732784951500, Thread 8866: XXXX 1732784951500, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951607 XXXX 1732784951607, Thread 8866: XXXX 1732784951607, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951609 XXXX 1732784951609, Thread 8866: XXXX 1732784951609, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951715 XXXX 1732784951715, Thread 8866: XXXX 1732784951715, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951716 XXXX 1732784951716, Thread 8866: XXXX 1732784951716, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951820 XXXX 1732784951820, Thread 8866: XXXX 1732784951820, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951822 XXXX 1732784951822, Thread 8866: XXXX 1732784951822, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784951921 XXXX 1732784951921, Thread 8866: XXXX 1732784951921, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784951923 XXXX 1732784951923, Thread 8866: XXXX 1732784951923, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952027 XXXX 1732784952027, Thread 8866: XXXX 1732784952027, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952029 XXXX 1732784952029, Thread 8866: XXXX 1732784952029, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952131 XXXX 1732784952131, Thread 8866: XXXX 1732784952131, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952133 XXXX 1732784952133, Thread 8866: XXXX 1732784952133, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952238 XXXX 1732784952238, Thread 8866: XXXX 1732784952238, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952240 XXXX 1732784952240, Thread 8866: XXXX 1732784952240, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952343 XXXX 1732784952343, Thread 8866: XXXX 1732784952343, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952345 XXXX 1732784952345, Thread 8866: XXXX 1732784952345, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952448 XXXX 1732784952448, Thread 8866: XXXX 1732784952448, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952450 XXXX 1732784952450, Thread 8866: XXXX 1732784952450, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952556 XXXX 1732784952556, Thread 8866: XXXX 1732784952556, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952558 XXXX 1732784952558, Thread 8866: XXXX 1732784952558, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952662 XXXX 1732784952662, Thread 8866: XXXX 1732784952662, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952664 XXXX 1732784952664, Thread 8866: XXXX 1732784952664, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952768 XXXX 1732784952768, Thread 8866: XXXX 1732784952768, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952770 XXXX 1732784952770, Thread 8866: XXXX 1732784952770, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952874 XXXX 1732784952874, Thread 8866: XXXX 1732784952874, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952876 XXXX 1732784952876, Thread 8866: XXXX 1732784952876, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784952975 XXXX 1732784952975, Thread 8866: XXXX 1732784952975, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784952977 XXXX 1732784952977, Thread 8866: XXXX 1732784952977, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953078 XXXX 1732784953078, Thread 8866: XXXX 1732784953078, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953079 XXXX 1732784953079, Thread 8866: XXXX 1732784953079, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953185 XXXX 1732784953185, Thread 8866: XXXX 1732784953185, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953187 XXXX 1732784953187, Thread 8866: XXXX 1732784953187, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953290 XXXX 1732784953290, Thread 8866: XXXX 1732784953290, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953292 XXXX 1732784953292, Thread 8866: XXXX 1732784953292, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953395 XXXX 1732784953395, Thread 8866: XXXX 1732784953395, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953397 XXXX 1732784953397, Thread 8866: XXXX 1732784953397, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953500 XXXX 1732784953500, Thread 8866: XXXX 1732784953500, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953501 XXXX 1732784953501, Thread 8866: XXXX 1732784953501, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953604 XXXX 1732784953604, Thread 8866: XXXX 1732784953604, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953606 XXXX 1732784953606, Thread 8866: XXXX 1732784953606, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953710 XXXX 1732784953710, Thread 8866: XXXX 1732784953710, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953711 XXXX 1732784953711, Thread 8866: XXXX 1732784953711, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953813 XXXX 1732784953813, Thread 8866: XXXX 1732784953813, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953815 XXXX 1732784953815, Thread 8866: XXXX 1732784953815, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784953917 XXXX 1732784953917, Thread 8866: XXXX 1732784953917, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784953920 XXXX 1732784953920, Thread 8866: XXXX 1732784953920, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954021 XXXX 1732784954021, Thread 8866: XXXX 1732784954021, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954022 XXXX 1732784954022, Thread 8866: XXXX 1732784954022, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954124 XXXX 1732784954124, Thread 8866: XXXX 1732784954124, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954125 XXXX 1732784954125, Thread 8866: XXXX 1732784954125, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954230 XXXX 1732784954230, Thread 8866: XXXX 1732784954230, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954232 XXXX 1732784954232, Thread 8866: XXXX 1732784954232, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954335 XXXX 1732784954335, Thread 8866: XXXX 1732784954335, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954337 XXXX 1732784954337, Thread 8866: XXXX 1732784954337, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954439 XXXX 1732784954439, Thread 8866: XXXX 1732784954439, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954440 XXXX 1732784954440, Thread 8866: XXXX 1732784954440, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954544 XXXX 1732784954544, Thread 8866: XXXX 1732784954544, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954545 XXXX 1732784954545, Thread 8866: XXXX 1732784954545, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954649 XXXX 1732784954649, Thread 8866: XXXX 1732784954649, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954650 XXXX 1732784954650, Thread 8866: XXXX 1732784954650, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954764 XXXX 1732784954764, Thread 8866: XXXX 1732784954764, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954765 XXXX 1732784954765, Thread 8866: XXXX 1732784954765, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954869 XXXX 1732784954869, Thread 8866: XXXX 1732784954869, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954870 XXXX 1732784954870, Thread 8866: XXXX 1732784954870, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784954973 XXXX 1732784954973, Thread 8866: XXXX 1732784954973, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784954975 XXXX 1732784954975, Thread 8866: XXXX 1732784954975, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955078 XXXX 1732784955078, Thread 8866: XXXX 1732784955078, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955080 XXXX 1732784955080, Thread 8866: XXXX 1732784955080, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955182 XXXX 1732784955182, Thread 8866: XXXX 1732784955182, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955184 XXXX 1732784955184, Thread 8866: XXXX 1732784955184, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955283 XXXX 1732784955283, Thread 8866: XXXX 1732784955283, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955285 XXXX 1732784955285, Thread 8866: XXXX 1732784955285, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955396 XXXX 1732784955396, Thread 8866: XXXX 1732784955396, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955398 XXXX 1732784955398, Thread 8866: XXXX 1732784955398, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955501 XXXX 1732784955501, Thread 8866: XXXX 1732784955501, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955503 XXXX 1732784955503, Thread 8866: XXXX 1732784955503, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955609 XXXX 1732784955609, Thread 8866: XXXX 1732784955609, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955610 XXXX 1732784955610, Thread 8866: XXXX 1732784955610, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955735 XXXX 1732784955735, Thread 8866: XXXX 1732784955735, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955737 XXXX 1732784955737, Thread 8866: XXXX 1732784955737, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955841 XXXX 1732784955841, Thread 8866: XXXX 1732784955841, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955842 XXXX 1732784955842, Thread 8866: XXXX 1732784955842, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784955946 XXXX 1732784955946, Thread 8866: XXXX 1732784955946, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784955948 XXXX 1732784955948, Thread 8866: XXXX 1732784955948, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956049 XXXX 1732784956049, Thread 8866: XXXX 1732784956049, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956050 XXXX 1732784956050, Thread 8866: XXXX 1732784956050, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956151 XXXX 1732784956151, Thread 8866: XXXX 1732784956151, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956152 XXXX 1732784956152, Thread 8866: XXXX 1732784956152, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956256 XXXX 1732784956256, Thread 8866: XXXX 1732784956256, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956259 XXXX 1732784956259, Thread 8866: XXXX 1732784956259, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956361 XXXX 1732784956361, Thread 8866: XXXX 1732784956361, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956367 XXXX 1732784956367, Thread 8866: XXXX 1732784956367, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956464 XXXX 1732784956464, Thread 8866: XXXX 1732784956464, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956466 XXXX 1732784956466, Thread 8866: XXXX 1732784956466, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956571 XXXX 1732784956571, Thread 8866: XXXX 1732784956571, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956572 XXXX 1732784956572, Thread 8866: XXXX 1732784956572, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956676 XXXX 1732784956676, Thread 8866: XXXX 1732784956676, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956677 XXXX 1732784956677, Thread 8866: XXXX 1732784956677, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956780 XXXX 1732784956780, Thread 8866: XXXX 1732784956780, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956785 XXXX 1732784956785, Thread 8866: XXXX 1732784956785, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956892 XXXX 1732784956892, Thread 8866: XXXX 1732784956892, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956895 XXXX 1732784956895, Thread 8866: XXXX 1732784956895, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784956993 XXXX 1732784956993, Thread 8866: XXXX 1732784956993, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784956994 XXXX 1732784956994, Thread 8866: XXXX 1732784956994, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957097 XXXX 1732784957097, Thread 8866: XXXX 1732784957097, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957099 XXXX 1732784957099, Thread 8866: XXXX 1732784957099, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957203 XXXX 1732784957203, Thread 8866: XXXX 1732784957203, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957204 XXXX 1732784957204, Thread 8866: XXXX 1732784957204, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957308 XXXX 1732784957308, Thread 8866: XXXX 1732784957308, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957309 XXXX 1732784957309, Thread 8866: XXXX 1732784957309, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957410 XXXX 1732784957410, Thread 8866: XXXX 1732784957410, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957412 XXXX 1732784957412, Thread 8866: XXXX 1732784957412, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957515 XXXX 1732784957515, Thread 8866: XXXX 1732784957515, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957516 XXXX 1732784957516, Thread 8866: XXXX 1732784957516, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957620 XXXX 1732784957620, Thread 8866: XXXX 1732784957620, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957621 XXXX 1732784957621, Thread 8866: XXXX 1732784957621, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957722 XXXX 1732784957722, Thread 8866: XXXX 1732784957722, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957725 XXXX 1732784957725, Thread 8866: XXXX 1732784957725, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957827 XXXX 1732784957827, Thread 8866: XXXX 1732784957827, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957829 XXXX 1732784957829, Thread 8866: XXXX 1732784957829, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784957931 XXXX 1732784957931, Thread 8866: XXXX 1732784957931, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784957933 XXXX 1732784957933, Thread 8866: XXXX 1732784957933, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958034 XXXX 1732784958034, Thread 8866: XXXX 1732784958034, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958035 XXXX 1732784958035, Thread 8866: XXXX 1732784958035, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958138 XXXX 1732784958138, Thread 8866: XXXX 1732784958138, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958139 XXXX 1732784958139, Thread 8866: XXXX 1732784958139, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958246 XXXX 1732784958246, Thread 8866: XXXX 1732784958246, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958247 XXXX 1732784958247, Thread 8866: XXXX 1732784958247, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958352 XXXX 1732784958352, Thread 8866: XXXX 1732784958352, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958353 XXXX 1732784958353, Thread 8866: XXXX 1732784958353, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958452 XXXX 1732784958452, Thread 8866: XXXX 1732784958452, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958453 XXXX 1732784958453, Thread 8866: XXXX 1732784958453, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958558 XXXX 1732784958558, Thread 8866: XXXX 1732784958558, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958559 XXXX 1732784958559, Thread 8866: XXXX 1732784958559, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958673 XXXX 1732784958673, Thread 8866: XXXX 1732784958673, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958676 XXXX 1732784958676, Thread 8866: XXXX 1732784958676, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958775 XXXX 1732784958775, Thread 8866: XXXX 1732784958775, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958776 XXXX 1732784958776, Thread 8866: XXXX 1732784958776, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958875 XXXX 1732784958875, Thread 8866: XXXX 1732784958875, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958876 XXXX 1732784958876, Thread 8866: XXXX 1732784958876, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784958975 XXXX 1732784958975, Thread 8866: XXXX 1732784958975, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784958978 XXXX 1732784958978, Thread 8866: XXXX 1732784958977, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959076 XXXX 1732784959076, Thread 8866: XXXX 1732784959076, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959078 XXXX 1732784959078, Thread 8866: XXXX 1732784959078, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959187 XXXX 1732784959187, Thread 8866: XXXX 1732784959187, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959188 XXXX 1732784959188, Thread 8866: XXXX 1732784959188, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959292 XXXX 1732784959292, Thread 8866: XXXX 1732784959292, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959293 XXXX 1732784959293, Thread 8866: XXXX 1732784959293, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959397 XXXX 1732784959397, Thread 8866: XXXX 1732784959397, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959400 XXXX 1732784959399, Thread 8866: XXXX 1732784959399, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959502 XXXX 1732784959502, Thread 8866: XXXX 1732784959502, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959503 XXXX 1732784959503, Thread 8866: XXXX 1732784959503, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959607 XXXX 1732784959607, Thread 8866: XXXX 1732784959607, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959609 XXXX 1732784959609, Thread 8866: XXXX 1732784959608, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959709 XXXX 1732784959709, Thread 8866: XXXX 1732784959709, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959711 XXXX 1732784959711, Thread 8866: XXXX 1732784959711, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959812 XXXX 1732784959812, Thread 8866: XXXX 1732784959812, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959814 XXXX 1732784959814, Thread 8866: XXXX 1732784959814, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784959915 XXXX 1732784959915, Thread 8866: XXXX 1732784959915, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784959916 XXXX 1732784959916, Thread 8866: XXXX 1732784959916, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960020 XXXX 1732784960020, Thread 8866: XXXX 1732784960020, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960022 XXXX 1732784960022, Thread 8866: XXXX 1732784960021, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960126 XXXX 1732784960126, Thread 8866: XXXX 1732784960126, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960127 XXXX 1732784960127, Thread 8866: XXXX 1732784960127, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960231 XXXX 1732784960231, Thread 8866: XXXX 1732784960231, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960233 XXXX 1732784960233, Thread 8866: XXXX 1732784960233, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960337 XXXX 1732784960337, Thread 8866: XXXX 1732784960336, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960339 XXXX 1732784960339, Thread 8866: XXXX 1732784960339, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960441 XXXX 1732784960441, Thread 8866: XXXX 1732784960441, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960444 XXXX 1732784960444, Thread 8866: XXXX 1732784960444, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960546 XXXX 1732784960546, Thread 8866: XXXX 1732784960546, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960549 XXXX 1732784960549, Thread 8866: XXXX 1732784960549, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960651 XXXX 1732784960651, Thread 8866: XXXX 1732784960651, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960654 XXXX 1732784960654, Thread 8866: XXXX 1732784960654, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960752 XXXX 1732784960752, Thread 8866: XXXX 1732784960752, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960754 XXXX 1732784960754, Thread 8866: XXXX 1732784960754, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960857 XXXX 1732784960857, Thread 8866: XXXX 1732784960857, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960860 XXXX 1732784960860, Thread 8866: XXXX 1732784960860, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784960964 XXXX 1732784960964, Thread 8866: XXXX 1732784960964, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784960966 XXXX 1732784960966, Thread 8866: XXXX 1732784960966, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961069 XXXX 1732784961069, Thread 8866: XXXX 1732784961069, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961071 XXXX 1732784961071, Thread 8866: XXXX 1732784961071, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961174 XXXX 1732784961174, Thread 8866: XXXX 1732784961174, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961176 XXXX 1732784961176, Thread 8866: XXXX 1732784961176, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961279 XXXX 1732784961279, Thread 8866: XXXX 1732784961279, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961281 XXXX 1732784961281, Thread 8866: XXXX 1732784961281, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961383 XXXX 1732784961383, Thread 8866: XXXX 1732784961383, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961385 XXXX 1732784961385, Thread 8866: XXXX 1732784961385, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961489 XXXX 1732784961489, Thread 8866: XXXX 1732784961489, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961491 XXXX 1732784961491, Thread 8866: XXXX 1732784961491, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961595 XXXX 1732784961595, Thread 8866: XXXX 1732784961595, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961597 XXXX 1732784961597, Thread 8866: XXXX 1732784961597, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961701 XXXX 1732784961701, Thread 8866: XXXX 1732784961701, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961712 XXXX 1732784961712, Thread 8866: XXXX 1732784961712, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961804 XXXX 1732784961804, Thread 8866: XXXX 1732784961804, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961806 XXXX 1732784961806, Thread 8866: XXXX 1732784961806, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784961914 XXXX 1732784961914, Thread 8866: XXXX 1732784961914, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784961917 XXXX 1732784961917, Thread 8866: XXXX 1732784961917, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962019 XXXX 1732784962019, Thread 8866: XXXX 1732784962019, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962022 XXXX 1732784962022, Thread 8866: XXXX 1732784962022, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962130 XXXX 1732784962130, Thread 8866: XXXX 1732784962130, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962133 XXXX 1732784962133, Thread 8866: XXXX 1732784962133, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962233 XXXX 1732784962233, Thread 8866: XXXX 1732784962233, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962236 XXXX 1732784962236, Thread 8866: XXXX 1732784962236, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962344 XXXX 1732784962344, Thread 8866: XXXX 1732784962344, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962346 XXXX 1732784962346, Thread 8866: XXXX 1732784962346, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962449 XXXX 1732784962449, Thread 8866: XXXX 1732784962449, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962451 XXXX 1732784962451, Thread 8866: XXXX 1732784962451, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962555 XXXX 1732784962555, Thread 8866: XXXX 1732784962554, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962557 XXXX 1732784962557, Thread 8866: XXXX 1732784962557, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962660 XXXX 1732784962660, Thread 8866: XXXX 1732784962660, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962662 XXXX 1732784962662, Thread 8866: XXXX 1732784962662, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962765 XXXX 1732784962765, Thread 8866: XXXX 1732784962765, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962769 XXXX 1732784962769, Thread 8866: XXXX 1732784962769, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962870 XXXX 1732784962870, Thread 8866: XXXX 1732784962870, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962873 XXXX 1732784962873, Thread 8866: XXXX 1732784962873, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784962975 XXXX 1732784962975, Thread 8866: XXXX 1732784962975, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784962978 XXXX 1732784962978, Thread 8866: XXXX 1732784962978, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963078 XXXX 1732784963078, Thread 8866: XXXX 1732784963078, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963081 XXXX 1732784963081, Thread 8866: XXXX 1732784963081, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963188 XXXX 1732784963188, Thread 8866: XXXX 1732784963188, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963190 XXXX 1732784963190, Thread 8866: XXXX 1732784963190, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963294 XXXX 1732784963294, Thread 8866: XXXX 1732784963294, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963296 XXXX 1732784963296, Thread 8866: XXXX 1732784963296, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963399 XXXX 1732784963399, Thread 8866: XXXX 1732784963399, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963402 XXXX 1732784963402, Thread 8866: XXXX 1732784963402, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963505 XXXX 1732784963505, Thread 8866: XXXX 1732784963505, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963508 XXXX 1732784963508, Thread 8866: XXXX 1732784963508, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963611 XXXX 1732784963611, Thread 8866: XXXX 1732784963611, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963613 XXXX 1732784963613, Thread 8866: XXXX 1732784963613, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963717 XXXX 1732784963717, Thread 8866: XXXX 1732784963717, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963719 XXXX 1732784963719, Thread 8866: XXXX 1732784963719, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963822 XXXX 1732784963822, Thread 8866: XXXX 1732784963822, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963825 XXXX 1732784963825, Thread 8866: XXXX 1732784963825, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784963927 XXXX 1732784963927, Thread 8866: XXXX 1732784963927, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784963929 XXXX 1732784963929, Thread 8866: XXXX 1732784963929, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964033 XXXX 1732784964033, Thread 8866: XXXX 1732784964033, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964035 XXXX 1732784964035, Thread 8866: XXXX 1732784964035, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964139 XXXX 1732784964139, Thread 8866: XXXX 1732784964139, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964144 XXXX 1732784964144, Thread 8866: XXXX 1732784964144, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964249 XXXX 1732784964249, Thread 8866: XXXX 1732784964249, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964251 XXXX 1732784964251, Thread 8866: XXXX 1732784964251, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964355 XXXX 1732784964355, Thread 8866: XXXX 1732784964355, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964357 XXXX 1732784964357, Thread 8866: XXXX 1732784964357, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964461 XXXX 1732784964461, Thread 8866: XXXX 1732784964461, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964463 XXXX 1732784964463, Thread 8866: XXXX 1732784964463, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964565 XXXX 1732784964565, Thread 8866: XXXX 1732784964565, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964567 XXXX 1732784964567, Thread 8866: XXXX 1732784964567, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964671 XXXX 1732784964671, Thread 8866: XXXX 1732784964671, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964673 XXXX 1732784964673, Thread 8866: XXXX 1732784964673, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964776 XXXX 1732784964776, Thread 8866: XXXX 1732784964776, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964778 XXXX 1732784964778, Thread 8866: XXXX 1732784964778, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964882 XXXX 1732784964882, Thread 8866: XXXX 1732784964882, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964884 XXXX 1732784964884, Thread 8866: XXXX 1732784964884, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784964990 XXXX 1732784964990, Thread 8866: XXXX 1732784964990, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784964992 XXXX 1732784964992, Thread 8866: XXXX 1732784964992, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965091 XXXX 1732784965091, Thread 8866: XXXX 1732784965091, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965093 XXXX 1732784965093, Thread 8866: XXXX 1732784965093, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965197 XXXX 1732784965197, Thread 8866: XXXX 1732784965197, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965200 XXXX 1732784965200, Thread 8866: XXXX 1732784965200, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965301 XXXX 1732784965301, Thread 8866: XXXX 1732784965301, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965303 XXXX 1732784965303, Thread 8866: XXXX 1732784965303, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965412 XXXX 1732784965412, Thread 8866: XXXX 1732784965412, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965414 XXXX 1732784965414, Thread 8866: XXXX 1732784965414, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965518 XXXX 1732784965518, Thread 8866: XXXX 1732784965518, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965520 XXXX 1732784965520, Thread 8866: XXXX 1732784965520, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965626 XXXX 1732784965626, Thread 8866: XXXX 1732784965626, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965628 XXXX 1732784965628, Thread 8866: XXXX 1732784965628, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965726 XXXX 1732784965726, Thread 8866: XXXX 1732784965726, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965728 XXXX 1732784965728, Thread 8866: XXXX 1732784965728, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965832 XXXX 1732784965832, Thread 8866: XXXX 1732784965832, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965834 XXXX 1732784965834, Thread 8866: XXXX 1732784965834, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784965939 XXXX 1732784965939, Thread 8866: XXXX 1732784965939, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784965942 XXXX 1732784965942, Thread 8866: XXXX 1732784965942, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966040 XXXX 1732784966040, Thread 8866: XXXX 1732784966040, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966042 XXXX 1732784966042, Thread 8866: XXXX 1732784966042, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966142 XXXX 1732784966142, Thread 8866: XXXX 1732784966142, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966144 XXXX 1732784966144, Thread 8866: XXXX 1732784966144, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966247 XXXX 1732784966247, Thread 8866: XXXX 1732784966247, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966249 XXXX 1732784966249, Thread 8866: XXXX 1732784966249, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966353 XXXX 1732784966353, Thread 8866: XXXX 1732784966353, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966355 XXXX 1732784966355, Thread 8866: XXXX 1732784966355, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966459 XXXX 1732784966459, Thread 8866: XXXX 1732784966459, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966470 XXXX 1732784966470, Thread 8866: XXXX 1732784966470, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966567 XXXX 1732784966567, Thread 8866: XXXX 1732784966567, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966569 XXXX 1732784966569, Thread 8866: XXXX 1732784966569, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966671 XXXX 1732784966671, Thread 8866: XXXX 1732784966671, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966673 XXXX 1732784966673, Thread 8866: XXXX 1732784966673, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966776 XXXX 1732784966775, Thread 8866: XXXX 1732784966775, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966778 XXXX 1732784966778, Thread 8866: XXXX 1732784966778, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966881 XXXX 1732784966881, Thread 8866: XXXX 1732784966881, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966883 XXXX 1732784966883, Thread 8866: XXXX 1732784966883, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784966984 XXXX 1732784966984, Thread 8866: XXXX 1732784966984, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784966987 XXXX 1732784966987, Thread 8866: XXXX 1732784966987, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967089 XXXX 1732784967089, Thread 8866: XXXX 1732784967089, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967091 XXXX 1732784967091, Thread 8866: XXXX 1732784967091, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967193 XXXX 1732784967193, Thread 8866: XXXX 1732784967193, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967195 XXXX 1732784967195, Thread 8866: XXXX 1732784967195, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967298 XXXX 1732784967298, Thread 8866: XXXX 1732784967298, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967300 XXXX 1732784967300, Thread 8866: XXXX 1732784967300, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967415 XXXX 1732784967415, Thread 8866: XXXX 1732784967414, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967417 XXXX 1732784967417, Thread 8866: XXXX 1732784967417, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967520 XXXX 1732784967520, Thread 8866: XXXX 1732784967520, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967523 XXXX 1732784967523, Thread 8866: XXXX 1732784967523, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967627 XXXX 1732784967627, Thread 8866: XXXX 1732784967627, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967629 XXXX 1732784967629, Thread 8866: XXXX 1732784967629, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967733 XXXX 1732784967733, Thread 8866: XXXX 1732784967733, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967735 XXXX 1732784967735, Thread 8866: XXXX 1732784967735, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967839 XXXX 1732784967839, Thread 8866: XXXX 1732784967839, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967843 XXXX 1732784967843, Thread 8866: XXXX 1732784967843, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784967941 XXXX 1732784967941, Thread 8866: XXXX 1732784967941, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784967943 XXXX 1732784967943, Thread 8866: XXXX 1732784967943, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968047 XXXX 1732784968047, Thread 8866: XXXX 1732784968047, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968049 XXXX 1732784968049, Thread 8866: XXXX 1732784968049, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968153 XXXX 1732784968153, Thread 8866: XXXX 1732784968153, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968155 XXXX 1732784968155, Thread 8866: XXXX 1732784968155, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968255 XXXX 1732784968255, Thread 8866: XXXX 1732784968255, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968258 XXXX 1732784968258, Thread 8866: XXXX 1732784968258, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968361 XXXX 1732784968361, Thread 8866: XXXX 1732784968361, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968363 XXXX 1732784968363, Thread 8866: XXXX 1732784968363, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968467 XXXX 1732784968467, Thread 8866: XXXX 1732784968467, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968469 XXXX 1732784968469, Thread 8866: XXXX 1732784968469, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968573 XXXX 1732784968573, Thread 8866: XXXX 1732784968573, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968575 XXXX 1732784968575, Thread 8866: XXXX 1732784968575, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968674 XXXX 1732784968674, Thread 8866: XXXX 1732784968674, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968676 XXXX 1732784968676, Thread 8866: XXXX 1732784968676, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968780 XXXX 1732784968780, Thread 8866: XXXX 1732784968780, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968782 XXXX 1732784968782, Thread 8866: XXXX 1732784968782, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968882 XXXX 1732784968882, Thread 8866: XXXX 1732784968882, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968884 XXXX 1732784968884, Thread 8866: XXXX 1732784968884, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784968988 XXXX 1732784968988, Thread 8866: XXXX 1732784968988, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784968990 XXXX 1732784968990, Thread 8866: XXXX 1732784968990, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969092 XXXX 1732784969092, Thread 8866: XXXX 1732784969091, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969093 XXXX 1732784969093, Thread 8866: XXXX 1732784969093, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969197 XXXX 1732784969197, Thread 8866: XXXX 1732784969197, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969200 XXXX 1732784969200, Thread 8866: XXXX 1732784969200, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969302 XXXX 1732784969302, Thread 8866: XXXX 1732784969302, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969304 XXXX 1732784969304, Thread 8866: XXXX 1732784969304, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969408 XXXX 1732784969408, Thread 8866: XXXX 1732784969408, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969415 XXXX 1732784969415, Thread 8866: XXXX 1732784969415, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969513 XXXX 1732784969513, Thread 8866: XXXX 1732784969513, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969515 XXXX 1732784969515, Thread 8866: XXXX 1732784969515, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969618 XXXX 1732784969618, Thread 8866: XXXX 1732784969618, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969619 XXXX 1732784969619, Thread 8866: XXXX 1732784969619, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969718 XXXX 1732784969718, Thread 8866: XXXX 1732784969718, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969720 XXXX 1732784969720, Thread 8866: XXXX 1732784969720, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969822 XXXX 1732784969822, Thread 8866: XXXX 1732784969822, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969823 XXXX 1732784969823, Thread 8866: XXXX 1732784969823, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784969927 XXXX 1732784969927, Thread 8866: XXXX 1732784969927, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784969929 XXXX 1732784969929, Thread 8866: XXXX 1732784969929, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970032 XXXX 1732784970032, Thread 8866: XXXX 1732784970032, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970034 XXXX 1732784970034, Thread 8866: XXXX 1732784970034, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970134 XXXX 1732784970134, Thread 8866: XXXX 1732784970134, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970136 XXXX 1732784970136, Thread 8866: XXXX 1732784970136, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970237 XXXX 1732784970237, Thread 8866: XXXX 1732784970237, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970239 XXXX 1732784970239, Thread 8866: XXXX 1732784970239, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970340 XXXX 1732784970340, Thread 8866: XXXX 1732784970340, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970341 XXXX 1732784970341, Thread 8866: XXXX 1732784970341, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970445 XXXX 1732784970445, Thread 8866: XXXX 1732784970445, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970447 XXXX 1732784970447, Thread 8866: XXXX 1732784970447, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970551 XXXX 1732784970551, Thread 8866: XXXX 1732784970551, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970552 XXXX 1732784970552, Thread 8866: XXXX 1732784970552, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970654 XXXX 1732784970654, Thread 8866: XXXX 1732784970654, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970655 XXXX 1732784970655, Thread 8866: XXXX 1732784970655, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970760 XXXX 1732784970760, Thread 8866: XXXX 1732784970760, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970762 XXXX 1732784970762, Thread 8866: XXXX 1732784970762, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970871 XXXX 1732784970871, Thread 8866: XXXX 1732784970871, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970873 XXXX 1732784970873, Thread 8866: XXXX 1732784970873, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784970977 XXXX 1732784970977, Thread 8866: XXXX 1732784970977, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784970979 XXXX 1732784970979, Thread 8866: XXXX 1732784970979, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971088 XXXX 1732784971088, Thread 8866: XXXX 1732784971088, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971090 XXXX 1732784971090, Thread 8866: XXXX 1732784971090, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971193 XXXX 1732784971193, Thread 8866: XXXX 1732784971193, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971195 XXXX 1732784971195, Thread 8866: XXXX 1732784971195, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971299 XXXX 1732784971299, Thread 8866: XXXX 1732784971299, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971301 XXXX 1732784971301, Thread 8866: XXXX 1732784971301, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971419 XXXX 1732784971419, Thread 8866: XXXX 1732784971419, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971420 XXXX 1732784971420, Thread 8866: XXXX 1732784971420, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971523 XXXX 1732784971523, Thread 8866: XXXX 1732784971523, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971525 XXXX 1732784971525, Thread 8866: XXXX 1732784971525, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971625 XXXX 1732784971625, Thread 8866: XXXX 1732784971625, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971627 XXXX 1732784971627, Thread 8866: XXXX 1732784971627, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971728 XXXX 1732784971728, Thread 8866: XXXX 1732784971728, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971730 XXXX 1732784971730, Thread 8866: XXXX 1732784971730, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971833 XXXX 1732784971833, Thread 8866: XXXX 1732784971833, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971835 XXXX 1732784971835, Thread 8866: XXXX 1732784971835, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784971939 XXXX 1732784971939, Thread 8866: XXXX 1732784971939, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784971941 XXXX 1732784971941, Thread 8866: XXXX 1732784971941, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972124 XXXX 1732784972124, Thread 8866: XXXX 1732784972124, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972163 XXXX 1732784972163, Thread 8866: XXXX 1732784972163, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972225 XXXX 1732784972225, Thread 8866: XXXX 1732784972224, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972228 XXXX 1732784972228, Thread 8866: XXXX 1732784972228, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972352 XXXX 1732784972352, Thread 8866: XXXX 1732784972352, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972368 XXXX 1732784972368, Thread 8866: XXXX 1732784972368, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972459 XXXX 1732784972459, Thread 8866: XXXX 1732784972459, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972461 XXXX 1732784972461, Thread 8866: XXXX 1732784972461, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972561 XXXX 1732784972561, Thread 8866: XXXX 1732784972561, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972563 XXXX 1732784972563, Thread 8866: XXXX 1732784972563, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972669 XXXX 1732784972669, Thread 8866: XXXX 1732784972669, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972670 XXXX 1732784972670, Thread 8866: XXXX 1732784972670, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972771 XXXX 1732784972771, Thread 8866: XXXX 1732784972771, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972772 XXXX 1732784972772, Thread 8866: XXXX 1732784972772, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972879 XXXX 1732784972879, Thread 8866: XXXX 1732784972879, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972881 XXXX 1732784972881, Thread 8866: XXXX 1732784972881, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784972991 XXXX 1732784972991, Thread 8866: XXXX 1732784972991, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784972995 XXXX 1732784972995, Thread 8866: XXXX 1732784972995, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973096 XXXX 1732784973096, Thread 8866: XXXX 1732784973096, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973097 XXXX 1732784973097, Thread 8866: XXXX 1732784973097, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973207 XXXX 1732784973207, Thread 8866: XXXX 1732784973207, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973208 XXXX 1732784973208, Thread 8866: XXXX 1732784973208, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973317 XXXX 1732784973317, Thread 8866: XXXX 1732784973317, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973319 XXXX 1732784973319, Thread 8866: XXXX 1732784973319, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973424 XXXX 1732784973424, Thread 8866: XXXX 1732784973424, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973425 XXXX 1732784973425, Thread 8866: XXXX 1732784973425, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973535 XXXX 1732784973535, Thread 8866: XXXX 1732784973535, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973537 XXXX 1732784973537, Thread 8866: XXXX 1732784973537, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973659 XXXX 1732784973659, Thread 8866: XXXX 1732784973659, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973660 XXXX 1732784973660, Thread 8866: XXXX 1732784973660, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973777 XXXX 1732784973777, Thread 8866: XXXX 1732784973777, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973779 XXXX 1732784973779, Thread 8866: XXXX 1732784973779, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784973885 XXXX 1732784973885, Thread 8866: XXXX 1732784973885, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784973886 XXXX 1732784973886, Thread 8866: XXXX 1732784973886, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974018 XXXX 1732784974018, Thread 8866: XXXX 1732784974018, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974020 XXXX 1732784974020, Thread 8866: XXXX 1732784974020, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974126 XXXX 1732784974126, Thread 8866: XXXX 1732784974126, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974128 XXXX 1732784974128, Thread 8866: XXXX 1732784974128, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974238 XXXX 1732784974238, Thread 8866: XXXX 1732784974238, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974240 XXXX 1732784974240, Thread 8866: XXXX 1732784974240, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974349 XXXX 1732784974349, Thread 8866: XXXX 1732784974349, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974351 XXXX 1732784974351, Thread 8866: XXXX 1732784974351, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974458 XXXX 1732784974458, Thread 8866: XXXX 1732784974458, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974459 XXXX 1732784974459, Thread 8866: XXXX 1732784974459, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974564 XXXX 1732784974564, Thread 8866: XXXX 1732784974564, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974566 XXXX 1732784974566, Thread 8866: XXXX 1732784974566, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974673 XXXX 1732784974673, Thread 8866: XXXX 1732784974673, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974675 XXXX 1732784974675, Thread 8866: XXXX 1732784974675, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974788 XXXX 1732784974788, Thread 8866: XXXX 1732784974788, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974790 XXXX 1732784974790, Thread 8866: XXXX 1732784974790, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784974898 XXXX 1732784974898, Thread 8866: XXXX 1732784974898, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784974899 XXXX 1732784974899, Thread 8866: XXXX 1732784974899, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975008 XXXX 1732784975008, Thread 8866: XXXX 1732784975008, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975010 XXXX 1732784975010, Thread 8866: XXXX 1732784975010, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975125 XXXX 1732784975125, Thread 8866: XXXX 1732784975125, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975128 XXXX 1732784975128, Thread 8866: XXXX 1732784975128, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975228 XXXX 1732784975228, Thread 8866: XXXX 1732784975228, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975230 XXXX 1732784975230, Thread 8866: XXXX 1732784975230, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975333 XXXX 1732784975333, Thread 8866: XXXX 1732784975333, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975335 XXXX 1732784975335, Thread 8866: XXXX 1732784975335, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975444 XXXX 1732784975444, Thread 8866: XXXX 1732784975444, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975446 XXXX 1732784975446, Thread 8866: XXXX 1732784975446, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975552 XXXX 1732784975552, Thread 8866: XXXX 1732784975552, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975554 XXXX 1732784975554, Thread 8866: XXXX 1732784975554, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975660 XXXX 1732784975660, Thread 8866: XXXX 1732784975660, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975662 XXXX 1732784975662, Thread 8866: XXXX 1732784975662, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975770 XXXX 1732784975770, Thread 8866: XXXX 1732784975770, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975772 XXXX 1732784975772, Thread 8866: XXXX 1732784975772, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975881 XXXX 1732784975881, Thread 8866: XXXX 1732784975881, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975884 XXXX 1732784975884, Thread 8866: XXXX 1732784975884, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784975991 XXXX 1732784975991, Thread 8866: XXXX 1732784975991, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784975994 XXXX 1732784975994, Thread 8866: XXXX 1732784975994, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976102 XXXX 1732784976102, Thread 8866: XXXX 1732784976101, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976104 XXXX 1732784976104, Thread 8866: XXXX 1732784976104, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976209 XXXX 1732784976209, Thread 8866: XXXX 1732784976209, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976211 XXXX 1732784976211, Thread 8866: XXXX 1732784976211, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976315 XXXX 1732784976315, Thread 8866: XXXX 1732784976315, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976317 XXXX 1732784976317, Thread 8866: XXXX 1732784976317, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976421 XXXX 1732784976421, Thread 8866: XXXX 1732784976421, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976424 XXXX 1732784976424, Thread 8866: XXXX 1732784976424, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976529 XXXX 1732784976529, Thread 8866: XXXX 1732784976529, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976530 XXXX 1732784976530, Thread 8866: XXXX 1732784976530, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976633 XXXX 1732784976633, Thread 8866: XXXX 1732784976633, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976634 XXXX 1732784976634, Thread 8866: XXXX 1732784976634, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976734 XXXX 1732784976734, Thread 8866: XXXX 1732784976734, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976736 XXXX 1732784976736, Thread 8866: XXXX 1732784976736, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976841 XXXX 1732784976841, Thread 8866: XXXX 1732784976841, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976844 XXXX 1732784976844, Thread 8866: XXXX 1732784976844, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784976952 XXXX 1732784976952, Thread 8866: XXXX 1732784976952, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784976953 XXXX 1732784976953, Thread 8866: XXXX 1732784976953, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977074 XXXX 1732784977074, Thread 8866: XXXX 1732784977074, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977077 XXXX 1732784977077, Thread 8866: XXXX 1732784977076, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977161 XXXX 1732784977161, Thread 8866: XXXX 1732784977161, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977163 XXXX 1732784977163, Thread 8866: XXXX 1732784977163, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977267 XXXX 1732784977267, Thread 8866: XXXX 1732784977267, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977268 XXXX 1732784977268, Thread 8866: XXXX 1732784977268, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977377 XXXX 1732784977377, Thread 8866: XXXX 1732784977377, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977379 XXXX 1732784977379, Thread 8866: XXXX 1732784977379, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977488 XXXX 1732784977488, Thread 8866: XXXX 1732784977488, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977490 XXXX 1732784977490, Thread 8866: XXXX 1732784977490, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977598 XXXX 1732784977598, Thread 8866: XXXX 1732784977598, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977599 XXXX 1732784977599, Thread 8866: XXXX 1732784977599, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977703 XXXX 1732784977703, Thread 8866: XXXX 1732784977703, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977704 XXXX 1732784977704, Thread 8866: XXXX 1732784977704, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977812 XXXX 1732784977812, Thread 8866: XXXX 1732784977812, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977815 XXXX 1732784977815, Thread 8866: XXXX 1732784977814, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784977920 XXXX 1732784977920, Thread 8866: XXXX 1732784977920, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784977921 XXXX 1732784977921, Thread 8866: XXXX 1732784977921, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784978021 XXXX 1732784978021, Thread 8866: XXXX 1732784978021, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784978023 XXXX 1732784978023, Thread 8866: XXXX 1732784978023, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784978129 XXXX 1732784978129, Thread 8866: XXXX 1732784978129, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784978131 XXXX 1732784978131, Thread 8866: XXXX 1732784978131, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784978240 XXXX 1732784978240, Thread 8866: XXXX 1732784978240, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784978241 XXXX 1732784978241, Thread 8866: XXXX 1732784978241, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784978350 XXXX 1732784978350, Thread 8866: XXXX 1732784978350, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784978353 XXXX 1732784978353, Thread 8866: XXXX 1732784978353, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784978462 XXXX 1732784978462, Thread 8866: XXXX 1732784978462, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784978463 XXXX 1732784978463, Thread 8866: XXXX 1732784978463, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784978572 XXXX 1732784978572, Thread 8866: XXXX 1732784978572, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784978575 XXXX 1732784978575, Thread 8866: XXXX 1732784978575, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732784978707 XXXX 1732784978707, Thread 8866: XXXX 1732784978707, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732784978708 XXXX 1732784978708, Thread 8866: XXXX 1732784978708, Exiting Thread 8866: Commands::runScriptBasic  
+8866 1732785222020 XXXX 1732785222020, Thread 8866: XXXX 1732785222020, Entering Thread 8866: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+8866 1732785222392 XXXX 1732785222392, Thread 8866: com.Send returned false 
+8866 1732785222392 XXXX 1732785222392, Thread 8866: transfer: exception after writeHeaderAndGetResult null 
+8866 1732785222397 XXXX 1732785222397, Thread 8866: XXXX 1732785222397, Entering Thread 8866: ToolCommUsb::recoverFromProtocolError, type = NO_SCRIPT  
+8866 1732785222400 XXXX 1732785222400, Thread 8866: Send Abort Script Engine Command 
+8866 1732785222400 XXXX 1732785222400, Thread 8866: XXXX 1732785222400, Entering Thread 8866: ToolCommUsb::killScriptEngine  
+8866 1732785222404 XXXX 1732785222404, Thread 8866: com.Send returned false 
+8866 1732785222404 XXXX 1732785222404, Thread 8866: Failed sending Abort Script Engine Command. Set nuclear option = true 
+8866 1732785222404 XXXX 1732785222404, Thread 8866: About to nuke 
+8866 1732785222404 XXXX 1732785222404, Thread 8866: XXXX 1732785222404, Entering Thread 8866: ToolCommUsb::nuclearOption  
+8866 1732785222407 XXXX 1732785222407, Thread 8866: com.Send returned false 
